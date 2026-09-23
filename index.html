@@ -94,46 +94,95 @@ summary{font-weight:700;cursor:pointer;color:var(--azul)}
 footer{background:var(--azul2);color:var(--off);border-top:3px solid var(--dourado);padding:28px 24px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
 footer .slogan-oficial{color:var(--dourado)}
 .wpp{position:fixed;right:18px;bottom:18px;background:var(--azul);color:#fff;text-decoration:none;padding:13px 18px;border-radius:999px;border:2px solid var(--dourado);font-weight:800;box-shadow:var(--sombra)}
+/* ===== Animações e 3D (portados do site original) ===== */
+html{scroll-behavior:smooth}
+.scroll-progress{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--dourado),var(--dourado2));z-index:60}
+.cursor-glow{position:fixed;width:220px;height:220px;border-radius:50%;pointer-events:none;z-index:1;background:radial-gradient(circle,rgba(201,168,76,.22),transparent 70%);transform:translate(-50%,-50%);transition:opacity .3s}
+.announcement{position:relative;overflow:hidden}
+.announcement::after{content:"";position:absolute;top:0;left:-60%;width:50%;height:100%;background:linear-gradient(100deg,transparent,rgba(201,168,76,.35),transparent);animation:announcement-shimmer 5s ease-in-out infinite}
+@keyframes announcement-shimmer{0%,60%{left:-60%}100%{left:130%}}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+.reveal-left{transform:translateX(-32px)}
+.reveal-right{transform:translateX(32px)}
+.reveal.visible{opacity:1;transform:none}
+.stagger>*{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}
+.stagger.visible>*{opacity:1;transform:none}
+.stagger.visible>*:nth-child(1){transition-delay:.05s}.stagger.visible>*:nth-child(2){transition-delay:.15s}.stagger.visible>*:nth-child(3){transition-delay:.25s}.stagger.visible>*:nth-child(4){transition-delay:.35s}
+.hero{position:relative}
+.ambient-glow{position:absolute;border-radius:50%;filter:blur(60px);pointer-events:none;z-index:0}
+.ambient-glow.gold{width:340px;height:340px;right:-60px;top:-40px;background:radial-gradient(circle,rgba(201,168,76,.35),transparent 70%);animation:glow-breathe 6s ease-in-out infinite}
+.ambient-glow.navy{width:300px;height:300px;left:-70px;bottom:-50px;background:radial-gradient(circle,rgba(0,45,98,.20),transparent 70%);animation:glow-breathe 7s ease-in-out infinite reverse}
+@keyframes glow-breathe{0%,100%{opacity:.6;transform:scale(1)}50%{opacity:1;transform:scale(1.12)}}
+.hero-particle{position:absolute;width:10px;height:10px;border-radius:50%;background:var(--dourado);opacity:.55;pointer-events:none;z-index:0;animation:float-particle 7s ease-in-out infinite}
+.hero-particle:nth-child(1){left:8%;top:20%}.hero-particle:nth-child(2){left:45%;top:8%;animation-delay:1.4s;width:7px;height:7px}.hero-particle:nth-child(3){left:70%;top:30%;animation-delay:2.6s}.hero-particle:nth-child(4){left:25%;bottom:12%;animation-delay:3.8s;width:8px;height:8px}.hero-particle:nth-child(5){left:88%;bottom:22%;animation-delay:5s;width:6px;height:6px}
+@keyframes float-particle{0%,100%{transform:translateY(0)}50%{transform:translateY(-26px)}}
+.hero>*{position:relative;z-index:1}
+.hero-media{perspective:900px}
+.hero-media img{animation:hero-reveal 1s ease both;transform-style:preserve-3d;transition:transform .25s ease}
+@keyframes hero-reveal{from{opacity:0;transform:translateY(24px) scale(.97)}to{opacity:1;transform:none}}
+.badge{animation:float-badge 4s ease-in-out infinite}
+@keyframes float-badge{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+.btn{position:relative;overflow:hidden;transition:transform .2s ease,box-shadow .2s ease}
+.btn::after{content:"";position:absolute;top:0;left:-70%;width:45%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.45),transparent);transform:skewX(-20deg);animation:btn-shimmer 4.5s ease-in-out infinite}
+@keyframes btn-shimmer{0%,65%{left:-70%}100%{left:140%}}
+.magnetic{transition:transform .2s ease;will-change:transform}
+.card{transform-style:preserve-3d;transition:transform .25s ease,box-shadow .25s ease}
+.card:hover{box-shadow:0 18px 40px rgba(0,45,98,.18) !important}
+.lente{transition:transform .25s ease,box-shadow .25s ease}
+.lente:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(0,45,98,.14)}
+.lente span{display:inline-block;animation:lens-pulse 3.5s ease-in-out infinite}
+@keyframes lens-pulse{0%,100%{opacity:1}50%{opacity:.55}}
+.mat{transition:transform .25s ease,box-shadow .25s ease}
+.mat:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(0,45,98,.14)}
+.rev{transition:transform .25s ease}
+.rev:hover{transform:translateY(-3px)}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none !important;transition:none !important}.reveal,.stagger>*{opacity:1;transform:none}}
+@media (hover:none){.cursor-glow{display:none}}
 @media(max-width:860px){.hero,.store{grid-template-columns:1fr}nav{display:none}.grid,.lentes,.reviews,.materiais{grid-template-columns:1fr 1fr}}
 @media(max-width:520px){.grid,.lentes,.reviews,.materiais{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
+<div class="scroll-progress" aria-hidden="true"></div>
+<div class="cursor-glow" aria-hidden="true"></div>
 <div class="announcement">Alexsander Ótica · Rua Poligonal, 10 · Mesquita, RJ <strong>✦ Seu olhar, nosso cuidado.</strong></div>
 <header>
 <a class="brand" href="#"><span class="brand-mark">A</span><span class="brand-name">ALEXSANDER<span class="brand-dot">.</span><span class="slogan-oficial">Seu olhar, nosso cuidado</span></span></a>
 <nav><a href="#colecao">Coleção</a><a href="#lentes">Lentes</a><a href="#materiais">Materiais</a><a href="#loja">Loja física</a><a class="cta" href="https://wa.me/5521984816082">WhatsApp ↗</a></nav>
 </header>
 <div class="container">
-<div class="hero">
-<div>
+<div class="hero parallax" data-speed="0.06">
+<div class="ambient-glow gold" aria-hidden="true"></div>
+<div class="ambient-glow navy" aria-hidden="true"></div>
+<span class="hero-particle" aria-hidden="true"></span><span class="hero-particle" aria-hidden="true"></span><span class="hero-particle" aria-hidden="true"></span><span class="hero-particle" aria-hidden="true"></span><span class="hero-particle" aria-hidden="true"></span>
+<div class="reveal reveal-left">
 <div class="eyebrow">Alexsander Ótica · Mesquita</div>
 <h1><span class="h1-linha h1-linha-1">Um novo olhar.</span><em class="h1-linha h1-linha-2">Nos mínimos detalhes.</em></h1>
 <p class="hero-slogan">Seu olhar, <strong>nosso cuidado.</strong></p>
 <p class="hero-lead">Formas, cores e acabamentos que expressam seu estilo. Explore as armações e encontre sua próxima escolha com a nossa equipe.</p>
 <div class="trust"><span class="stars">★★★★★ 5,0/5</span><span>29 avaliações no Google · Atendimento próximo</span></div>
-<div><a class="btn" href="#colecao">Explorar armações</a><a class="btn-ghost" href="#lentes">Escolher minhas lentes →</a></div>
+<div><a class="btn magnetic" href="#colecao">Explorar armações</a><a class="btn-ghost" href="#lentes">Escolher minhas lentes →</a></div>
 <div><span class="badge"><i></i>Orçamento personalizado pelo WhatsApp</span></div>
 </div>
-<div class="hero-media"><img src="https://alexsander-otica.passosnikolas5.workers.dev/campaigns/eyewear-editorial.jpg" alt="Campanha Alexsander Ótica"/></div>
+<div class="hero-media reveal reveal-right"><img class="tilt" src="https://alexsander-otica.passosnikolas5.workers.dev/campaigns/eyewear-editorial.jpg" alt="Campanha Alexsander Ótica"/></div>
 </div>
 
-<div id="colecao" style="margin-top:38px">
+<div id="colecao" class="reveal" style="margin-top:38px">
 <div class="eyebrow">Escolha seu próximo par</div>
 <h2>Seu estilo. <em>Seu próximo par.</em></h2>
 <p class="section-note">Fotografias reais para inspirar sua escolha. Envie a referência que combina com você.</p>
-<div class="grid">
-<div class="card"><img src="https://alexsander-otica.passosnikolas5.workers.dev/frames/25389282.jpg" alt="Lumen"/><div><small>Óptico · Retangular</small><h3>Lumen</h3><p>Retangular · Preto</p><div class="price">Preço sob consulta</div><a class="mini-btn" href="#">Escolher e pedir orçamento</a></div></div>
-<div class="card"><img src="https://alexsander-otica.passosnikolas5.workers.dev/frames/14482342.jpg" alt="Linha"/><div><small>Óptico · Redondo</small><h3>Linha</h3><p>Tartaruga e dourado</p><div class="price">Preço sob consulta</div><a class="mini-btn" href="#">Escolher e pedir orçamento</a></div></div>
-<div class="card"><img src="https://alexsander-otica.passosnikolas5.workers.dev/frames/6143506.jpg" alt="Norte"/><div><small>Óptico · Redondo</small><h3>Norte</h3><p>Transparente e marrom</p><div class="price">Preço sob consulta</div><a class="mini-btn" href="#">Escolher e pedir orçamento</a></div></div>
-<div class="card"><img src="https://alexsander-otica.passosnikolas5.workers.dev/frames/13982236.jpg" alt="Brisa"/><div><small>Solar · Quadrado</small><h3>Brisa</h3><p>Preto com lentes vermelhas</p><div class="price">Preço sob consulta</div><a class="mini-btn" href="#">Escolher e pedir orçamento</a></div></div>
+<div class="grid stagger">
+<div class="card tilt"><img src="https://alexsander-otica.passosnikolas5.workers.dev/frames/25389282.jpg" alt="Lumen"/><div><small>Óptico · Retangular</small><h3>Lumen</h3><p>Retangular · Preto</p><div class="price">Preço sob consulta</div><a class="mini-btn" href="#">Escolher e pedir orçamento</a></div></div>
+<div class="card tilt"><img src="https://alexsander-otica.passosnikolas5.workers.dev/frames/14482342.jpg" alt="Linha"/><div><small>Óptico · Redondo</small><h3>Linha</h3><p>Tartaruga e dourado</p><div class="price">Preço sob consulta</div><a class="mini-btn" href="#">Escolher e pedir orçamento</a></div></div>
+<div class="card tilt"><img src="https://alexsander-otica.passosnikolas5.workers.dev/frames/6143506.jpg" alt="Norte"/><div><small>Óptico · Redondo</small><h3>Norte</h3><p>Transparente e marrom</p><div class="price">Preço sob consulta</div><a class="mini-btn" href="#">Escolher e pedir orçamento</a></div></div>
+<div class="card tilt"><img src="https://alexsander-otica.passosnikolas5.workers.dev/frames/13982236.jpg" alt="Brisa"/><div><small>Solar · Quadrado</small><h3>Brisa</h3><p>Preto com lentes vermelhas</p><div class="price">Preço sob consulta</div><a class="mini-btn" href="#">Escolher e pedir orçamento</a></div></div>
 </div>
 </div>
 
-<div id="lentes" style="margin-top:38px">
+<div id="lentes" class="reveal" style="margin-top:38px">
 <div class="eyebrow">Escolha sua lente</div>
 <h2>Mais conforto <em>em cada olhar.</em></h2>
-<div class="lentes">
+<div class="lentes stagger">
 <div class="lente"><span>01</span><h3>Transparente</h3><p>Leve e versátil para o dia a dia.</p></div>
 <div class="lente"><span>02</span><h3>Antirreflexo</h3><p>Mais nitidez para telas e direção.</p></div>
 <div class="lente"><span>03</span><h3>Fotossensível</h3><p>Clara dentro, escura no sol.</p></div>
@@ -141,34 +190,34 @@ footer .slogan-oficial{color:var(--dourado)}
 </div>
 </div>
 
-<div id="materiais" style="margin-top:38px">
+<div id="materiais" class="reveal" style="margin-top:38px">
 <div class="eyebrow">Por dentro da Alexsander</div>
 <h2>Materiais que <em>fazem diferença.</em></h2>
-<div class="materiais">
+<div class="materiais stagger">
 <div class="mat"><i>◈</i><h3>Acetato premium</h3><p>Toque confortável, cores profundas e brilho natural.</p></div>
 <div class="mat"><i>◇</i><h3>Metal leve</h3><p>Linhas finas e ajuste delicado, quase imperceptível.</p></div>
 <div class="mat"><i>✦</i><h3>Bio-based</h3><p>Base renovável, escolha consciente sem perder estilo.</p></div>
 </div>
 </div>
 
-<div class="dark">
+<div class="dark reveal">
 <div class="eyebrow">Atendimento Alexsander Ótica</div>
 <h2>Encontre o par <em>que encontra você.</em></h2>
 <p>Conte sua rotina e a gente indica armações, lentes e tamanhos que fazem sentido.</p>
-<p style="margin-top:14px;position:relative;z-index:1"><a class="btn btn-gold" href="https://wa.me/5521984816082">Falar no WhatsApp ↗</a></p>
+<p style="margin-top:14px;position:relative;z-index:1"><a class="btn btn-gold magnetic" href="https://wa.me/5521984816082">Falar no WhatsApp ↗</a></p>
 </div>
 
-<div style="margin-top:34px">
+<div class="reveal" style="margin-top:34px">
 <div class="eyebrow">Quem escolhe a Alexsander</div>
 <h2>Cuidado que vira <em>recomendação.</em></h2>
-<div class="reviews">
+<div class="reviews stagger">
 <div class="rev"><div class="stars">★★★★★</div><p>“Gostei muito do tratamento, facilita a forma de pagamento.”</p><small>Taiane Lima · Google</small></div>
 <div class="rev"><div class="stars">★★★★★</div><p>“O atendimento é ótimo!”</p><small>Isabel Peres · Google</small></div>
 <div class="rev"><div class="stars">★★★★★</div><p>“Atendimento excelente, super recomendo.”</p><small>Veronica Lacerda · Google</small></div>
 </div>
 </div>
 
-<div id="loja" class="store" style="margin-top:30px">
+<div id="loja" class="store reveal" style="margin-top:30px">
 <div><img src="./loja-perfil.png" alt="Foto de perfil da Alexsander Ótica" width="400" height="400"/></div>
 <div><div class="eyebrow">Visite a loja</div><h2>Seu olhar,<br/><em>bem cuidado.</em></h2><p>Rua Poligonal, 10 · Mesquita, RJ<br/>(21) 98481-6082 · WhatsApp<br/>Aberto · confira o horário pelo WhatsApp</p><p style="margin-top:12px"><a class="btn" href="#">Chamar no WhatsApp ↗</a></p></div>
 </div>
@@ -180,7 +229,59 @@ footer .slogan-oficial{color:var(--dourado)}
 <details><summary>As lentes têm proteção UV?</summary><p>Confirme proteção e especificações com a equipe antes da compra.</p></details>
 </div>
 </div>
-<a class="wpp" href="https://wa.me/5521984816082">WhatsApp</a>
+<a class="wpp magnetic" href="https://wa.me/5521984816082">WhatsApp</a>
+<script>
+(function(){
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // Barra de progresso da rolagem
+  var bar = document.querySelector('.scroll-progress');
+  function onScrollBar(){
+    var h = document.documentElement;
+    var max = h.scrollHeight - h.clientHeight;
+    bar.style.width = (max > 0 ? (h.scrollTop / max) * 100 : 0) + '%';
+    // Parallax do hero
+    if(!reduce){
+      var p = document.querySelector('.parallax');
+      if(p){ var sp = parseFloat(p.dataset.speed || '0.06'); p.style.transform = 'translateY(' + (h.scrollTop * sp) + 'px)'; }
+    }
+  }
+  document.addEventListener('scroll', onScrollBar, {passive:true});
+  onScrollBar();
+  // Brilho que segue o cursor
+  var glow = document.querySelector('.cursor-glow');
+  if(glow && window.matchMedia('(hover:hover)').matches){
+    document.addEventListener('mousemove', function(e){
+      glow.style.left = e.clientX + 'px';
+      glow.style.top = e.clientY + 'px';
+    }, {passive:true});
+  } else if(glow){ glow.style.display = 'none'; }
+  // Revelar seções ao rolar
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('visible'); io.unobserve(en.target); } });
+  }, {threshold: 0.12});
+  document.querySelectorAll('.reveal, .stagger').forEach(function(el){ io.observe(el); });
+  // Botões magnéticos
+  if(!reduce && window.matchMedia('(hover:hover)').matches){
+    document.querySelectorAll('.magnetic').forEach(function(btn){
+      btn.addEventListener('mousemove', function(e){
+        var r = btn.getBoundingClientRect();
+        var x = e.clientX - r.left - r.width/2, y = e.clientY - r.top - r.height/2;
+        btn.style.transform = 'translate(' + x*0.15 + 'px,' + y*0.2 + 'px)';
+      });
+      btn.addEventListener('mouseleave', function(){ btn.style.transform = ''; });
+    });
+    // Inclinação 3D nos cards e no hero
+    document.querySelectorAll('.tilt').forEach(function(card){
+      card.addEventListener('mousemove', function(e){
+        var r = card.getBoundingClientRect();
+        var px = (e.clientX - r.left)/r.width - .5, py = (e.clientY - r.top)/r.height - .5;
+        card.style.transform = 'perspective(900px) rotateX(' + (-py*8) + 'deg) rotateY(' + (px*10) + 'deg) translateY(-3px)';
+      });
+      card.addEventListener('mouseleave', function(){ card.style.transform = ''; });
+    });
+  }
+})();
+</script>
 <footer>
 <div><b>ALEXSANDER<span style="color:var(--dourado)">.</span></b><br/><span class="slogan-oficial">Seu olhar, nosso cuidado</span><br/><small>Elegância, conforto e cuidado com a sua visão.</small></div>
 <div><small>Rua Poligonal, 10 · Mesquita RJ<br/>© 2026 Alexsander Ótica</small></div>
