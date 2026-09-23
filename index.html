@@ -116,6 +116,10 @@ nav a.cta{background:linear-gradient(135deg,var(--dourado),#b9973f);color:var(--
 .card h3{font-size:1.15rem;margin-top:6px}
 .card .meta{font-size:.88rem;opacity:.75}
 .price{font-weight:800;margin-top:8px}
+.price .old{text-decoration:line-through;opacity:.55;font-weight:400;margin-right:6px}
+.promo-tag{display:inline-block;background:linear-gradient(135deg,var(--dourado),#b9973f);color:var(--azul2);font-size:.66rem;font-weight:800;letter-spacing:.1em;border-radius:999px;padding:3px 9px;margin-left:6px;vertical-align:middle}
+.empty{display:none;text-align:center;padding:26px;background:#fff;border:1px dashed var(--dourado);border-radius:14px;margin-top:18px}
+.empty.show{display:block}
 .mini-btn{display:inline-block;margin-top:10px;font-size:.85rem;font-weight:700;text-decoration:underline;text-decoration-color:var(--dourado);text-decoration-thickness:2px;text-underline-offset:5px}
 /* lentes */
 .lentes{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:22px}
@@ -208,9 +212,9 @@ footer a{color:var(--off);margin-right:12px;font-size:.88rem}
 <div class="hero-media-col reveal reveal-right">
 <a class="hero-campaign tilt" href="#colecao"><img src="https://alexsander-otica.passosnikolas5.workers.dev/campaigns/eyewear-editorial.jpg" alt="Ilustração de campanha: óculos arredondados em tom champanhe e armação tartaruga sobre pedra clara, com luz de estúdio."/><span>Explore seu estilo ↗</span></a>
 <div class="hero-picks">
-<a href="#colecao"><img src="https://alexsander-otica.passosnikolas5.workers.dev/frames/25389282.jpg" alt="Fotografia de referência: retangular preto."/><span>Lumen<small>Retangular</small></span></a>
-<a href="#colecao"><img src="https://alexsander-otica.passosnikolas5.workers.dev/frames/14482342.jpg" alt="Fotografia de referência: redondo tartaruga."/><span>Linha<small>Redondo</small></span></a>
-<a href="#colecao"><img src="https://alexsander-otica.passosnikolas5.workers.dev/frames/6143506.jpg" alt="Fotografia de referência: redondo transparente."/><span>Norte<small>Redondo</small></span></a>
+<a href="#colecao"><img src="./fotos/solar-aviador-azul.jpg" alt="Óculos de sol Aviador Azul." loading="lazy"/><span>Aviador Azul<small>Solar · R$ 80</small></span></a>
+<a href="#colecao"><img src="./fotos/optico-oval-tartaruga.jpg" alt="Óculos de grau Oval Tartaruga." loading="lazy"/><span>Oval Tartaruga<small>Óptico · R$ 80</small></span></a>
+<a href="#colecao"><img src="./fotos/solar-wayfarer-marrom.jpg" alt="Óculos de sol Wayfarer Marrom." loading="lazy"/><span>Wayfarer Marrom<small>Solar · R$ 150</small></span></a>
 </div>
 </div>
 </div>
@@ -235,20 +239,21 @@ footer a{color:var(--off);margin-right:12px;font-size:.88rem}
 </div>
 <div class="filters">
 <label>Formato da armação
-<select id="formato"><option value="">Todos os formatos</option><option>Retangular</option><option>Redondo</option><option>Quadrado</option><option>Gatinho</option></select>
+<select id="formato"><option value="">Todos os formatos</option><option>Retangular</option><option>Redondo</option><option>Quadrado</option><option>Oval</option><option>Aviador</option><option>Hexagonal</option><option>Wayfarer</option></select>
 </label>
 <button class="reset" id="limpar" type="button" disabled>Limpar filtros ✕</button>
 </div>
 <div class="grid stagger" id="grade">
-<article class="card tilt" data-cat="optico" data-name="Lumen" data-format="Retangular" data-color="Preto"><img src="https://alexsander-otica.passosnikolas5.workers.dev/frames/25389282.jpg" alt="Fotografia de referência: retangular preto."/><div class="pad"><small class="cat"><span>Óptico</span><button type="button" data-orc="Lumen">Orçamento ↗</button></small><h3>Lumen</h3><p class="meta">Retangular · Preto</p><div class="price">Preço sob consulta</div><a class="mini-btn" href="#" data-orc="Lumen">Escolher e pedir orçamento</a></div></article>
-<article class="card tilt" data-cat="optico" data-name="Linha" data-format="Redondo" data-color="Tartaruga e dourado"><img src="https://alexsander-otica.passosnikolas5.workers.dev/frames/14482342.jpg" alt="Fotografia de referência: redondo tartaruga."/><div class="pad"><small class="cat"><span>Óptico</span><button type="button" data-orc="Linha">Orçamento ↗</button></small><h3>Linha</h3><p class="meta">Redondo · Tartaruga e dourado</p><div class="price">Preço sob consulta</div><a class="mini-btn" href="#" data-orc="Linha">Escolher e pedir orçamento</a></div></article>
-<article class="card tilt" data-cat="optico" data-name="Norte" data-format="Redondo" data-color="Transparente e marrom"><img src="https://alexsander-otica.passosnikolas5.workers.dev/frames/6143506.jpg" alt="Fotografia de referência: redondo transparente."/><div class="pad"><small class="cat"><span>Óptico</span><button type="button" data-orc="Norte">Orçamento ↗</button></small><h3>Norte</h3><p class="meta">Redondo · Transparente e marrom</p><div class="price">Preço sob consulta</div><a class="mini-btn" href="#" data-orc="Norte">Escolher e pedir orçamento</a></div></article>
-<article class="card tilt" data-cat="optico" data-name="Vértice" data-format="Redondo" data-color="Preto"><img src="https://alexsander-otica.passosnikolas5.workers.dev/frames/26682029.jpg" alt="Fotografia de referência: redondo preto."/><div class="pad"><small class="cat"><span>Óptico</span><button type="button" data-orc="Vértice">Orçamento ↗</button></small><h3>Vértice</h3><p class="meta">Redondo · Preto</p><div class="price">Preço sob consulta</div><a class="mini-btn" href="#" data-orc="Vértice">Escolher e pedir orçamento</a></div></article>
-<article class="card tilt" data-cat="optico" data-name="Névoa" data-format="Quadrado" data-color="Verde translúcido"><img src="https://alexsander-otica.passosnikolas5.workers.dev/frames/36824998.jpg" alt="Fotografia de referência: quadrado verde translúcido."/><div class="pad"><small class="cat"><span>Óptico</span><button type="button" data-orc="Névoa">Orçamento ↗</button></small><h3>Névoa</h3><p class="meta">Quadrado · Verde translúcido</p><div class="price">Preço sob consulta</div><a class="mini-btn" href="#" data-orc="Névoa">Escolher e pedir orçamento</a></div></article>
-<article class="card tilt" data-cat="optico" data-name="Íris" data-format="Gatinho" data-color="Rosa ou marrom"><img src="https://alexsander-otica.passosnikolas5.workers.dev/frames/7357971.jpg" alt="Fotografia de referência: gatinho rosa e marrom."/><div class="pad"><small class="cat"><span>Óptico</span><button type="button" data-orc="Íris">Orçamento ↗</button></small><h3>Íris</h3><p class="meta">Gatinho · Rosa ou marrom</p><div class="price">Preço sob consulta</div><a class="mini-btn" href="#" data-orc="Íris">Escolher e pedir orçamento</a></div></article>
-<article class="card tilt" data-cat="solar" data-name="Aurora" data-format="Retangular" data-color="Preto"><img src="https://alexsander-otica.passosnikolas5.workers.dev/frames/8360292.jpg" alt="Fotografia de referência: solar retangular preto."/><div class="pad"><small class="cat"><span>Solar</span><button type="button" data-orc="Aurora">Orçamento ↗</button></small><h3>Aurora</h3><p class="meta">Retangular · Preto</p><div class="price">Preço sob consulta</div><a class="mini-btn" href="#" data-orc="Aurora">Escolher e pedir orçamento</a></div></article>
-<article class="card tilt" data-cat="solar" data-name="Brisa" data-format="Quadrado" data-color="Preto com lentes vermelhas"><img src="https://alexsander-otica.passosnikolas5.workers.dev/frames/13982236.jpg" alt="Fotografia de referência: solar com lentes vermelhas."/><div class="pad"><small class="cat"><span>Solar</span><button type="button" data-orc="Brisa">Orçamento ↗</button></small><h3>Brisa</h3><p class="meta">Quadrado · Preto com lentes vermelhas</p><div class="price">Preço sob consulta</div><a class="mini-btn" href="#" data-orc="Brisa">Escolher e pedir orçamento</a></div></article>
+<article class="card tilt" data-cat="solar" data-name="Aviador Azul" data-format="Aviador" data-color="Dourado e azul" data-preco="R$ 80"><img src="./fotos/solar-aviador-azul.jpg" alt="Óculos de sol Aviador Azul com armação dourada e lente azul." loading="lazy"/><div class="pad"><small class="cat"><span>Solar · Promoção</span><button type="button" data-orc="Aviador Azul" data-preco="R$ 80">Orçamento ↗</button></small><h3>Aviador Azul</h3><p class="meta">Aviador · Dourado e azul</p><div class="price"><span class="old">R$ 150</span><strong>R$ 80</strong><span class="promo-tag">PROMOÇÃO</span></div><a class="mini-btn" href="#" data-orc="Aviador Azul" data-preco="R$ 80">Escolher e pedir orçamento</a></div></article>
+<article class="card tilt" data-cat="optico" data-name="Oval Tartaruga" data-format="Oval" data-color="Tartaruga" data-preco="R$ 80"><img src="./fotos/optico-oval-tartaruga.jpg" alt="Óculos de grau Oval Tartaruga em acetato." loading="lazy"/><div class="pad"><small class="cat"><span>Óptico · Promoção</span><button type="button" data-orc="Oval Tartaruga" data-preco="R$ 80">Orçamento ↗</button></small><h3>Oval Tartaruga</h3><p class="meta">Oval · Tartaruga</p><div class="price"><span class="old">R$ 120</span><strong>R$ 80</strong><span class="promo-tag">PROMOÇÃO</span></div><a class="mini-btn" href="#" data-orc="Oval Tartaruga" data-preco="R$ 80">Escolher e pedir orçamento</a></div></article>
+<article class="card tilt" data-cat="optico" data-name="Retangular Tartaruga" data-format="Retangular" data-color="Tartaruga" data-preco="R$ 120"><img src="./fotos/optico-retangular-tartaruga.jpg" alt="Óculos de grau Retangular Tartaruga em acetato." loading="lazy"/><div class="pad"><small class="cat"><span>Óptico</span><button type="button" data-orc="Retangular Tartaruga" data-preco="R$ 120">Orçamento ↗</button></small><h3>Retangular Tartaruga</h3><p class="meta">Retangular · Tartaruga</p><div class="price"><strong>R$ 120</strong></div><a class="mini-btn" href="#" data-orc="Retangular Tartaruga" data-preco="R$ 120">Escolher e pedir orçamento</a></div></article>
+<article class="card tilt" data-cat="solar" data-name="Wayfarer Marrom" data-format="Wayfarer" data-color="Marrom degradê" data-preco="R$ 150"><img src="./fotos/solar-wayfarer-marrom.jpg" alt="Óculos de sol Wayfarer Marrom com lente degradê." loading="lazy"/><div class="pad"><small class="cat"><span>Solar</span><button type="button" data-orc="Wayfarer Marrom" data-preco="R$ 150">Orçamento ↗</button></small><h3>Wayfarer Marrom</h3><p class="meta">Wayfarer · Marrom degradê</p><div class="price"><strong>R$ 150</strong></div><a class="mini-btn" href="#" data-orc="Wayfarer Marrom" data-preco="R$ 150">Escolher e pedir orçamento</a></div></article>
+<article class="card tilt" data-cat="solar" data-name="Redondo Preto" data-format="Redondo" data-color="Preto" data-preco="R$ 140"><img src="./fotos/solar-redondo-preto.jpg" alt="Óculos de sol Redondo Preto em metal." loading="lazy"/><div class="pad"><small class="cat"><span>Solar</span><button type="button" data-orc="Redondo Preto" data-preco="R$ 140">Orçamento ↗</button></small><h3>Redondo Preto</h3><p class="meta">Redondo · Preto</p><div class="price"><strong>R$ 140</strong></div><a class="mini-btn" href="#" data-orc="Redondo Preto" data-preco="R$ 140">Escolher e pedir orçamento</a></div></article>
+<article class="card tilt" data-cat="solar" data-name="Hexagonal Âmbar" data-format="Hexagonal" data-color="Marrom âmbar" data-preco="R$ 130"><img src="./fotos/solar-hexagonal-ambar.jpg" alt="Óculos de sol Hexagonal Âmbar." loading="lazy"/><div class="pad"><small class="cat"><span>Solar</span><button type="button" data-orc="Hexagonal Âmbar" data-preco="R$ 130">Orçamento ↗</button></small><h3>Hexagonal Âmbar</h3><p class="meta">Hexagonal · Marrom âmbar</p><div class="price"><strong>R$ 130</strong></div><a class="mini-btn" href="#" data-orc="Hexagonal Âmbar" data-preco="R$ 130">Escolher e pedir orçamento</a></div></article>
+<article class="card tilt" data-cat="solar" data-name="Bali Quadrado" data-format="Quadrado" data-color="Preto" data-preco="R$ 150"><img src="./fotos/solar-bali-quadrado.jpg" alt="Óculos de sol Bali Quadrado preto." loading="lazy"/><div class="pad"><small class="cat"><span>Solar</span><button type="button" data-orc="Bali Quadrado" data-preco="R$ 150">Orçamento ↗</button></small><h3>Bali Quadrado</h3><p class="meta">Quadrado · Preto</p><div class="price"><strong>R$ 150</strong></div><a class="mini-btn" href="#" data-orc="Bali Quadrado" data-preco="R$ 150">Escolher e pedir orçamento</a></div></article>
+<article class="card tilt" data-cat="solar" data-name="Redondo Grafite" data-format="Redondo" data-color="Grafite" data-preco="R$ 130"><img src="./fotos/solar-redondo-grafite.jpg" alt="Óculos de sol Redondo Grafite." loading="lazy"/><div class="pad"><small class="cat"><span>Solar</span><button type="button" data-orc="Redondo Grafite" data-preco="R$ 130">Orçamento ↗</button></small><h3>Redondo Grafite</h3><p class="meta">Redondo · Grafite</p><div class="price"><strong>R$ 130</strong></div><a class="mini-btn" href="#" data-orc="Redondo Grafite" data-preco="R$ 130">Escolher e pedir orçamento</a></div></article>
 </div>
+<p class="empty" id="vazio">Nenhum modelo encontrado com esses filtros. <button class="reset" id="limpar2" type="button">Limpar filtros ✕</button></p>
 </section>
 
 <section id="lentes" class="section reveal">
@@ -442,14 +447,17 @@ footer a{color:var(--off);margin-right:12px;font-size:.88rem}
     vis.forEach(function(c){ grade.appendChild(c); c.style.display=''; });
     cards.forEach(function(c){ if(vis.indexOf(c) < 0) c.style.display='none'; });
     contagem.textContent = vis.length + (vis.length === 1 ? ' modelo na seleção' : ' modelos na seleção');
+    document.getElementById('vazio').classList.toggle('show', vis.length === 0);
     limpar.disabled = !(q || f || tab!=='todos' || ordem.value!=='destaques');
   }
-  // Orçamento pelo WhatsApp com o nome do modelo
+  document.getElementById('limpar2').addEventListener('click', function(){ limpar.click(); });
+  // Orçamento pelo WhatsApp com o nome do modelo e o preço
   document.querySelectorAll('[data-orc]').forEach(function(el){
     el.addEventListener('click', function(ev){
       ev.preventDefault();
       var m = el.getAttribute('data-orc');
-      window.open('https://wa.me/5521984816082?text=' + encodeURIComponent('Olá Alexsander Ótica, quero orçamento do modelo ' + m), '_blank');
+      var p = el.getAttribute('data-preco') || '';
+      window.open('https://wa.me/5521984816082?text=' + encodeURIComponent('Olá Alexsander Ótica, quero o modelo ' + m + (p ? ' (' + p + ')' : '')), '_blank');
     });
   });
 })();
