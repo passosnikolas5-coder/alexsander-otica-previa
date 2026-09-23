@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Alexsander Ótica — Seu olhar, nosso cuidado | Mesquita RJ</title>
+<style>
+:root{--azul:#002D62;--azul2:#001E42;--azul-soft:#E8EDF3;--off:#F5F5F0;--dourado:#C9A84C;--dourado2:#A88A35;--branco:#fff;--sombra:0 10px 30px rgba(0,45,98,.12)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;background:var(--off);color:var(--azul);line-height:1.6}
+h1,h2,h3{font-family:Georgia,"Times New Roman",serif;letter-spacing:-.02em}
+.announcement{background:linear-gradient(90deg,var(--azul2),var(--azul));color:var(--off);text-align:center;font-size:.84rem;padding:10px 16px}
+.announcement strong{color:var(--dourado);font-weight:800;letter-spacing:.06em;text-transform:uppercase;font-size:.78rem;margin-left:8px}
+header{background:rgba(245,245,240,.92);backdrop-filter:blur(10px);border-bottom:2px solid var(--dourado);padding:12px 24px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:20}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--azul)}
+.brand-mark{width:40px;height:40px;border-radius:12px;background:var(--azul);color:var(--off);display:grid;place-items:center;font-weight:900;font-size:1.3rem;border:2px solid var(--dourado)}
+.brand-name{font-weight:900;letter-spacing:.08em;line-height:1}
+.brand-dot{color:var(--dourado)}
+.slogan-oficial{display:block;font-family:Inter,system-ui,sans-serif;font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--dourado2);font-weight:800;margin-top:3px}
+nav{display:flex;gap:18px;font-size:.92rem;align-items:center}
+nav a{color:var(--azul);text-decoration:none;font-weight:500}
+nav a.cta{background:var(--azul);color:var(--off);padding:9px 16px;border-radius:999px;border:1.5px solid var(--dourado);font-weight:700}
+nav a.cta:hover{background:var(--azul2)}
+.container{max-width:1120px;margin:0 auto;padding:44px 24px}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:Inter,system-ui,sans-serif;font-size:.76rem;text-transform:uppercase;letter-spacing:.16em;color:var(--azul);font-weight:800}
+.eyebrow::before{content:"";width:34px;height:3px;background:linear-gradient(90deg,var(--dourado),var(--dourado2));display:inline-block;border-radius:2px}
+h1{font-size:clamp(2.4rem,5.2vw,3.9rem);line-height:1.02;margin:14px 0 8px}
+h1 em,h2 em{font-style:italic;font-weight:400;border-bottom:3px solid var(--dourado);padding-bottom:2px}
+h2{font-size:clamp(1.7rem,3.6vw,2.5rem);margin:10px 0 8px}
+.hero{display:grid;grid-template-columns:1.05fr .95fr;gap:32px;align-items:center}
+.hero-slogan{font-size:1.25rem;margin-top:6px;color:var(--azul)}
+.hero-slogan strong{color:var(--dourado2)}
+.hero-lead{opacity:.85;margin:12px 0 20px;max-width:46ch}
+.trust{display:flex;gap:12px;align-items:center;margin:16px 0;font-size:.88rem}
+.stars{color:var(--dourado);letter-spacing:.1em;font-weight:800}
+.btn{display:inline-block;background:var(--azul);color:var(--off);padding:13px 22px;border-radius:12px;text-decoration:none;font-weight:800;border:2px solid var(--azul)}
+.btn:hover{background:var(--azul2);border-color:var(--dourado);transform:translateY(-1px)}
+.btn-gold{background:var(--dourado);border-color:var(--dourado);color:var(--azul2)}
+.btn-gold:hover{background:#b9973f;color:#fff}
+.btn-ghost{color:var(--azul);font-weight:700;margin-left:12px}
+.badge{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--dourado);color:var(--azul);border-radius:999px;padding:7px 13px;font-size:.83rem;margin-top:16px;box-shadow:var(--sombra)}
+.badge i{width:8px;height:8px;border-radius:50%;background:var(--dourado);display:inline-block}
+.hero-media{position:relative}
+.hero-media img{width:100%;border-radius:20px;border:1px solid rgba(0,45,98,.15);box-shadow:var(--sombra);display:block}
+.hero-media::after{content:"Mesquita · RJ — desde o atendimento até o ajuste";position:absolute;left:16px;bottom:16px;background:rgba(0,45,98,.88);color:var(--off);font-size:.8rem;padding:8px 12px;border-radius:10px;border-left:3px solid var(--dourado)}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:22px}
+.card{background:var(--branco);border:1px solid rgba(0,45,98,.12);border-top:4px solid var(--dourado);border-radius:16px;overflow:hidden;transition:.2s;box-shadow:0 4px 16px rgba(0,45,98,.06)}
+.card:hover{transform:translateY(-3px);box-shadow:var(--sombra)}
+.card img{width:100%;height:160px;object-fit:cover;display:block}
+.card div{padding:14px 15px}
+.card small{color:var(--dourado2);font-weight:800;text-transform:uppercase;letter-spacing:.08em;font-size:.7rem}
+.card p{font-size:.9rem;opacity:.8}
+.price{font-weight:800;margin-top:6px}
+.mini-btn{display:inline-block;margin-top:10px;font-size:.85rem;font-weight:700;color:var(--azul);text-decoration:none;border-bottom:2px solid var(--dourado)}
+.section-note{opacity:.75;max-width:60ch}
+.lentes{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:22px}
+.lente{background:var(--branco);border:1px solid rgba(0,45,98,.12);border-radius:16px;padding:20px;position:relative;overflow:hidden}
+.lente::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--azul),var(--dourado))}
+.lente span{color:var(--dourado);font-weight:900;font-size:.9rem;letter-spacing:.1em}
+.materiais{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:22px}
+.mat{background:var(--branco);border-radius:16px;padding:22px;border:1px solid rgba(0,45,98,.12);border-top:4px solid var(--dourado)}
+.mat i{width:36px;height:36px;border-radius:10px;background:var(--azul-soft);border:1px solid var(--dourado);display:grid;place-items:center;font-style:normal;margin-bottom:10px}
+.dark{background:linear-gradient(135deg,var(--azul2),var(--azul));color:var(--off);border-radius:20px;padding:36px 30px;margin-top:28px;border:1px solid var(--dourado);position:relative;overflow:hidden}
+.dark::after{content:"";position:absolute;width:320px;height:320px;right:-80px;top:-80px;background:radial-gradient(circle,rgba(201,168,76,.35),transparent 70%)}
+.dark h2,.dark p{color:var(--off);position:relative;z-index:1}
+.dark .eyebrow{color:var(--dourado)}
+.reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:20px}
+.rev{background:#fff;border-radius:16px;padding:20px;border:1px solid rgba(0,45,98,.12);border-left:4px solid var(--dourado)}
+details{background:#fff;border:1px solid rgba(0,45,98,.15);border-radius:12px;padding:14px 16px;margin-top:10px}
+summary{font-weight:700;cursor:pointer;color:var(--azul)}
+.store{display:grid;grid-template-columns:.9fr 1.1fr;gap:26px;align-items:center;margin-top:10px;background:#fff;border:1px solid rgba(0,45,98,.12);border-radius:20px;padding:22px;border-top:4px solid var(--dourado)}
+.store img{width:100%;border-radius:14px}
+footer{background:var(--azul2);color:var(--off);border-top:3px solid var(--dourado);padding:28px 24px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+footer .slogan-oficial{color:var(--dourado)}
+.wpp{position:fixed;right:18px;bottom:18px;background:var(--azul);color:#fff;text-decoration:none;padding:13px 18px;border-radius:999px;border:2px solid var(--dourado);font-weight:800;box-shadow:var(--sombra)}
+@media(max-width:860px){.hero,.store{grid-template-columns:1fr}nav{display:none}.grid,.lentes,.reviews,.materiais{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.grid,.lentes,.reviews,.materiais{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="announcement">Alexsander Ótica · Rua Poligonal, 10 · Mesquita, RJ <strong>✦ Seu olhar, nosso cuidado.</strong></div>
+<header>
+<a class="brand" href="#"><span class="brand-mark">A</span><span class="brand-name">ALEXSANDER<span class="brand-dot">.</span><span class="slogan-oficial">Seu olhar, nosso cuidado</span></span></a>
+<nav><a href="#colecao">Coleção</a><a href="#lentes">Lentes</a><a href="#materiais">Materiais</a><a href="#loja">Loja física</a><a class="cta" href="https://wa.me/5521984816082">WhatsApp ↗</a></nav>
+</header>
+<div class="container">
+<div class="hero">
+<div>
+<div class="eyebrow">Alexsander Ótica · Mesquita</div>
+<h1>Um novo olhar.<br/><em>Nos mínimos detalhes.</em></h1>
+<p class="hero-slogan">Seu olhar, <strong>nosso cuidado.</strong></p>
+<p class="hero-lead">Formas, cores e acabamentos que expressam seu estilo. Explore as armações e encontre sua próxima escolha com a nossa equipe.</p>
+<div class="trust"><span class="stars">★★★★★ 5,0/5</span><span>29 avaliações no Google · Atendimento próximo</span></div>
+<div><a class="btn" href="#colecao">Explorar armações</a><a class="btn-ghost" href="#lentes">Escolher minhas lentes →</a></div>
+<div><span class="badge"><i></i>Orçamento personalizado pelo WhatsApp</span></div>
+</div>
+<div class="hero-media"><img src="https://alexsander-otica.passosnikolas5.workers.dev/campaigns/eyewear-editorial.jpg" alt="Campanha Alexsander Ótica"/></div>
+</div>
+
+<div id="colecao" style="margin-top:38px">
+<div class="eyebrow">Escolha seu próximo par</div>
+<h2>Seu estilo. <em>Seu próximo par.</em></h2>
+<p class="section-note">Fotografias reais para inspirar sua escolha. Envie a referência que combina com você.</p>
+<div class="grid">
+<div class="card"><img src="https://alexsander-otica.passosnikolas5.workers.dev/frames/25389282.jpg" alt="Lumen"/><div><small>Óptico · Retangular</small><h3>Lumen</h3><p>Retangular · Preto</p><div class="price">Preço sob consulta</div><a class="mini-btn" href="#">Escolher e pedir orçamento</a></div></div>
+<div class="card"><img src="https://alexsander-otica.passosnikolas5.workers.dev/frames/14482342.jpg" alt="Linha"/><div><small>Óptico · Redondo</small><h3>Linha</h3><p>Tartaruga e dourado</p><div class="price">Preço sob consulta</div><a class="mini-btn" href="#">Escolher e pedir orçamento</a></div></div>
+<div class="card"><img src="https://alexsander-otica.passosnikolas5.workers.dev/frames/6143506.jpg" alt="Norte"/><div><small>Óptico · Redondo</small><h3>Norte</h3><p>Transparente e marrom</p><div class="price">Preço sob consulta</div><a class="mini-btn" href="#">Escolher e pedir orçamento</a></div></div>
+<div class="card"><img src="https://alexsander-otica.passosnikolas5.workers.dev/frames/13982236.jpg" alt="Brisa"/><div><small>Solar · Quadrado</small><h3>Brisa</h3><p>Preto com lentes vermelhas</p><div class="price">Preço sob consulta</div><a class="mini-btn" href="#">Escolher e pedir orçamento</a></div></div>
+</div>
+</div>
+
+<div id="lentes" style="margin-top:38px">
+<div class="eyebrow">Escolha sua lente</div>
+<h2>Mais conforto <em>em cada olhar.</em></h2>
+<div class="lentes">
+<div class="lente"><span>01</span><h3>Transparente</h3><p>Leve e versátil para o dia a dia.</p></div>
+<div class="lente"><span>02</span><h3>Antirreflexo</h3><p>Mais nitidez para telas e direção.</p></div>
+<div class="lente"><span>03</span><h3>Fotossensível</h3><p>Clara dentro, escura no sol.</p></div>
+<div class="lente"><span>04</span><h3>Polarizada</h3><p>Reduz reflexos e realça cores.</p></div>
+</div>
+</div>
+
+<div id="materiais" style="margin-top:38px">
+<div class="eyebrow">Por dentro da Alexsander</div>
+<h2>Materiais que <em>fazem diferença.</em></h2>
+<div class="materiais">
+<div class="mat"><i>◈</i><h3>Acetato premium</h3><p>Toque confortável, cores profundas e brilho natural.</p></div>
+<div class="mat"><i>◇</i><h3>Metal leve</h3><p>Linhas finas e ajuste delicado, quase imperceptível.</p></div>
+<div class="mat"><i>✦</i><h3>Bio-based</h3><p>Base renovável, escolha consciente sem perder estilo.</p></div>
+</div>
+</div>
+
+<div class="dark">
+<div class="eyebrow">Atendimento Alexsander Ótica</div>
+<h2>Encontre o par <em>que encontra você.</em></h2>
+<p>Conte sua rotina e a gente indica armações, lentes e tamanhos que fazem sentido.</p>
+<p style="margin-top:14px;position:relative;z-index:1"><a class="btn btn-gold" href="https://wa.me/5521984816082">Falar no WhatsApp ↗</a></p>
+</div>
+
+<div style="margin-top:34px">
+<div class="eyebrow">Quem escolhe a Alexsander</div>
+<h2>Cuidado que vira <em>recomendação.</em></h2>
+<div class="reviews">
+<div class="rev"><div class="stars">★★★★★</div><p>“Gostei muito do tratamento, facilita a forma de pagamento.”</p><small>Taiane Lima · Google</small></div>
+<div class="rev"><div class="stars">★★★★★</div><p>“O atendimento é ótimo!”</p><small>Isabel Peres · Google</small></div>
+<div class="rev"><div class="stars">★★★★★</div><p>“Atendimento excelente, super recomendo.”</p><small>Veronica Lacerda · Google</small></div>
+</div>
+</div>
+
+<div id="loja" class="store" style="margin-top:30px">
+<div><img src="https://linktr.ee/og/image/Alexsanderotica.jpg" alt="Alexsander Ótica"/></div>
+<div><div class="eyebrow">Visite a loja</div><h2>Seu olhar,<br/><em>bem cuidado.</em></h2><p>Rua Poligonal, 10 · Mesquita, RJ<br/>(21) 98481-6082 · WhatsApp<br/>Aberto · confira o horário pelo WhatsApp</p><p style="margin-top:12px"><a class="btn" href="#">Chamar no WhatsApp ↗</a></p></div>
+</div>
+
+<div style="margin-top:28px">
+<div class="eyebrow">Dúvidas frequentes</div>
+<h2>Antes de <em>escolher.</em></h2>
+<details open><summary>Como escolho o tamanho ideal?</summary><p>Compare com uma armação que você já usa ou fale com nossa equipe.</p></details>
+<details><summary>As lentes têm proteção UV?</summary><p>Confirme proteção e especificações com a equipe antes da compra.</p></details>
+</div>
+</div>
+<a class="wpp" href="https://wa.me/5521984816082">WhatsApp</a>
+<footer>
+<div><b>ALEXSANDER<span style="color:var(--dourado)">.</span></b><br/><span class="slogan-oficial">Seu olhar, nosso cuidado</span><br/><small>Elegância, conforto e cuidado com a sua visão.</small></div>
+<div><small>Rua Poligonal, 10 · Mesquita RJ<br/>© 2026 Alexsander Ótica</small></div>
+</footer>
+</body>
+</html>

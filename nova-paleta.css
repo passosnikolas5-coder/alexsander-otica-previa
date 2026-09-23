@@ -1,0 +1,219 @@
+/* ============================================================
+   Alexsander Ótica — Paleta institucional
+   Azul-marinho #002D62 (principal)
+   Off-white #F5F5F0 (fundo)
+   Dourado #C9A84C (destaque)
+   Como usar: cole NO FINAL do seu globals.css / layout.css
+   Isso sobrescreve sem mudar layout, fontes ou estrutura.
+   ============================================================ */
+
+:root {
+  --azul-marinho: #002D62;
+  --azul-marinho-escuro: #001E42;
+  --off-white: #F5F5F0;
+  --dourado: #C9A84C;
+  --dourado-claro: #DECB8E;
+}
+
+/* Fundo geral */
+body, main#top {
+  background-color: var(--off-white) !important;
+  color: var(--azul-marinho) !important;
+}
+
+/* Barra de anúncio topo */
+.announcement {
+  background-color: var(--azul-marinho) !important;
+  color: var(--off-white) !important;
+}
+.announcement span {
+  color: var(--dourado) !important;
+}
+
+/* Header */
+.shop-header {
+  background-color: var(--off-white) !important;
+  border-bottom: 2px solid var(--dourado) !important;
+}
+.brand, .brand span {
+  color: var(--azul-marinho) !important;
+}
+.brand-mark {
+  background-color: var(--azul-marinho) !important;
+  color: var(--off-white) !important;
+}
+.brand-dot {
+  color: var(--dourado) !important;
+}
+.desktop-nav a {
+  color: var(--azul-marinho) !important;
+}
+.nav-whatsapp, .desktop-nav a.nav-whatsapp {
+  background-color: var(--azul-marinho) !important;
+  color: var(--off-white) !important;
+  border: 1px solid var(--dourado) !important;
+}
+
+/* Títulos e detalhes — seções claras */
+#colecao h2, #lentes h2, #materiais h2, #guia h2,
+#cuidados h2, #entrega h2, #pagamento h2,
+#avaliacoes h2, #faq h2, #loja h2, h3 {
+  color: var(--azul-marinho) !important;
+}
+#colecao h2 em, #lentes h2 em, #materiais h2 em,
+#guia h2 em, #cuidados h2 em, #entrega h2 em,
+#pagamento h2 em, #avaliacoes h2 em, #faq h2 em, #loja h2 em {
+  color: var(--azul-marinho) !important;
+  border-bottom: 3px solid var(--dourado);
+  font-style: italic;
+}
+/* HERO tem fundo escuro — título precisa ser claro para leitura */
+.shop-hero, .editorial-hero {
+  background: linear-gradient(135deg, #001E42 0%, #002D62 55%, #0a2a52 100%) !important;
+}
+.shop-hero h1, .editorial-hero h1 {
+  color: var(--off-white) !important;
+  text-shadow: 0 2px 18px rgba(0,0,0,.35);
+}
+.shop-hero h1 em, .editorial-hero h1 em {
+  color: var(--dourado-claro) !important;
+  border-bottom: 3px solid var(--dourado) !important;
+}
+.shop-hero .hero-lead, .editorial-hero .hero-lead,
+.shop-hero .eyebrow, .editorial-hero .eyebrow {
+  color: var(--off-white) !important;
+  opacity: .92;
+}
+.shop-hero .hero-slogan, .hero-slogan {
+  color: var(--off-white) !important;
+}
+.shop-hero .hero-slogan strong, .hero-slogan strong {
+  color: var(--dourado) !important;
+}
+.eyebrow {
+  color: var(--azul-marinho) !important;
+}
+.eyebrow-line {
+  background-color: var(--dourado) !important;
+}
+
+/* Botões principais — acabamento premium */
+.button-primary {
+  background-color: var(--azul-marinho) !important;
+  color: var(--off-white) !important;
+  border: 2px solid var(--dourado) !important;
+  box-shadow: 0 8px 22px rgba(0,45,98,.28) !important;
+}
+.button-primary:hover {
+  background-color: var(--azul-marinho-escuro) !important;
+  border-color: var(--dourado-claro) !important;
+  transform: translateY(-1px);
+}
+.nav-whatsapp, .desktop-nav a.nav-whatsapp {
+  background: linear-gradient(135deg, var(--dourado), #b9973f) !important;
+  color: var(--azul-marinho-escuro) !important;
+  border: 1px solid var(--dourado-claro) !important;
+  font-weight: 800 !important;
+  box-shadow: 0 6px 16px rgba(201,168,76,.35) !important;
+}
+.hero-campaign img, .hero-editorial-media img {
+  border: 1px solid rgba(201,168,76,.55) !important;
+  box-shadow: 0 18px 50px rgba(0,0,0,.35) !important;
+}
+.product-card, .lens-card, .review-card {
+  box-shadow: 0 6px 20px rgba(0,45,98,.08) !important;
+  border-radius: 14px !important;
+  overflow: hidden !important;
+}
+.product-card:hover, .lens-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 32px rgba(0,45,98,.16) !important;
+  border-top-color: var(--dourado-claro) !important;
+}
+.button-light {
+  background-color: var(--dourado) !important;
+  color: var(--azul-marinho) !important;
+  border: 2px solid var(--dourado) !important;
+}
+.hero-secondary-link, .text-link {
+  color: var(--azul-marinho) !important;
+  text-decoration-color: var(--dourado) !important;
+}
+
+/* Cards de produto / lentes / materiais */
+.product-card, .lens-card, .materials-grid article,
+.operations-grid article, .payment-grid > div,
+.review-card, .care-card, .contact-card {
+  background-color: #FFFFFF !important;
+  border: 1px solid rgba(0,45,98,0.12) !important;
+  border-top: 3px solid var(--dourado) !important;
+}
+.product-meta span, .lens-symbol, .material-number,
+.service-icon, .payment-icon, .reviews-stars {
+  color: var(--dourado) !important;
+}
+.view-detail {
+  color: var(--azul-marinho) !important;
+}
+
+/* Abas e filtros */
+.category-tabs button.active {
+  background-color: var(--azul-marinho) !important;
+  color: var(--off-white) !important;
+}
+.category-tabs button {
+  border: 1px solid var(--azul-marinho) !important;
+  color: var(--azul-marinho) !important;
+}
+
+/* Seções escuras (contato / benefícios) */
+.contact-card, .benefits {
+  background-color: var(--azul-marinho) !important;
+  color: var(--off-white) !important;
+}
+.contact-card h2, .contact-card p, .benefits h2, .benefits p {
+  color: var(--off-white) !important;
+}
+.contact-card .eyebrow, .benefits .eyebrow {
+  color: var(--dourado) !important;
+}
+
+/* Rodapé */
+.footer {
+  border-top: 2px solid var(--dourado) !important;
+}
+.footer p, .footer span {
+  color: var(--azul-marinho) !important;
+}
+
+/* Slogan — classe nova */
+.slogan-oficial {
+  display: block;
+  font-size: 0.95rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--dourado);
+  font-weight: 600;
+  margin-top: 6px;
+}
+.hero-slogan {
+  font-size: 1.05rem;
+  color: var(--azul-marinho);
+  font-weight: 500;
+  margin-top: 8px;
+}
+.hero-slogan strong {
+  color: var(--dourado);
+  font-weight: 700;
+}
+
+/* Brilhos ambientes antigos (laranja/menta) → tons da marca */
+.ambient-glow.orange {
+  background: radial-gradient(circle, rgba(201,168,76,0.35), transparent 70%) !important;
+}
+.ambient-glow.mint {
+  background: radial-gradient(circle, rgba(0,45,98,0.18), transparent 70%) !important;
+}
+.cursor-glow, .scroll-progress {
+  background-color: var(--dourado) !important;
+}
