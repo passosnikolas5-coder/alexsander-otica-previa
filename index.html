@@ -19,272 +19,440 @@
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Alexsander Ótica — Seu olhar, nosso cuidado"/>
 <meta name="twitter:image" content="https://passosnikolas5-coder.github.io/alexsander-otica-previa/loja-perfil.png"/>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Optician","name":"Alexsander Ótica","slogan":"Seu olhar, nosso cuidado.","description":"Armações ópticas e solares, lentes antirreflexo, polarizadas e fotossensíveis em Mesquita, RJ.","url":"https://passosnikolas5-coder.github.io/alexsander-otica-previa/","logo":"https://passosnikolas5-coder.github.io/alexsander-otica-previa/loja-perfil.png","image":"https://passosnikolas5-coder.github.io/alexsander-otica-previa/loja-perfil.png","telephone":"+5521984816082","address":{"@type":"PostalAddress","streetAddress":"Rua Poligonal, 10","addressLocality":"Mesquita","addressRegion":"RJ","addressCountry":"BR"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Optician","name":"Alexsander Ótica","slogan":"Seu olhar, nosso cuidado.","description":"Armações ópticas e solares, lentes antirreflexo, polarizadas e fotossensíveis em Mesquita, RJ.","url":"https://passosnikolas5-coder.github.io/alexsander-otica-previa/","logo":"https://passosnikolas5-coder.github.io/alexsander-otica-previa/loja-perfil.png","image":"https://passosnikolas5-coder.github.io/alexsander-otica-previa/loja-perfil.png","telephone":"+5521984816082","address":{"@type":"PostalAddress","streetAddress":"Rua Poligonal, 10","addressLocality":"Mesquita","addressRegion":"RJ","addressCountry":"BR"}}}</script>
 <style>
 :root{--azul:#002D62;--azul2:#001E42;--azul-soft:#E8EDF3;--off:#F5F5F0;--dourado:#C9A84C;--dourado2:#A88A35;--branco:#fff;--sombra:0 10px 30px rgba(0,45,98,.12)}
 *{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
 body{font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;background:var(--off);color:var(--azul);line-height:1.6}
 h1,h2,h3{font-family:Georgia,"Times New Roman",serif;letter-spacing:-.02em}
-.announcement{background:linear-gradient(90deg,var(--azul2),var(--azul));color:var(--off);text-align:center;font-size:.84rem;padding:10px 16px}
+h1 em,h2 em{font-style:italic;font-weight:400}
+a{color:inherit}
+.skip-link{position:absolute;left:-999px}
+.container{max-width:1120px;margin:0 auto;padding:44px 24px}
+.section{padding:8px 0}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:.76rem;text-transform:uppercase;letter-spacing:.16em;font-weight:800}
+.eyebrow::before{content:"";width:34px;height:3px;background:linear-gradient(90deg,var(--dourado),var(--dourado2));display:inline-block;border-radius:2px}
+h2{font-size:clamp(1.7rem,3.6vw,2.5rem);margin:12px 0 10px;line-height:1.3}
+h2 em{color:var(--dourado2)}
+.section-note{opacity:.75;max-width:62ch}
+/* barra + progresso + cursor */
+.scroll-progress{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--dourado),var(--dourado2));z-index:60}
+.cursor-glow{position:fixed;width:220px;height:220px;border-radius:50%;pointer-events:none;z-index:1;background:radial-gradient(circle,rgba(201,168,76,.20),transparent 70%);transform:translate(-50%,-50%)}
+.announcement{background:linear-gradient(90deg,var(--azul2),var(--azul));color:var(--off);text-align:center;font-size:.84rem;padding:10px 16px;position:relative;overflow:hidden}
 .announcement strong{color:var(--dourado);font-weight:800;letter-spacing:.06em;text-transform:uppercase;font-size:.78rem;margin-left:8px}
-header{background:rgba(245,245,240,.92);backdrop-filter:blur(10px);border-bottom:2px solid var(--dourado);padding:12px 24px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:20}
-.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--azul)}
+.announcement::after{content:"";position:absolute;top:0;left:-60%;width:50%;height:100%;background:linear-gradient(100deg,transparent,rgba(201,168,76,.35),transparent);animation:announcement-shimmer 5s ease-in-out infinite}
+@keyframes announcement-shimmer{0%,60%{left:-60%}100%{left:130%}}
+/* header */
+header{background:rgba(245,245,240,.94);backdrop-filter:blur(10px);border-bottom:2px solid var(--dourado);padding:12px 24px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:20}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
 .brand-mark{width:40px;height:40px;border-radius:12px;background:var(--azul);color:var(--off);display:grid;place-items:center;font-weight:900;font-size:1.3rem;border:none}
 .brand-name{font-weight:900;letter-spacing:.08em;line-height:1}
 .brand-dot{color:var(--dourado)}
-.slogan-oficial{display:block;font-family:Inter,system-ui,sans-serif;font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--dourado2);font-weight:800;margin-top:3px}
-nav{display:flex;gap:18px;font-size:.92rem;align-items:center}
-nav a{color:var(--azul);text-decoration:none;font-weight:500}
-nav a.cta{background:var(--azul);color:var(--off);padding:9px 16px;border-radius:999px;border:1.5px solid var(--dourado);font-weight:700}
-nav a.cta:hover{background:var(--azul2)}
-.container{max-width:1120px;margin:0 auto;padding:44px 24px}
-.eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:Inter,system-ui,sans-serif;font-size:.76rem;text-transform:uppercase;letter-spacing:.16em;color:var(--azul);font-weight:800}
-.eyebrow::before{content:"";width:34px;height:3px;background:linear-gradient(90deg,var(--dourado),var(--dourado2));display:inline-block;border-radius:2px}
-h1{font-size:clamp(2.4rem,5.2vw,3.9rem);line-height:1.28;margin:20px 0 4px;text-wrap:balance}
-h1 .h1-linha{display:block}
-h1 .h1-linha-1{margin-bottom:16px}
-h1 em,h2 em{font-style:italic;font-weight:400;border-bottom:none;padding-bottom:0;text-decoration:none}
-h1 em{display:inline;line-height:1.4;padding-bottom:0;margin-bottom:0}
-h1 .h1-linha-2{padding-bottom:0}
-h2{font-size:clamp(1.7rem,3.6vw,2.5rem);margin:12px 0 10px;line-height:1.3}
-.mini-btn{text-decoration:underline;text-decoration-color:var(--dourado);text-decoration-thickness:2px;text-underline-offset:5px;border-bottom:none}
-.hero{display:grid;grid-template-columns:1.05fr .95fr;gap:32px;align-items:center}
-.hero-slogan{font-size:1.25rem;margin-top:24px;color:var(--azul)}
-.hero-slogan strong{color:var(--dourado2)}
-.hero-lead{opacity:.85;margin:12px 0 20px;max-width:46ch}
-.trust{display:flex;gap:12px;align-items:center;margin:16px 0;font-size:.88rem}
+.slogan-oficial{display:block;font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--dourado2);font-weight:800;margin-top:3px}
+nav{display:flex;gap:16px;font-size:.9rem;align-items:center;flex-wrap:wrap}
+nav a{text-decoration:none;font-weight:500}
+nav a.cta{background:linear-gradient(135deg,var(--dourado),#b9973f);color:var(--azul2);padding:9px 16px;border-radius:999px;border:1px solid var(--dourado);font-weight:800}
+/* hero */
+.hero{background:linear-gradient(135deg,#001E42 0%,#002D62 55%,#0a2a52 100%);position:relative;overflow:hidden}
+.hero-inner{max-width:1120px;margin:0 auto;padding:56px 24px;display:grid;grid-template-columns:1.05fr .95fr;gap:32px;align-items:center;position:relative}
+.hero .eyebrow{color:var(--dourado)}
+.hero h1{font-size:clamp(2.4rem,5.2vw,3.8rem);line-height:1.28;margin:20px 0 4px;color:var(--off);text-wrap:balance}
+.hero h1 .h1-linha{display:block}
+.hero h1 .h1-linha-1{margin-bottom:16px}
+.hero h1 em{color:var(--dourado);text-decoration:none}
+.hero-slogan{font-size:1.2rem;margin-top:22px;color:var(--off)}
+.hero-slogan strong{color:var(--dourado)}
+.hero-lead{opacity:.88;margin:12px 0 20px;max-width:46ch;color:var(--off)}
+.trust{display:flex;gap:12px;align-items:center;margin:16px 0;font-size:.88rem;color:var(--off)}
 .stars{color:var(--dourado);letter-spacing:.1em;font-weight:800}
-.btn{display:inline-block;background:var(--azul);color:var(--off);padding:13px 22px;border-radius:12px;text-decoration:none;font-weight:800;border:2px solid var(--azul)}
-.btn:hover{background:var(--azul2);border-color:var(--dourado);transform:translateY(-1px)}
-.btn-gold{background:var(--dourado);border-color:var(--dourado);color:var(--azul2)}
-.btn-gold:hover{background:#b9973f;color:#fff}
-.btn-ghost{color:var(--azul);font-weight:700;margin-left:12px}
-.badge{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--dourado);color:var(--azul);border-radius:999px;padding:7px 13px;font-size:.83rem;margin-top:16px;box-shadow:var(--sombra)}
+.btn{display:inline-block;background:var(--dourado);color:var(--azul2);padding:13px 22px;border-radius:12px;text-decoration:none;font-weight:800;border:2px solid var(--dourado);position:relative;overflow:hidden;transition:transform .2s ease}
+.btn:hover{transform:translateY(-1px)}
+.btn::after{content:"";position:absolute;top:0;left:-70%;width:45%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.5),transparent);transform:skewX(-20deg);animation:btn-shimmer 4.5s ease-in-out infinite}
+@keyframes btn-shimmer{0%,65%{left:-70%}100%{left:140%}}
+.btn-ghost{color:var(--off);font-weight:700;margin-left:12px}
+.badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.1);border:1px solid var(--dourado);color:var(--off);border-radius:999px;padding:7px 13px;font-size:.83rem;margin-top:16px;animation:float-badge 4s ease-in-out infinite}
 .badge i{width:8px;height:8px;border-radius:50%;background:var(--dourado);display:inline-block}
-.hero-media{position:relative}
-.hero-media img{width:100%;border-radius:20px;border:1px solid rgba(0,45,98,.15);box-shadow:var(--sombra);display:block}
-.hero-media::after{content:"Mesquita · RJ — desde o atendimento até o ajuste";position:absolute;left:16px;bottom:16px;background:rgba(0,45,98,.88);color:var(--off);font-size:.8rem;padding:8px 12px;border-radius:10px;border-left:3px solid var(--dourado)}
+@keyframes float-badge{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+.ambient-glow{position:absolute;border-radius:50%;filter:blur(60px);pointer-events:none}
+.ambient-glow.gold{width:340px;height:340px;right:-60px;top:-40px;background:radial-gradient(circle,rgba(201,168,76,.35),transparent 70%);animation:glow-breathe 6s ease-in-out infinite}
+.ambient-glow.navy{width:300px;height:300px;left:-70px;bottom:-50px;background:radial-gradient(circle,rgba(0,45,98,.4),transparent 70%);animation:glow-breathe 7s ease-in-out infinite reverse}
+@keyframes glow-breathe{0%,100%{opacity:.6;transform:scale(1)}50%{opacity:1;transform:scale(1.12)}}
+.hero-particle{position:absolute;width:10px;height:10px;border-radius:50%;background:var(--dourado);opacity:.55;pointer-events:none;animation:float-particle 7s ease-in-out infinite}
+.hero-particle:nth-child(1){left:8%;top:20%}.hero-particle:nth-child(2){left:45%;top:8%;animation-delay:1.4s;width:7px;height:7px}.hero-particle:nth-child(3){left:70%;top:30%;animation-delay:2.6s}.hero-particle:nth-child(4){left:25%;bottom:12%;animation-delay:3.8s;width:8px;height:8px}.hero-particle:nth-child(5){left:88%;bottom:22%;animation-delay:5s;width:6px;height:6px}
+@keyframes float-particle{0%,100%{transform:translateY(0)}50%{transform:translateY(-26px)}}
+.hero-copy,.hero-media-col{position:relative;z-index:1}
+.hero-media-col{perspective:900px}
+.hero-campaign{display:block;border-radius:20px;overflow:hidden;border:1px solid rgba(201,168,76,.55);box-shadow:0 18px 50px rgba(0,0,0,.35);text-decoration:none;animation:hero-reveal 1s ease both}
+.hero-campaign img{width:100%;display:block}
+.hero-campaign span{display:flex;justify-content:space-between;align-items:center;background:var(--off);color:var(--azul);font-weight:800;padding:12px 16px;font-size:.92rem}
+@keyframes hero-reveal{from{opacity:0;transform:translateY(24px) scale(.97)}to{opacity:1;transform:none}}
+.hero-picks{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:14px}
+.hero-picks a{background:rgba(255,255,255,.08);border:1px solid rgba(201,168,76,.4);border-radius:14px;overflow:hidden;text-decoration:none;color:var(--off);font-size:.82rem;font-weight:700}
+.hero-picks img{width:100%;height:74px;object-fit:cover;display:block}
+.hero-picks span{display:block;padding:8px 10px}
+.hero-picks small{display:block;opacity:.7;font-weight:500}
+/* coleção */
+.tabs{display:flex;gap:10px;margin-top:18px;flex-wrap:wrap}
+.tabs button{border:1px solid var(--azul);background:transparent;color:var(--azul);border-radius:999px;padding:8px 18px;font-weight:700;cursor:pointer}
+.tabs button.active{background:var(--azul);color:var(--off)}
+.toolbar{display:flex;gap:14px;align-items:center;justify-content:space-between;margin-top:16px;flex-wrap:wrap}
+.search{flex:1;min-width:220px;display:flex;align-items:center;gap:8px;background:#fff;border:1px solid rgba(0,45,98,.2);border-radius:12px;padding:10px 14px}
+.search input{border:none;outline:none;flex:1;font-size:.95rem;background:transparent;color:var(--azul)}
+.count{font-size:.82rem;text-transform:uppercase;letter-spacing:.08em;font-weight:700;opacity:.8}
+.sort{display:flex;align-items:center;gap:8px;font-size:.88rem}
+.sort select{border:1px solid rgba(0,45,98,.25);border-radius:10px;padding:8px 10px;background:#fff;color:var(--azul)}
+.filters{display:flex;gap:12px;align-items:center;margin-top:12px;flex-wrap:wrap}
+.filters select{border:1px solid rgba(0,45,98,.25);border-radius:10px;padding:8px 10px;background:#fff;color:var(--azul)}
+.reset{background:none;border:none;color:var(--azul);font-weight:700;cursor:pointer;text-decoration:underline;text-underline-offset:4px}
+.reset:disabled{opacity:.4;cursor:default}
 .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:22px}
-.card{background:var(--branco);border:1px solid rgba(0,45,98,.12);border-top:4px solid var(--dourado);border-radius:16px;overflow:hidden;transition:.2s;box-shadow:0 4px 16px rgba(0,45,98,.06)}
-.card:hover{transform:translateY(-3px);box-shadow:var(--sombra)}
+.card{background:var(--branco);border:1px solid rgba(0,45,98,.12);border-top:4px solid var(--dourado);border-radius:16px;overflow:hidden;transform-style:preserve-3d;transition:transform .25s ease,box-shadow .25s ease;box-shadow:0 4px 16px rgba(0,45,98,.06)}
+.card:hover{transform:translateY(-3px);box-shadow:0 18px 40px rgba(0,45,98,.16)}
 .card img{width:100%;height:160px;object-fit:cover;display:block}
-.card div{padding:14px 15px}
-.card small{color:var(--dourado2);font-weight:800;text-transform:uppercase;letter-spacing:.08em;font-size:.7rem}
-.card p{font-size:.9rem;opacity:.8}
-.price{font-weight:800;margin-top:6px}
-.mini-btn{display:inline-block;margin-top:10px;font-size:.85rem;font-weight:700;color:var(--azul);text-decoration:none;border-bottom:2px solid var(--dourado)}
-.section-note{opacity:.75;max-width:60ch}
+.card .pad{padding:14px 15px}
+.card small.cat{color:var(--dourado2);font-weight:800;text-transform:uppercase;letter-spacing:.08em;font-size:.7rem;display:flex;justify-content:space-between;align-items:center}
+.card small.cat button{background:none;border:none;color:var(--dourado2);font-weight:800;font-size:.72rem;cursor:pointer;text-transform:uppercase;letter-spacing:.06em}
+.card h3{font-size:1.15rem;margin-top:6px}
+.card .meta{font-size:.88rem;opacity:.75}
+.price{font-weight:800;margin-top:8px}
+.mini-btn{display:inline-block;margin-top:10px;font-size:.85rem;font-weight:700;text-decoration:underline;text-decoration-color:var(--dourado);text-decoration-thickness:2px;text-underline-offset:5px}
+/* lentes */
 .lentes{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:22px}
-.lente{background:var(--branco);border:1px solid rgba(0,45,98,.12);border-radius:16px;padding:20px;position:relative;overflow:hidden}
+.lente{background:var(--branco);border:1px solid rgba(0,45,98,.12);border-radius:16px;padding:20px;position:relative;overflow:hidden;transition:transform .25s ease,box-shadow .25s ease}
 .lente::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--azul),var(--dourado))}
-.lente span{color:var(--dourado);font-weight:900;font-size:.9rem;letter-spacing:.1em}
+.lente:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(0,45,98,.14)}
+.lente .num{color:var(--dourado);font-weight:900;letter-spacing:.1em;animation:lens-pulse 3.5s ease-in-out infinite}
+@keyframes lens-pulse{0%,100%{opacity:1}50%{opacity:.5}}
+.lente strong{display:block;margin-top:8px}
+/* faixas e listas */
+.band{background:linear-gradient(135deg,var(--azul2),var(--azul));color:var(--off);border-radius:20px;padding:36px 30px;margin-top:28px;border:1px solid var(--dourado)}
+.band .eyebrow{color:var(--dourado)}
+.band h2{color:var(--off)}
+.band h2 em{color:var(--dourado)}
+.benefit-list{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:20px}
+.benefit-list>div{background:rgba(255,255,255,.06);border:1px solid rgba(201,168,76,.4);border-radius:14px;padding:18px}
+.benefit-list span.num{color:var(--dourado);font-weight:900}
 .materiais{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:22px}
-.mat{background:var(--branco);border-radius:16px;padding:22px;border:1px solid rgba(0,45,98,.12);border-top:4px solid var(--dourado)}
+.mat{background:var(--branco);border-radius:16px;padding:22px;border:1px solid rgba(0,45,98,.12);border-top:4px solid var(--dourado);transition:transform .25s ease}
+.mat:hover{transform:translateY(-4px)}
 .mat i{width:36px;height:36px;border-radius:10px;background:var(--azul-soft);border:1px solid var(--dourado);display:grid;place-items:center;font-style:normal;margin-bottom:10px}
-.dark{background:linear-gradient(135deg,var(--azul2),var(--azul));color:var(--off);border-radius:20px;padding:36px 30px;margin-top:28px;border:1px solid var(--dourado);position:relative;overflow:hidden}
-.dark::after{content:"";position:absolute;width:320px;height:320px;right:-80px;top:-80px;background:radial-gradient(circle,rgba(201,168,76,.35),transparent 70%)}
-.dark h2,.dark p{color:var(--off);position:relative;z-index:1}
-.dark .eyebrow{color:var(--dourado)}
+.face-grid,.ops-grid,.pay-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:22px}
+.face-grid article,.ops-grid article,.pay-grid>div{background:#fff;border:1px solid rgba(0,45,98,.12);border-top:4px solid var(--dourado);border-radius:16px;padding:20px}
+.care-card{background:#fff;border:1px solid rgba(0,45,98,.12);border-top:4px solid var(--dourado);border-radius:20px;padding:30px;margin-top:8px}
+.care-list{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:18px}
+.quote-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:20px}
+.quote-grid blockquote{background:#fff;border-left:4px solid var(--dourado);border-radius:12px;padding:18px}
+.quote-grid cite{display:block;margin-top:8px;font-style:normal;font-weight:700;color:var(--dourado2);font-size:.85rem}
+/* avaliações */
+.score{display:inline-flex;gap:14px;align-items:center;background:#fff;border:1px solid rgba(0,45,98,.15);border-radius:14px;padding:14px 18px;text-decoration:none;margin-top:14px}
+.score strong{font-size:1.6rem}
 .reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:20px}
-.rev{background:#fff;border-radius:16px;padding:20px;border:1px solid rgba(0,45,98,.12);border-left:4px solid var(--dourado)}
+.rev{background:#fff;border-radius:16px;padding:20px;border:1px solid rgba(0,45,98,.12);border-left:4px solid var(--dourado);transition:transform .25s ease}
+.rev:hover{transform:translateY(-3px)}
+.rev .who{display:flex;gap:10px;align-items:center;margin-top:12px}
+.avatar{width:36px;height:36px;border-radius:50%;background:var(--azul);color:var(--off);display:grid;place-items:center;font-weight:800;font-size:.8rem}
+.social-row{display:flex;gap:12px;align-items:center;margin-top:18px;flex-wrap:wrap}
+.social-row a{border:1px solid var(--azul);border-radius:999px;padding:8px 16px;text-decoration:none;font-weight:700;font-size:.88rem}
+/* faq loja contato */
 details{background:#fff;border:1px solid rgba(0,45,98,.15);border-radius:12px;padding:14px 16px;margin-top:10px}
-summary{font-weight:700;cursor:pointer;color:var(--azul)}
+summary{font-weight:700;cursor:pointer}
 .store{display:grid;grid-template-columns:.9fr 1.1fr;gap:26px;align-items:center;margin-top:10px;background:#fff;border:1px solid rgba(0,45,98,.12);border-radius:20px;padding:22px;border-top:4px solid var(--dourado)}
-.store img{width:100%;border-radius:14px}
+.store img{width:100%;border-radius:14px;max-width:340px}
+.store .row{margin-top:10px}
+.store .row strong{display:block;font-size:.82rem;text-transform:uppercase;letter-spacing:.08em;color:var(--dourado2)}
+.contact-card{background:linear-gradient(135deg,var(--azul2),var(--azul));color:var(--off);border-radius:20px;padding:36px 30px;margin-top:28px;border:1px solid var(--dourado);text-align:left}
+.contact-card .eyebrow{color:var(--dourado)}
+.contact-card h2{color:var(--off)}
+.contact-card h2 em{color:var(--dourado)}
 footer{background:var(--azul2);color:var(--off);border-top:3px solid var(--dourado);padding:28px 24px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
 footer .slogan-oficial{color:var(--dourado)}
-.wpp{position:fixed;right:18px;bottom:18px;background:var(--azul);color:#fff;text-decoration:none;padding:13px 18px;border-radius:999px;border:2px solid var(--dourado);font-weight:800;box-shadow:var(--sombra)}
-/* ===== Animações e 3D (portados do site original) ===== */
-html{scroll-behavior:smooth}
-.scroll-progress{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--dourado),var(--dourado2));z-index:60}
-.cursor-glow{position:fixed;width:220px;height:220px;border-radius:50%;pointer-events:none;z-index:1;background:radial-gradient(circle,rgba(201,168,76,.22),transparent 70%);transform:translate(-50%,-50%);transition:opacity .3s}
-.announcement{position:relative;overflow:hidden}
-.announcement::after{content:"";position:absolute;top:0;left:-60%;width:50%;height:100%;background:linear-gradient(100deg,transparent,rgba(201,168,76,.35),transparent);animation:announcement-shimmer 5s ease-in-out infinite}
-@keyframes announcement-shimmer{0%,60%{left:-60%}100%{left:130%}}
+footer a{color:var(--off);margin-right:12px;font-size:.88rem}
+.wpp{position:fixed;right:18px;bottom:18px;background:var(--azul);color:#fff;text-decoration:none;padding:13px 18px;border-radius:999px;border:2px solid var(--dourado);font-weight:800;box-shadow:var(--sombra);z-index:50}
+/* reveal / stagger / magnetic / tilt */
 .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
-.reveal-left{transform:translateX(-32px)}
-.reveal-right{transform:translateX(32px)}
 .reveal.visible{opacity:1;transform:none}
 .stagger>*{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}
 .stagger.visible>*{opacity:1;transform:none}
 .stagger.visible>*:nth-child(1){transition-delay:.05s}.stagger.visible>*:nth-child(2){transition-delay:.15s}.stagger.visible>*:nth-child(3){transition-delay:.25s}.stagger.visible>*:nth-child(4){transition-delay:.35s}
-.hero{position:relative}
-.ambient-glow{position:absolute;border-radius:50%;filter:blur(60px);pointer-events:none;z-index:0}
-.ambient-glow.gold{width:340px;height:340px;right:-60px;top:-40px;background:radial-gradient(circle,rgba(201,168,76,.35),transparent 70%);animation:glow-breathe 6s ease-in-out infinite}
-.ambient-glow.navy{width:300px;height:300px;left:-70px;bottom:-50px;background:radial-gradient(circle,rgba(0,45,98,.20),transparent 70%);animation:glow-breathe 7s ease-in-out infinite reverse}
-@keyframes glow-breathe{0%,100%{opacity:.6;transform:scale(1)}50%{opacity:1;transform:scale(1.12)}}
-.hero-particle{position:absolute;width:10px;height:10px;border-radius:50%;background:var(--dourado);opacity:.55;pointer-events:none;z-index:0;animation:float-particle 7s ease-in-out infinite}
-.hero-particle:nth-child(1){left:8%;top:20%}.hero-particle:nth-child(2){left:45%;top:8%;animation-delay:1.4s;width:7px;height:7px}.hero-particle:nth-child(3){left:70%;top:30%;animation-delay:2.6s}.hero-particle:nth-child(4){left:25%;bottom:12%;animation-delay:3.8s;width:8px;height:8px}.hero-particle:nth-child(5){left:88%;bottom:22%;animation-delay:5s;width:6px;height:6px}
-@keyframes float-particle{0%,100%{transform:translateY(0)}50%{transform:translateY(-26px)}}
-.hero>*{position:relative;z-index:1}
-.hero-media{perspective:900px}
-.hero-media img{animation:hero-reveal 1s ease both;transform-style:preserve-3d;transition:transform .25s ease}
-@keyframes hero-reveal{from{opacity:0;transform:translateY(24px) scale(.97)}to{opacity:1;transform:none}}
-.badge{animation:float-badge 4s ease-in-out infinite}
-@keyframes float-badge{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
-.btn{position:relative;overflow:hidden;transition:transform .2s ease,box-shadow .2s ease}
-.btn::after{content:"";position:absolute;top:0;left:-70%;width:45%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.45),transparent);transform:skewX(-20deg);animation:btn-shimmer 4.5s ease-in-out infinite}
-@keyframes btn-shimmer{0%,65%{left:-70%}100%{left:140%}}
 .magnetic{transition:transform .2s ease;will-change:transform}
-.card{transform-style:preserve-3d;transition:transform .25s ease,box-shadow .25s ease}
-.card:hover{box-shadow:0 18px 40px rgba(0,45,98,.18) !important}
-.lente{transition:transform .25s ease,box-shadow .25s ease}
-.lente:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(0,45,98,.14)}
-.lente span{display:inline-block;animation:lens-pulse 3.5s ease-in-out infinite}
-@keyframes lens-pulse{0%,100%{opacity:1}50%{opacity:.55}}
-.mat{transition:transform .25s ease,box-shadow .25s ease}
-.mat:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(0,45,98,.14)}
-.rev{transition:transform .25s ease}
-.rev:hover{transform:translateY(-3px)}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none !important;transition:none !important}.reveal,.stagger>*{opacity:1;transform:none}}
 @media (hover:none){.cursor-glow{display:none}}
-@media(max-width:860px){.hero,.store{grid-template-columns:1fr}nav{display:none}.grid,.lentes,.reviews,.materiais{grid-template-columns:1fr 1fr}}
-@media(max-width:520px){.grid,.lentes,.reviews,.materiais{grid-template-columns:1fr}}
+@media(max-width:900px){.hero-inner{grid-template-columns:1fr}nav{display:none}.grid,.lentes,.benefit-list,.face-grid,.ops-grid,.pay-grid,.care-list{grid-template-columns:1fr 1fr}.reviews,.materiais,.quote-grid{grid-template-columns:1fr 1fr}.store{grid-template-columns:1fr}}
+@media(max-width:560px){.grid,.lentes,.reviews,.materiais,.quote-grid,.face-grid,.ops-grid,.pay-grid,.care-list,.benefit-list{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
 <div class="scroll-progress" aria-hidden="true"></div>
 <div class="cursor-glow" aria-hidden="true"></div>
+<a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
 <div class="announcement">Alexsander Ótica · Rua Poligonal, 10 · Mesquita, RJ <strong>✦ Seu olhar, nosso cuidado.</strong></div>
 <header>
-<a class="brand" href="#"><span class="brand-mark">A</span><span class="brand-name">ALEXSANDER<span class="brand-dot">.</span><span class="slogan-oficial">Seu olhar, nosso cuidado</span></span></a>
-<nav><a href="#colecao">Coleção</a><a href="#lentes">Lentes</a><a href="#materiais">Materiais</a><a href="#loja">Loja física</a><a class="cta" href="https://wa.me/5521984816082">WhatsApp ↗</a></nav>
+<a class="brand" href="#topo"><span class="brand-mark">A</span><span class="brand-name">ALEXSANDER<span class="brand-dot">.</span><span class="slogan-oficial">Seu olhar, nosso cuidado</span></span></a>
+<nav><a href="#colecao">Coleção</a><a href="#lentes">Lentes</a><a href="#materiais">Materiais</a><a href="#guia">Guia</a><a href="#entrega">Entrega</a><a href="#loja">Loja física</a><a href="#contato">Atendimento</a><a class="cta" href="https://wa.me/5521984816082?text=Ol%C3%A1%20Alexsander%20%C3%93tica">WhatsApp ↗</a></nav>
 </header>
-<div class="container">
-<div class="hero parallax" data-speed="0.06">
+
+<section class="hero parallax" data-speed="0.05" id="topo">
+<div class="hero-inner" id="conteudo">
 <div class="ambient-glow gold" aria-hidden="true"></div>
 <div class="ambient-glow navy" aria-hidden="true"></div>
 <span class="hero-particle" aria-hidden="true"></span><span class="hero-particle" aria-hidden="true"></span><span class="hero-particle" aria-hidden="true"></span><span class="hero-particle" aria-hidden="true"></span><span class="hero-particle" aria-hidden="true"></span>
-<div class="reveal reveal-left">
+<div class="hero-copy reveal reveal-left">
 <div class="eyebrow">Alexsander Ótica · Mesquita</div>
-<h1><span class="h1-linha h1-linha-1">Um novo olhar.</span><em class="h1-linha h1-linha-2">Nos mínimos detalhes.</em></h1>
+<h1><span class="h1-linha h1-linha-1">Um novo olhar.</span><em class="h1-linha">Nos mínimos detalhes.</em></h1>
 <p class="hero-slogan">Seu olhar, <strong>nosso cuidado.</strong></p>
 <p class="hero-lead">Formas, cores e acabamentos que expressam seu estilo. Explore as armações e encontre sua próxima escolha com a nossa equipe.</p>
-<div class="trust"><span class="stars">★★★★★ 5,0/5</span><span>29 avaliações no Google · Atendimento próximo</span></div>
-<div><a class="btn magnetic" href="#colecao">Explorar armações</a><a class="btn-ghost" href="#lentes">Escolher minhas lentes →</a></div>
+<div><a class="btn magnetic" href="#colecao">Explorar armações</a><a class="btn-ghost" href="#lentes">Escolher minhas lentes</a></div>
 <div><span class="badge"><i></i>Orçamento personalizado pelo WhatsApp</span></div>
 </div>
-<div class="hero-media reveal reveal-right"><img class="tilt" src="https://alexsander-otica.passosnikolas5.workers.dev/campaigns/eyewear-editorial.jpg" alt="Campanha Alexsander Ótica"/></div>
+<div class="hero-media-col reveal reveal-right">
+<a class="hero-campaign tilt" href="#colecao"><img src="https://alexsander-otica.passosnikolas5.workers.dev/campaigns/eyewear-editorial.jpg" alt="Ilustração de campanha: óculos arredondados em tom champanhe e armação tartaruga sobre pedra clara, com luz de estúdio."/><span>Explore seu estilo ↗</span></a>
+<div class="hero-picks">
+<a href="#colecao"><img src="https://alexsander-otica.passosnikolas5.workers.dev/frames/25389282.jpg" alt="Fotografia de referência: retangular preto."/><span>Lumen<small>Retangular</small></span></a>
+<a href="#colecao"><img src="https://alexsander-otica.passosnikolas5.workers.dev/frames/14482342.jpg" alt="Fotografia de referência: redondo tartaruga."/><span>Linha<small>Redondo</small></span></a>
+<a href="#colecao"><img src="https://alexsander-otica.passosnikolas5.workers.dev/frames/6143506.jpg" alt="Fotografia de referência: redondo transparente."/><span>Norte<small>Redondo</small></span></a>
 </div>
+</div>
+</div>
+</section>
 
-<div id="colecao" class="reveal" style="margin-top:38px">
+<div class="container">
+<section id="colecao" class="section reveal">
 <div class="eyebrow">Escolha seu próximo par</div>
 <h2>Seu estilo. <em>Seu próximo par.</em></h2>
-<p class="section-note">Fotografias reais para inspirar sua escolha. Envie a referência que combina com você.</p>
-<div class="grid stagger">
-<div class="card tilt"><img src="https://alexsander-otica.passosnikolas5.workers.dev/frames/25389282.jpg" alt="Lumen"/><div><small>Óptico · Retangular</small><h3>Lumen</h3><p>Retangular · Preto</p><div class="price">Preço sob consulta</div><a class="mini-btn" href="#">Escolher e pedir orçamento</a></div></div>
-<div class="card tilt"><img src="https://alexsander-otica.passosnikolas5.workers.dev/frames/14482342.jpg" alt="Linha"/><div><small>Óptico · Redondo</small><h3>Linha</h3><p>Tartaruga e dourado</p><div class="price">Preço sob consulta</div><a class="mini-btn" href="#">Escolher e pedir orçamento</a></div></div>
-<div class="card tilt"><img src="https://alexsander-otica.passosnikolas5.workers.dev/frames/6143506.jpg" alt="Norte"/><div><small>Óptico · Redondo</small><h3>Norte</h3><p>Transparente e marrom</p><div class="price">Preço sob consulta</div><a class="mini-btn" href="#">Escolher e pedir orçamento</a></div></div>
-<div class="card tilt"><img src="https://alexsander-otica.passosnikolas5.workers.dev/frames/13982236.jpg" alt="Brisa"/><div><small>Solar · Quadrado</small><h3>Brisa</h3><p>Preto com lentes vermelhas</p><div class="price">Preço sob consulta</div><a class="mini-btn" href="#">Escolher e pedir orçamento</a></div></div>
+<p class="section-note">Fotografias reais para inspirar sua escolha. Envie a referência que combina com você e consulte os modelos disponíveis na Alexsander.</p>
+<div class="tabs" role="tablist" aria-label="Categorias">
+<button type="button" class="active" data-tab="todos" aria-pressed="true">Todos</button>
+<button type="button" data-tab="solar" aria-pressed="false">Solar</button>
+<button type="button" data-tab="optico" aria-pressed="false">Óptico</button>
 </div>
+<div class="toolbar">
+<label class="search"><span aria-hidden="true">⌕</span><input id="busca" type="search" placeholder="Buscar nome, formato ou cor" aria-label="Buscar na coleção"/></label>
+<p class="count" id="contagem" role="status" aria-live="polite">8 modelos na seleção</p>
+<label class="sort">Ordenar
+<select id="ordem"><option value="destaques" selected>Destaques da coleção</option><option value="az">Nome de A a Z</option></select>
+</label>
 </div>
+<div class="filters">
+<label>Formato da armação
+<select id="formato"><option value="">Todos os formatos</option><option>Retangular</option><option>Redondo</option><option>Quadrado</option><option>Gatinho</option></select>
+</label>
+<button class="reset" id="limpar" type="button" disabled>Limpar filtros ✕</button>
+</div>
+<div class="grid stagger" id="grade">
+<article class="card tilt" data-cat="optico" data-name="Lumen" data-format="Retangular" data-color="Preto"><img src="https://alexsander-otica.passosnikolas5.workers.dev/frames/25389282.jpg" alt="Fotografia de referência: retangular preto."/><div class="pad"><small class="cat"><span>Óptico</span><button type="button" data-orc="Lumen">Orçamento ↗</button></small><h3>Lumen</h3><p class="meta">Retangular · Preto</p><div class="price">Preço sob consulta</div><a class="mini-btn" href="#" data-orc="Lumen">Escolher e pedir orçamento</a></div></article>
+<article class="card tilt" data-cat="optico" data-name="Linha" data-format="Redondo" data-color="Tartaruga e dourado"><img src="https://alexsander-otica.passosnikolas5.workers.dev/frames/14482342.jpg" alt="Fotografia de referência: redondo tartaruga."/><div class="pad"><small class="cat"><span>Óptico</span><button type="button" data-orc="Linha">Orçamento ↗</button></small><h3>Linha</h3><p class="meta">Redondo · Tartaruga e dourado</p><div class="price">Preço sob consulta</div><a class="mini-btn" href="#" data-orc="Linha">Escolher e pedir orçamento</a></div></article>
+<article class="card tilt" data-cat="optico" data-name="Norte" data-format="Redondo" data-color="Transparente e marrom"><img src="https://alexsander-otica.passosnikolas5.workers.dev/frames/6143506.jpg" alt="Fotografia de referência: redondo transparente."/><div class="pad"><small class="cat"><span>Óptico</span><button type="button" data-orc="Norte">Orçamento ↗</button></small><h3>Norte</h3><p class="meta">Redondo · Transparente e marrom</p><div class="price">Preço sob consulta</div><a class="mini-btn" href="#" data-orc="Norte">Escolher e pedir orçamento</a></div></article>
+<article class="card tilt" data-cat="optico" data-name="Vértice" data-format="Redondo" data-color="Preto"><img src="https://alexsander-otica.passosnikolas5.workers.dev/frames/26682029.jpg" alt="Fotografia de referência: redondo preto."/><div class="pad"><small class="cat"><span>Óptico</span><button type="button" data-orc="Vértice">Orçamento ↗</button></small><h3>Vértice</h3><p class="meta">Redondo · Preto</p><div class="price">Preço sob consulta</div><a class="mini-btn" href="#" data-orc="Vértice">Escolher e pedir orçamento</a></div></article>
+<article class="card tilt" data-cat="optico" data-name="Névoa" data-format="Quadrado" data-color="Verde translúcido"><img src="https://alexsander-otica.passosnikolas5.workers.dev/frames/36824998.jpg" alt="Fotografia de referência: quadrado verde translúcido."/><div class="pad"><small class="cat"><span>Óptico</span><button type="button" data-orc="Névoa">Orçamento ↗</button></small><h3>Névoa</h3><p class="meta">Quadrado · Verde translúcido</p><div class="price">Preço sob consulta</div><a class="mini-btn" href="#" data-orc="Névoa">Escolher e pedir orçamento</a></div></article>
+<article class="card tilt" data-cat="optico" data-name="Íris" data-format="Gatinho" data-color="Rosa ou marrom"><img src="https://alexsander-otica.passosnikolas5.workers.dev/frames/7357971.jpg" alt="Fotografia de referência: gatinho rosa e marrom."/><div class="pad"><small class="cat"><span>Óptico</span><button type="button" data-orc="Íris">Orçamento ↗</button></small><h3>Íris</h3><p class="meta">Gatinho · Rosa ou marrom</p><div class="price">Preço sob consulta</div><a class="mini-btn" href="#" data-orc="Íris">Escolher e pedir orçamento</a></div></article>
+<article class="card tilt" data-cat="solar" data-name="Aurora" data-format="Retangular" data-color="Preto"><img src="https://alexsander-otica.passosnikolas5.workers.dev/frames/8360292.jpg" alt="Fotografia de referência: solar retangular preto."/><div class="pad"><small class="cat"><span>Solar</span><button type="button" data-orc="Aurora">Orçamento ↗</button></small><h3>Aurora</h3><p class="meta">Retangular · Preto</p><div class="price">Preço sob consulta</div><a class="mini-btn" href="#" data-orc="Aurora">Escolher e pedir orçamento</a></div></article>
+<article class="card tilt" data-cat="solar" data-name="Brisa" data-format="Quadrado" data-color="Preto com lentes vermelhas"><img src="https://alexsander-otica.passosnikolas5.workers.dev/frames/13982236.jpg" alt="Fotografia de referência: solar com lentes vermelhas."/><div class="pad"><small class="cat"><span>Solar</span><button type="button" data-orc="Brisa">Orçamento ↗</button></small><h3>Brisa</h3><p class="meta">Quadrado · Preto com lentes vermelhas</p><div class="price">Preço sob consulta</div><a class="mini-btn" href="#" data-orc="Brisa">Escolher e pedir orçamento</a></div></article>
+</div>
+</section>
 
-<div id="lentes" class="reveal" style="margin-top:38px">
+<section id="lentes" class="section reveal">
 <div class="eyebrow">Escolha sua lente</div>
 <h2>Mais conforto <em>em cada olhar.</em></h2>
+<p class="section-note">Clique em uma opção para ver a tecnologia e escolher seu acabamento ideal.</p>
 <div class="lentes stagger">
-<div class="lente"><span>01</span><h3>Transparente</h3><p>Leve e versátil para o dia a dia.</p></div>
-<div class="lente"><span>02</span><h3>Antirreflexo</h3><p>Mais nitidez para telas e direção.</p></div>
-<div class="lente"><span>03</span><h3>Fotossensível</h3><p>Clara dentro, escura no sol.</p></div>
-<div class="lente"><span>04</span><h3>Polarizada</h3><p>Reduz reflexos e realça cores.</p></div>
+<div class="lente"><span class="num">01</span><h3>Transparente</h3><p>Leve e versátil para o dia a dia.</p><strong>Preço sob consulta</strong><br/><a class="mini-btn" href="https://wa.me/5521984816082?text=Ol%C3%A1%20Alexsander%20%C3%93tica%2C%20quero%20lente%20transparente">ver tecnologia</a></div>
+<div class="lente"><span class="num">02</span><h3>Antirreflexo</h3><p>Mais nitidez para telas e direção.</p><strong>Preço sob consulta</strong><br/><a class="mini-btn" href="https://wa.me/5521984816082?text=Ol%C3%A1%20Alexsander%20%C3%93tica%2C%20quero%20lente%20antirreflexo">ver tecnologia</a></div>
+<div class="lente"><span class="num">03</span><h3>Fotossensível</h3><p>Clara em ambientes fechados, escura no sol.</p><strong>Preço sob consulta</strong><br/><a class="mini-btn" href="https://wa.me/5521984816082?text=Ol%C3%A1%20Alexsander%20%C3%93tica%2C%20quero%20lente%20fotossens%C3%ADvel">ver tecnologia</a></div>
+<div class="lente"><span class="num">04</span><h3>Polarizada</h3><p>Reduz reflexos e realça as cores.</p><strong>Preço sob consulta</strong><br/><a class="mini-btn" href="https://wa.me/5521984816082?text=Ol%C3%A1%20Alexsander%20%C3%93tica%2C%20quero%20lente%20polarizada">ver tecnologia</a></div>
 </div>
-</div>
+</section>
 
-<div id="materiais" class="reveal" style="margin-top:38px">
+<section class="band reveal">
+<div class="eyebrow">O detalhe faz diferença</div>
+<h2>Feito para ser <em>usado de verdade.</em></h2>
+<div class="benefit-list stagger">
+<div><span class="num">01</span><p><strong>Especificações confirmadas</strong><br/>Confirme proteção UV e tratamentos com a equipe antes da compra.</p></div>
+<div><span class="num">02</span><p><strong>Conforto para sua rotina</strong><br/>O ajuste deve ser confirmado no rosto e no uso real.</p></div>
+<div><span class="num">03</span><p><strong>Política de troca clara</strong><br/>Consulte prazos e condições diretamente com a loja.</p></div>
+</div>
+</section>
+
+<section id="materiais" class="section reveal">
 <div class="eyebrow">Por dentro da Alexsander</div>
 <h2>Materiais que <em>fazem diferença.</em></h2>
+<p class="section-note">Cada acabamento foi escolhido para equilibrar leveza, resistência e personalidade.</p>
 <div class="materiais stagger">
-<div class="mat"><i>◈</i><h3>Acetato premium</h3><p>Toque confortável, cores profundas e brilho natural.</p></div>
-<div class="mat"><i>◇</i><h3>Metal leve</h3><p>Linhas finas e ajuste delicado, quase imperceptível.</p></div>
-<div class="mat"><i>✦</i><h3>Bio-based</h3><p>Base renovável, escolha consciente sem perder estilo.</p></div>
+<div class="mat"><i>◈</i><p><strong>01 · Acetato premium</strong></p><p>Toque confortável, cores profundas e brilho natural. Ideal para quem usa óculos o dia todo.</p></div>
+<div class="mat"><i>◇</i><p><strong>02 · Metal leve</strong></p><p>Linhas finas e ajuste delicado para um visual preciso, elegante e quase imperceptível.</p></div>
+<div class="mat"><i>✦</i><p><strong>03 · Bio-based</strong></p><p>Composição de base renovável para quem quer escolhas mais conscientes sem perder estilo.</p></div>
 </div>
-</div>
+</section>
 
-<div class="dark reveal">
-<div class="eyebrow">Atendimento Alexsander Ótica</div>
-<h2>Encontre o par <em>que encontra você.</em></h2>
-<p>Conte sua rotina e a gente indica armações, lentes e tamanhos que fazem sentido.</p>
-<p style="margin-top:14px;position:relative;z-index:1"><a class="btn btn-gold magnetic" href="https://wa.me/5521984816082">Falar no WhatsApp ↗</a></p>
+<section id="guia" class="section reveal">
+<div class="eyebrow">Guia rápido</div>
+<h2>Qual formato <em>combina com você?</em></h2>
+<p class="section-note">Use estas referências como ponto de partida. O mais importante é você se sentir bem usando.</p>
+<div class="face-grid stagger">
+<article><h3>Rosto quadrado</h3><p>Experimente armações arredondadas para suavizar os ângulos.</p></article>
+<article><h3>Rosto redondo</h3><p>Linhas retas criam contraste e alongam visualmente.</p></article>
+<article><h3>Rosto oval</h3><p>Quase todos os formatos funcionam. Brinque com proporções.</p></article>
+<article><h3>Rosto coração</h3><p>Modelos levemente maiores na parte inferior equilibram o conjunto.</p></article>
 </div>
+</section>
 
-<div class="reveal" style="margin-top:34px">
+<section class="section reveal">
+<div class="care-card">
+<div class="eyebrow">Cuide do seu par</div>
+<h2>Pequenos gestos, <em>mais tempo com você.</em></h2>
+<div class="care-list stagger">
+<div><p><strong>01 · Lave com água e sabão neutro</strong><br/>Seque com flanela de microfibra, sem papel ou camiseta.</p></div>
+<div><p><strong>02 · Guarde sempre no estojo</strong><br/>Evite deixar as lentes viradas para baixo ou dentro do carro.</p></div>
+<div><p><strong>03 · Cheque o ajuste</strong><br/>Nossa equipe pode orientar uma regulagem quando necessário.</p></div>
+</div>
+</div>
+</section>
+
+<section id="entrega" class="section reveal">
+<div class="eyebrow">Depois da compra</div>
+<h2>Pedido sob <em>seu controle.</em></h2>
+<p class="section-note">Acompanhe cada etapa e fale com a Alexsander quando precisar.</p>
+<div class="ops-grid stagger">
+<article><h3>01 · Entrega transparente</h3><p>Prazo, entrega e valor são combinados com a equipe depois do orçamento.</p></article>
+<article><h3>02 · Troca conforme política</h3><p>A equipe orienta as opções e os prazos aplicáveis ao seu pedido.</p></article>
+<article><h3>03 · Alterar seu pedido</h3><p>Precisa ajustar ou cancelar? Fale com a equipe pelo WhatsApp para consultar o andamento e as condições do seu pedido.</p></article>
+</div>
+</section>
+
+<section class="section reveal">
+<div class="eyebrow">Compra segura</div>
+<h2>Escolha como <em>quer pagar.</em></h2>
+<div class="pay-grid stagger">
+<div><h3>▣ Pix</h3><p>Consulte a equipe sobre condições à vista.</p></div>
+<div><h3>▤ Cartão de crédito</h3><p>Confirme as opções de parcelamento com a loja.</p></div>
+<div><h3>◫ Cartão de débito</h3><p>Disponibilidade e condições pelo atendimento.</p></div>
+<div><h3>↺ Atendimento próximo</h3><p>Combine os detalhes da compra com a equipe.</p></div>
+</div>
+</section>
+
+<section class="section reveal">
+<div class="eyebrow">Na hora de escolher</div>
+<h2>Estilo que <em>vira rotina.</em></h2>
+<div class="quote-grid stagger">
+<blockquote>Experimente a armação e observe o apoio no nariz e atrás das orelhas.<cite>Conforto no dia a dia</cite></blockquote>
+<blockquote>Converse com a equipe sobre sua rotina e os tratamentos disponíveis para suas lentes.<cite>Uma escolha acompanhada</cite></blockquote>
+</div>
+</section>
+
+<section id="avaliacoes" class="section reveal">
 <div class="eyebrow">Quem escolhe a Alexsander</div>
 <h2>Cuidado que vira <em>recomendação.</em></h2>
+<a class="score" href="https://www.google.com/maps?cid=16493775369192153875" target="_blank" rel="noopener"><strong>5,0 <small>/ 5</small></strong><span><span class="stars">★★★★★</span><br/>29 avaliações no Google ↗</span></a>
+<p class="section-note" style="margin-top:10px">Uma seleção de avaliações positivas de quem compartilhou sua experiência no Google.</p>
 <div class="reviews stagger">
-<div class="rev"><div class="stars">★★★★★</div><p>“Gostei muito do tratamento, facilita a forma de pagamento.”</p><small>Taiane Lima · Google</small></div>
-<div class="rev"><div class="stars">★★★★★</div><p>“O atendimento é ótimo!”</p><small>Isabel Peres · Google</small></div>
-<div class="rev"><div class="stars">★★★★★</div><p>“Atendimento excelente, super recomendo.”</p><small>Veronica Lacerda · Google</small></div>
+<figure class="rev"><span class="stars">★★★★★</span><blockquote><p>“Gostei muito do tratamento, facilita a forma de pagamento.”</p></blockquote><figcaption class="who"><span class="avatar">TL</span><span><strong>Taiane Lima</strong><br/><small>Avaliação no Google</small></span></figcaption><p><a class="mini-btn" href="https://maps.app.goo.gl/qDBtrJvw7MzpdN8i9" target="_blank" rel="noopener">Ler avaliação completa ↗</a></p></figure>
+<figure class="rev"><span class="stars">★★★★★</span><blockquote><p>“O atendimento é ótimo!”</p></blockquote><figcaption class="who"><span class="avatar">IP</span><span><strong>Isabel Peres</strong><br/><small>Avaliação no Google</small></span></figcaption><p><a class="mini-btn" href="https://maps.app.goo.gl/D5uB6egrPkgDQNt7A" target="_blank" rel="noopener">Ler avaliação completa ↗</a></p></figure>
+<figure class="rev"><span class="stars">★★★★★</span><blockquote><p>“Atendimento excelente, super recomendo, atenção total ao cliente”</p></blockquote><figcaption class="who"><span class="avatar">VL</span><span><strong>Veronica Lacerda</strong><br/><small>Avaliação no Google</small></span></figcaption><p><a class="mini-btn" href="https://maps.app.goo.gl/R7VwRW9kHe5iDicv5" target="_blank" rel="noopener">Ler avaliação completa ↗</a></p></figure>
 </div>
-</div>
+<p class="section-note" style="margin-top:12px">Trechos selecionados. Nota e total consultados em 07/09/2026. <a href="https://www.google.com/maps?cid=16493775369192153875" target="_blank" rel="noopener">Ver todas as avaliações no Google ↗</a></p>
+<div class="social-row"><span>Conheça também o dia a dia da nossa loja</span><a href="https://www.instagram.com/Alexsanderotic" target="_blank" rel="noopener">Instagram</a><a href="https://www.facebook.com/alexsander.otic?locale=pt_BR" target="_blank" rel="noopener">Facebook</a></div>
+</section>
 
-<div id="loja" class="store reveal" style="margin-top:30px">
-<div><img src="./loja-perfil.png" alt="Foto de perfil da Alexsander Ótica" width="400" height="400"/></div>
-<div><div class="eyebrow">Visite a loja</div><h2>Seu olhar,<br/><em>bem cuidado.</em></h2><p>Rua Poligonal, 10 · Mesquita, RJ<br/>(21) 98481-6082 · WhatsApp<br/>Aberto · confira o horário pelo WhatsApp</p><p style="margin-top:12px"><a class="btn" href="#">Chamar no WhatsApp ↗</a></p></div>
-</div>
-
-<div style="margin-top:28px">
+<section class="section reveal">
 <div class="eyebrow">Dúvidas frequentes</div>
 <h2>Antes de <em>escolher.</em></h2>
-<details open><summary>Como escolho o tamanho ideal?</summary><p>Compare com uma armação que você já usa ou fale com nossa equipe.</p></details>
-<details><summary>As lentes têm proteção UV?</summary><p>Confirme proteção e especificações com a equipe antes da compra.</p></details>
+<p class="section-note">Se ainda ficou alguma pergunta, nosso atendimento ajuda você a decidir.</p>
+<details open><summary>Como escolho o tamanho ideal?</summary><p>Compare as medidas de uma armação que você já usa ou fale com a nossa equipe. A gente orienta pelo formato e pela largura do rosto.</p></details>
+<details><summary>As lentes têm proteção UV?</summary><p>Confirme a proteção e as especificações do modelo com a equipe. A cor escura da lente, por si só, não comprova proteção UV.</p></details>
+<details><summary>Posso trocar ou cancelar meu pedido?</summary><p>Consulte as condições de troca e cancelamento com a equipe antes de finalizar uma compra real.</p></details>
+<details><summary>Como acompanho a entrega?</summary><p>Depois da confirmação, a equipe orienta a entrega e acompanha cada etapa pelo WhatsApp.</p></details>
+</section>
+
+<section id="loja" class="store reveal">
+<div><img src="./loja-perfil.png" alt="Foto de perfil da Alexsander Ótica" width="400" height="400"/></div>
+<div><div class="eyebrow">Visite a loja</div><h2>Seu olhar, <em>bem cuidado.</em></h2><p>Óculos e oculista em Mesquita, com atendimento próximo para escolher armações, lentes e ajustes com segurança.</p>
+<div class="row"><strong>Endereço</strong><span>Rua Poligonal, 10 · Mesquita, Rio de Janeiro</span></div>
+<div class="row"><strong>Telefone e WhatsApp</strong><span>(21) 98481-6082</span></div>
+<div class="row"><strong>Atendimento</strong><span>Aberto · confira o horário atualizado pelo WhatsApp</span></div>
+<p style="margin-top:12px"><a class="btn magnetic" href="https://wa.me/5521984816082?text=Ol%C3%A1%20Alexsander%20%C3%93tica%2C%20quero%20conhecer%20os%20modelos">Chamar no WhatsApp ↗</a> <a class="mini-btn" href="https://www.google.com/maps/search/?api=1&amp;query=Rua+Poligonal+10+Mesquita+RJ" target="_blank" rel="noopener">Abrir rota no mapa</a></p>
 </div>
+</section>
+
+<section id="contato" class="contact-card reveal">
+<div class="eyebrow">Atendimento Alexsander Ótica</div>
+<h2>Encontre o par <em>que encontra você.</em></h2>
+<p>Conte como é sua rotina e a gente indica armações, lentes e tamanhos que fazem sentido.</p>
+<p style="margin-top:14px"><a class="btn magnetic" href="https://api.whatsapp.com/send?phone=5521984816082&amp;text=Ol%C3%A1%20Alexsander%20%C3%93tica%2C%20quero%20ajuda%20para%20escolher%20meus%20%C3%B3culos">Falar com um especialista no WhatsApp ↗</a></p>
+</section>
 </div>
+
 <a class="wpp magnetic" href="https://wa.me/5521984816082">WhatsApp</a>
+<footer>
+<div><a class="brand" href="#topo" style="color:var(--off)"><span class="brand-mark" style="background:var(--dourado);color:var(--azul2)">A</span><span class="brand-name">ALEXSANDER<span class="brand-dot">.</span><span class="slogan-oficial">Seu olhar, nosso cuidado</span></span></a><p style="margin-top:10px;font-size:.88rem;opacity:.85">Elegância, conforto e cuidado com a sua visão.</p></div>
+<div><a href="#avaliacoes">Avaliações</a><a href="https://www.instagram.com/Alexsanderotic" target="_blank" rel="noopener">Instagram</a><a href="https://www.facebook.com/alexsander.otic?locale=pt_BR" target="_blank" rel="noopener">Facebook</a><a href="https://wa.me/5521984816082">WhatsApp</a><p style="margin-top:10px;font-size:.82rem;opacity:.75">© 2026 Alexsander Ótica</p></div>
+</footer>
+
 <script>
 (function(){
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  // Barra de progresso da rolagem
   var bar = document.querySelector('.scroll-progress');
-  function onScrollBar(){
+  function onScroll(){
     var h = document.documentElement;
     var max = h.scrollHeight - h.clientHeight;
     bar.style.width = (max > 0 ? (h.scrollTop / max) * 100 : 0) + '%';
-    // Parallax do hero
     if(!reduce){
       var p = document.querySelector('.parallax');
-      if(p){ var sp = parseFloat(p.dataset.speed || '0.06'); p.style.transform = 'translateY(' + (h.scrollTop * sp) + 'px)'; }
+      if(p){ p.style.transform = 'translateY(' + (h.scrollTop * parseFloat(p.dataset.speed || '0.05')) + 'px)'; }
     }
   }
-  document.addEventListener('scroll', onScrollBar, {passive:true});
-  onScrollBar();
-  // Brilho que segue o cursor
+  document.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
   var glow = document.querySelector('.cursor-glow');
   if(glow && window.matchMedia('(hover:hover)').matches){
-    document.addEventListener('mousemove', function(e){
-      glow.style.left = e.clientX + 'px';
-      glow.style.top = e.clientY + 'px';
-    }, {passive:true});
+    document.addEventListener('mousemove', function(e){ glow.style.left = e.clientX + 'px'; glow.style.top = e.clientY + 'px'; }, {passive:true});
   } else if(glow){ glow.style.display = 'none'; }
-  // Revelar seções ao rolar
-  var io = new IntersectionObserver(function(entries){
-    entries.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('visible'); io.unobserve(en.target); } });
-  }, {threshold: 0.12});
+  var io = new IntersectionObserver(function(es){ es.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('visible'); io.unobserve(en.target); } }); }, {threshold: 0.1});
   document.querySelectorAll('.reveal, .stagger').forEach(function(el){ io.observe(el); });
-  // Botões magnéticos
   if(!reduce && window.matchMedia('(hover:hover)').matches){
-    document.querySelectorAll('.magnetic').forEach(function(btn){
-      btn.addEventListener('mousemove', function(e){
-        var r = btn.getBoundingClientRect();
-        var x = e.clientX - r.left - r.width/2, y = e.clientY - r.top - r.height/2;
-        btn.style.transform = 'translate(' + x*0.15 + 'px,' + y*0.2 + 'px)';
-      });
-      btn.addEventListener('mouseleave', function(){ btn.style.transform = ''; });
+    document.querySelectorAll('.magnetic').forEach(function(b){
+      b.addEventListener('mousemove', function(e){ var r = b.getBoundingClientRect(); b.style.transform = 'translate(' + ((e.clientX - r.left - r.width/2)*0.15) + 'px,' + ((e.clientY - r.top - r.height/2)*0.2) + 'px)'; });
+      b.addEventListener('mouseleave', function(){ b.style.transform = ''; });
     });
-    // Inclinação 3D nos cards e no hero
-    document.querySelectorAll('.tilt').forEach(function(card){
-      card.addEventListener('mousemove', function(e){
-        var r = card.getBoundingClientRect();
-        var px = (e.clientX - r.left)/r.width - .5, py = (e.clientY - r.top)/r.height - .5;
-        card.style.transform = 'perspective(900px) rotateX(' + (-py*8) + 'deg) rotateY(' + (px*10) + 'deg) translateY(-3px)';
-      });
-      card.addEventListener('mouseleave', function(){ card.style.transform = ''; });
+    document.querySelectorAll('.tilt').forEach(function(c){
+      c.addEventListener('mousemove', function(e){ var r = c.getBoundingClientRect(); var px = (e.clientX - r.left)/r.width - .5, py = (e.clientY - r.top)/r.height - .5; c.style.transform = 'perspective(900px) rotateX(' + (-py*8) + 'deg) rotateY(' + (px*10) + 'deg) translateY(-3px)'; });
+      c.addEventListener('mouseleave', function(){ c.style.transform = ''; });
     });
   }
+  // Filtros da coleção
+  var tab = 'todos', grade = document.getElementById('grade'), cards = Array.prototype.slice.call(grade.children),
+      busca = document.getElementById('busca'), ordem = document.getElementById('ordem'), formato = document.getElementById('formato'),
+      limpar = document.getElementById('limpar'), contagem = document.getElementById('contagem');
+  document.querySelectorAll('.tabs button').forEach(function(b){
+    b.addEventListener('click', function(){
+      document.querySelectorAll('.tabs button').forEach(function(x){ x.classList.remove('active'); x.setAttribute('aria-pressed','false'); });
+      b.classList.add('active'); b.setAttribute('aria-pressed','true'); tab = b.dataset.tab; aplicar();
+    });
+  });
+  [busca, ordem, formato].forEach(function(el){ el.addEventListener('input', aplicar); el.addEventListener('change', aplicar); });
+  limpar.addEventListener('click', function(){ busca.value=''; formato.value=''; ordem.value='destaques'; tab='todos';
+    document.querySelectorAll('.tabs button').forEach(function(x){ var on = x.dataset.tab==='todos'; x.classList.toggle('active', on); x.setAttribute('aria-pressed', on); });
+    aplicar(); });
+  function aplicar(){
+    var q = busca.value.trim().toLowerCase(), f = formato.value;
+    var vis = cards.filter(function(c){
+      var txt = (c.dataset.name + ' ' + c.dataset.format + ' ' + c.dataset.color + ' ' + c.dataset.cat).toLowerCase();
+      return (tab==='todos' || c.dataset.cat===tab) && (!f || c.dataset.format===f) && (!q || txt.indexOf(q) > -1);
+    });
+    if(ordem.value==='az') vis.sort(function(a,b){ return a.dataset.name.localeCompare(b.dataset.name, 'pt-BR'); });
+    vis.forEach(function(c){ grade.appendChild(c); c.style.display=''; });
+    cards.forEach(function(c){ if(vis.indexOf(c) < 0) c.style.display='none'; });
+    contagem.textContent = vis.length + (vis.length === 1 ? ' modelo na seleção' : ' modelos na seleção');
+    limpar.disabled = !(q || f || tab!=='todos' || ordem.value!=='destaques');
+  }
+  // Orçamento pelo WhatsApp com o nome do modelo
+  document.querySelectorAll('[data-orc]').forEach(function(el){
+    el.addEventListener('click', function(ev){
+      ev.preventDefault();
+      var m = el.getAttribute('data-orc');
+      window.open('https://wa.me/5521984816082?text=' + encodeURIComponent('Olá Alexsander Ótica, quero orçamento do modelo ' + m), '_blank');
+    });
+  });
 })();
 </script>
-<footer>
-<div><b>ALEXSANDER<span style="color:var(--dourado)">.</span></b><br/><span class="slogan-oficial">Seu olhar, nosso cuidado</span><br/><small>Elegância, conforto e cuidado com a sua visão.</small></div>
-<div><small>Rua Poligonal, 10 · Mesquita RJ<br/>© 2026 Alexsander Ótica</small></div>
-</footer>
 </body>
 </html>
