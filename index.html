@@ -120,6 +120,22 @@ nav a.cta{background:linear-gradient(135deg,var(--dourado),#b9973f);color:var(--
 .promo-tag{display:inline-block;background:linear-gradient(135deg,var(--dourado),#b9973f);color:var(--azul2);font-size:.66rem;font-weight:800;letter-spacing:.1em;border-radius:999px;padding:3px 9px;margin-left:6px;vertical-align:middle}
 .empty{display:none;text-align:center;padding:26px;background:#fff;border:1px dashed var(--dourado);border-radius:14px;margin-top:18px}
 .empty.show{display:block}
+/* variantes + modal de detalhes */
+.swatches{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}
+.swatch{border:1px solid rgba(0,45,98,.3);background:#fff;color:var(--azul);border-radius:999px;padding:3px 10px;font-size:.72rem;font-weight:700;cursor:pointer}
+.swatch[aria-pressed="true"]{background:var(--azul);color:var(--off);border-color:var(--azul)}
+.card img,.card h3{cursor:pointer}
+.opt-label{font-size:.74rem;font-weight:800;text-transform:uppercase;letter-spacing:.1em;color:var(--dourado2);margin:12px 0 2px}
+.modal-backdrop{position:fixed;inset:0;background:rgba(0,20,45,.65);z-index:80;display:grid;place-items:center;padding:18px}
+.modal-backdrop[hidden]{display:none}
+.modal{background:var(--off);border-radius:20px;border-top:4px solid var(--dourado);max-width:720px;width:100%;max-height:90vh;overflow:auto;display:grid;grid-template-columns:1fr 1fr;position:relative}
+.modal img{width:100%;height:100%;min-height:280px;object-fit:cover}
+.modal-info{padding:24px}
+.modal-x{position:absolute;top:10px;right:10px;width:34px;height:34px;border-radius:50%;border:1px solid var(--dourado);background:var(--azul);color:var(--off);font-weight:800;cursor:pointer}
+.qty{display:inline-flex;align-items:center;gap:12px;margin-top:4px;background:#fff;border:1px solid rgba(0,45,98,.25);border-radius:999px;padding:4px 10px}
+.qty button{width:28px;height:28px;border-radius:50%;border:1px solid var(--azul);background:transparent;color:var(--azul);font-weight:800;cursor:pointer}
+.qty span{font-weight:800;min-width:20px;text-align:center}
+@media(max-width:640px){.modal{grid-template-columns:1fr}.modal img{min-height:200px;max-height:260px}}
 .mini-btn{display:inline-block;margin-top:10px;font-size:.85rem;font-weight:700;text-decoration:underline;text-decoration-color:var(--dourado);text-decoration-thickness:2px;text-underline-offset:5px}
 /* lentes */
 .lentes{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:22px}
@@ -387,6 +403,25 @@ footer a{color:var(--off);margin-right:12px;font-size:.88rem}
 </div>
 
 <a class="wpp magnetic" href="https://wa.me/5521984816082">WhatsApp</a>
+<div class="modal-backdrop" id="modal" hidden>
+<div class="modal" role="dialog" aria-modal="true" aria-labelledby="m-nome">
+<button class="modal-x" id="m-fechar" aria-label="Fechar detalhes">✕</button>
+<img id="m-foto" alt=""/>
+<div class="modal-info">
+<small class="cat" id="m-cat"></small>
+<h3 id="m-nome"></h3>
+<p class="meta" id="m-meta"></p>
+<div class="price" id="m-preco"></div>
+<p class="opt-label">Cor da armação</p>
+<div class="swatches" id="m-cores"></div>
+<p class="opt-label">Lente</p>
+<div class="swatches" id="m-lentes"></div>
+<p class="opt-label">Quantidade</p>
+<div class="qty"><button id="m-menos" type="button" aria-label="Diminuir quantidade">−</button><span id="m-qtd">1</span><button id="m-mais" type="button" aria-label="Aumentar quantidade">+</button></div>
+<p style="margin-top:16px"><a class="btn magnetic" id="m-pedir" href="#">Pedir no WhatsApp</a></p>
+</div>
+</div>
+</div>
 <footer>
 <div><a class="brand" href="#topo" style="color:var(--off)"><span class="brand-mark" style="background:var(--dourado);color:var(--azul2)">A</span><span class="brand-name">ALEXSANDER<span class="brand-dot">.</span><span class="slogan-oficial">Seu olhar, nosso cuidado</span></span></a><p style="margin-top:10px;font-size:.88rem;opacity:.85">Elegância, conforto e cuidado com a sua visão.</p></div>
 <div><a href="#avaliacoes">Avaliações</a><a href="https://www.instagram.com/Alexsanderotic" target="_blank" rel="noopener">Instagram</a><a href="https://www.facebook.com/alexsander.otic?locale=pt_BR" target="_blank" rel="noopener">Facebook</a><a href="https://wa.me/5521984816082">WhatsApp</a><p style="margin-top:10px;font-size:.82rem;opacity:.75">© 2026 Alexsander Ótica</p></div>
@@ -423,6 +458,100 @@ footer a{color:var(--off);margin-right:12px;font-size:.88rem}
       c.addEventListener('mouseleave', function(){ c.style.transform = ''; });
     });
   }
+  // Variantes de cor por modelo + modal de detalhes
+  var CORES = {
+    "Aviador Azul": ["Dourado e azul", "Preto", "Prata"],
+    "Oval Tartaruga": ["Tartaruga", "Preto", "Transparente"],
+    "Retangular Tartaruga": ["Tartaruga", "Preto", "Marrom"],
+    "Clubmaster Marrom": ["Marrom", "Preto"],
+    "Redondo Preto": ["Preto", "Grafite"],
+    "Hexagonal Âmbar": ["Âmbar", "Preto"],
+    "Bali Quadrado": ["Preto", "Tartaruga"],
+    "Redondo Grafite": ["Grafite", "Preto"]
+  };
+  var LENTES = ["Transparente", "Antirreflexo", "Fotossensível", "Polarizada"];
+  var PRECO = {"Aviador Azul": 80, "Oval Tartaruga": 80, "Retangular Tartaruga": 120, "Clubmaster Marrom": 150, "Redondo Preto": 140, "Hexagonal Âmbar": 130, "Bali Quadrado": 150, "Redondo Grafite": 130};
+  var PRECO_DE = {"Aviador Azul": 150, "Oval Tartaruga": 120};
+  function BRL(v){ return "R$ " + v; }
+  function selCor(card){ return card.dataset.selcor || card.dataset.color; }
+  // Linha de cores em cada card
+  document.querySelectorAll('#grade .card').forEach(function(card){
+    var nome = card.dataset.name, cores = CORES[nome] || [card.dataset.color];
+    card.dataset.selcor = cores[0];
+    var box = document.createElement('div');
+    box.className = 'swatches';
+    box.setAttribute('aria-label', 'Cores de ' + nome);
+    cores.forEach(function(cor, i){
+      var b = document.createElement('button');
+      b.type = 'button'; b.className = 'swatch'; b.textContent = cor;
+      b.setAttribute('aria-pressed', i === 0 ? 'true' : 'false');
+      b.addEventListener('click', function(){
+        card.dataset.selcor = cor;
+        box.querySelectorAll('.swatch').forEach(function(x){ x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
+        var meta = card.querySelector('.meta');
+        if(meta) meta.textContent = card.dataset.format + ' · ' + cor;
+      });
+      box.appendChild(b);
+    });
+    var meta = card.querySelector('.meta');
+    if(meta) meta.after(box);
+  });
+  // Modal
+  var modal = document.getElementById('modal'), mNome = document.getElementById('m-nome'),
+      mFoto = document.getElementById('m-foto'), mCat = document.getElementById('m-cat'),
+      mMeta = document.getElementById('m-meta'), mPreco = document.getElementById('m-preco'),
+      mCores = document.getElementById('m-cores'), mLentes = document.getElementById('m-lentes'),
+      mQtd = document.getElementById('m-qtd'), mPedir = document.getElementById('m-pedir'),
+      mCor = '', mLente = LENTES[0], mQtdN = 1, mModelo = '', mFotoSrc = '';
+  function precoHTML(nome){
+    var p = PRECO[nome], de = PRECO_DE[nome];
+    return de ? '<span class="old">' + BRL(de) + '</span><strong>' + BRL(p) + '</strong><span class="promo-tag">PROMOÇÃO</span>' : '<strong>' + BRL(p) + '</strong>';
+  }
+  function atualizaPedir(){
+    var total = (PRECO[mModelo] || 0) * mQtdN;
+    mPedir.href = 'https://wa.me/5521984816082?text=' + encodeURIComponent('Olá Alexsander Ótica, quero ' + mQtdN + 'x ' + mModelo + ' (' + mCor + ', lente ' + mLente + ') — ' + BRL(total));
+    mPedir.textContent = 'Pedir ' + mQtdN + 'x no WhatsApp — ' + BRL(total);
+  }
+  function abrirModal(card){
+    mModelo = card.dataset.name; mCor = selCor(card); mLente = LENTES[0]; mQtdN = 1;
+    mFotoSrc = card.querySelector('img').src;
+    mFoto.src = mFotoSrc; mFoto.alt = card.querySelector('img').alt;
+    mCat.textContent = card.querySelector('.cat span').textContent;
+    mNome.textContent = mModelo;
+    mMeta.textContent = card.dataset.format + ' · ' + mCor;
+    mPreco.innerHTML = precoHTML(mModelo);
+    mCores.innerHTML = ''; mLentes.innerHTML = ''; mQtd.textContent = '1';
+    (CORES[mModelo] || [mCor]).forEach(function(cor){
+      var b = document.createElement('button');
+      b.type = 'button'; b.className = 'swatch'; b.textContent = cor;
+      b.setAttribute('aria-pressed', cor === mCor ? 'true' : 'false');
+      b.addEventListener('click', function(){ mCor = cor; mMeta.textContent = card.dataset.format + ' · ' + cor;
+        mCores.querySelectorAll('.swatch').forEach(function(x){ x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); }); atualizaPedir(); });
+      mCores.appendChild(b);
+    });
+    LENTES.forEach(function(l, i){
+      var b = document.createElement('button');
+      b.type = 'button'; b.className = 'swatch'; b.textContent = l;
+      b.setAttribute('aria-pressed', i === 0 ? 'true' : 'false');
+      b.addEventListener('click', function(){ mLente = l;
+        mLentes.querySelectorAll('.swatch').forEach(function(x){ x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); }); atualizaPedir(); });
+      mLentes.appendChild(b);
+    });
+    atualizaPedir();
+    modal.hidden = false;
+    document.getElementById('m-fechar').focus();
+  }
+  function fecharModal(){ modal.hidden = true; }
+  document.getElementById('grade').addEventListener('click', function(e){
+    if(e.target.closest('button, a')) return;
+    var card = e.target.closest('.card');
+    if(card) abrirModal(card);
+  });
+  document.getElementById('m-fechar').addEventListener('click', fecharModal);
+  modal.addEventListener('click', function(e){ if(e.target === modal) fecharModal(); });
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape' && !modal.hidden) fecharModal(); });
+  document.getElementById('m-mais').addEventListener('click', function(){ mQtdN = Math.min(10, mQtdN + 1); mQtd.textContent = mQtdN; atualizaPedir(); });
+  document.getElementById('m-menos').addEventListener('click', function(){ mQtdN = Math.max(1, mQtdN - 1); mQtd.textContent = mQtdN; atualizaPedir(); });
   // Filtros da coleção
   var tab = 'todos', grade = document.getElementById('grade'), cards = Array.prototype.slice.call(grade.children),
       busca = document.getElementById('busca'), ordem = document.getElementById('ordem'), formato = document.getElementById('formato'),
@@ -440,7 +569,7 @@ footer a{color:var(--off);margin-right:12px;font-size:.88rem}
   function aplicar(){
     var q = busca.value.trim().toLowerCase(), f = formato.value;
     var vis = cards.filter(function(c){
-      var txt = (c.dataset.name + ' ' + c.dataset.format + ' ' + c.dataset.color + ' ' + c.dataset.cat).toLowerCase();
+      var txt = (c.dataset.name + ' ' + c.dataset.format + ' ' + c.dataset.color + ' ' + (CORES[c.dataset.name] || []).join(' ') + ' ' + c.dataset.cat).toLowerCase();
       return (tab==='todos' || c.dataset.cat===tab) && (!f || c.dataset.format===f) && (!q || txt.indexOf(q) > -1);
     });
     if(ordem.value==='az') vis.sort(function(a,b){ return a.dataset.name.localeCompare(b.dataset.name, 'pt-BR'); });
@@ -451,13 +580,15 @@ footer a{color:var(--off);margin-right:12px;font-size:.88rem}
     limpar.disabled = !(q || f || tab!=='todos' || ordem.value!=='destaques');
   }
   document.getElementById('limpar2').addEventListener('click', function(){ limpar.click(); });
-  // Orçamento pelo WhatsApp com o nome do modelo e o preço
+  // Orçamento pelo WhatsApp com o nome do modelo, cor e preço
   document.querySelectorAll('[data-orc]').forEach(function(el){
     el.addEventListener('click', function(ev){
       ev.preventDefault();
       var m = el.getAttribute('data-orc');
+      var card = el.closest('.card');
+      var cor = card ? selCor(card) : '';
       var p = el.getAttribute('data-preco') || '';
-      window.open('https://wa.me/5521984816082?text=' + encodeURIComponent('Olá Alexsander Ótica, quero o modelo ' + m + (p ? ' (' + p + ')' : '')), '_blank');
+      window.open('https://wa.me/5521984816082?text=' + encodeURIComponent('Olá Alexsander Ótica, quero o modelo ' + m + (cor ? ' (' + cor + ')' : '') + (p ? ' — ' + p : '')), '_blank');
     });
   });
 })();
