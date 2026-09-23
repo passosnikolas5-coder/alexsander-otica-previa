@@ -136,6 +136,32 @@ nav a.cta{background:linear-gradient(135deg,var(--dourado),#b9973f);color:var(--
 .qty button{width:28px;height:28px;border-radius:50%;border:1px solid var(--azul);background:transparent;color:var(--azul);font-weight:800;cursor:pointer}
 .qty span{font-weight:800;min-width:20px;text-align:center}
 @media(max-width:640px){.modal{grid-template-columns:1fr}.modal img{min-height:200px;max-height:260px}}
+/* carrinho */
+.cart-btn{position:relative;background:var(--azul);color:var(--off);border:1px solid var(--dourado);border-radius:999px;padding:8px 14px;font-weight:800;cursor:pointer;font-size:.88rem}
+.cart-num{position:absolute;top:-8px;right:-6px;background:var(--dourado);color:var(--azul2);font-size:.72rem;font-weight:800;border-radius:999px;min-width:20px;height:20px;display:grid;place-items:center;padding:0 5px}
+.cart-void{position:fixed;inset:0;background:rgba(0,20,45,.6);z-index:90}
+.cart-void[hidden]{display:none}
+.drawer{position:fixed;top:0;right:0;height:100dvh;width:min(400px,94vw);background:var(--off);z-index:95;display:flex;flex-direction:column;border-left:2px solid var(--dourado);transform:translateX(0);transition:transform .3s ease}
+.cart-void[hidden]+.drawer{transform:translateX(100%)}
+.drawer-head{display:flex;justify-content:space-between;align-items:center;padding:16px 18px;border-bottom:2px solid var(--dourado)}
+.drawer-head h2{font-size:1.3rem;margin:0}
+.drawer-items{flex:1;overflow:auto;padding:14px 18px;display:flex;flex-direction:column;gap:12px}
+.cart-item{display:grid;grid-template-columns:64px 1fr;gap:10px;background:#fff;border:1px solid rgba(0,45,98,.15);border-top:3px solid var(--dourado);border-radius:12px;padding:10px}
+.cart-item img{width:64px;height:64px;object-fit:cover;border-radius:8px}
+.cart-item h4{font-size:.92rem}
+.cart-item small{opacity:.75}
+.cart-item .row{display:flex;justify-content:space-between;align-items:center;margin-top:6px}
+.cart-item .qty{margin:0}
+.rm{background:none;border:none;color:var(--dourado2);font-size:.78rem;font-weight:700;cursor:pointer;text-decoration:underline;text-underline-offset:3px}
+.drawer-foot{padding:16px 18px;border-top:2px solid var(--dourado);background:#fff}
+.pickup{background:var(--azul-soft);border:1px solid var(--dourado);border-radius:10px;padding:10px 12px;font-size:.84rem;margin-bottom:10px}
+.pickup strong{color:var(--azul)}
+.total-line{display:flex;justify-content:space-between;font-weight:800;font-size:1.05rem;margin:8px 0 12px}
+.nome-input{width:100%;border:1px solid rgba(0,45,98,.3);border-radius:10px;padding:10px 12px;margin-bottom:10px;font-size:.92rem;color:var(--azul)}
+.checkout{width:100%;text-align:center}
+.toast{position:fixed;bottom:76px;left:50%;transform:translateX(-50%) translateY(20px);background:var(--azul);color:var(--off);border:1px solid var(--dourado);border-radius:999px;padding:10px 18px;font-size:.88rem;font-weight:700;z-index:120;opacity:0;pointer-events:none;transition:opacity .3s,transform .3s}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+.btn-outline{display:inline-block;margin-top:8px;color:var(--azul);font-weight:700;font-size:.88rem}
 .mini-btn{display:inline-block;margin-top:10px;font-size:.85rem;font-weight:700;text-decoration:underline;text-decoration-color:var(--dourado);text-decoration-thickness:2px;text-underline-offset:5px}
 /* lentes */
 .lentes{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:22px}
@@ -210,6 +236,7 @@ footer a{color:var(--off);margin-right:12px;font-size:.88rem}
 <header>
 <a class="brand" href="#topo"><span class="brand-mark">A</span><span class="brand-name">ALEXSANDER<span class="brand-dot">.</span><span class="slogan-oficial">Seu olhar, nosso cuidado</span></span></a>
 <nav><a href="#colecao">Coleção</a><a href="#lentes">Lentes</a><a href="#materiais">Materiais</a><a href="#guia">Guia</a><a href="#entrega">Entrega</a><a href="#loja">Loja física</a><a href="#contato">Atendimento</a><a class="cta" href="https://wa.me/5521984816082?text=Ol%C3%A1%20Alexsander%20%C3%93tica">WhatsApp ↗</a></nav>
+<button class="cart-btn magnetic" id="cart-abrir" type="button" aria-label="Abrir carrinho de compras">Sacola <span class="cart-num" id="cart-num">0</span></button>
 </header>
 
 <section class="hero parallax" data-speed="0.05" id="topo">
@@ -418,7 +445,8 @@ footer a{color:var(--off);margin-right:12px;font-size:.88rem}
 <div class="swatches" id="m-lentes"></div>
 <p class="opt-label">Quantidade</p>
 <div class="qty"><button id="m-menos" type="button" aria-label="Diminuir quantidade">−</button><span id="m-qtd">1</span><button id="m-mais" type="button" aria-label="Aumentar quantidade">+</button></div>
-<p style="margin-top:16px"><a class="btn magnetic" id="m-pedir" href="#">Pedir no WhatsApp</a></p>
+<p style="margin-top:16px"><button class="btn magnetic" id="m-add" type="button" style="width:100%">Adicionar à sacola</button></p>
+<p><a class="btn-outline" id="m-pedir" href="#">ou pedir direto no WhatsApp</a></p>
 </div>
 </div>
 </div>
@@ -427,6 +455,19 @@ footer a{color:var(--off);margin-right:12px;font-size:.88rem}
 <div><a href="#avaliacoes">Avaliações</a><a href="https://www.instagram.com/Alexsanderotic" target="_blank" rel="noopener">Instagram</a><a href="https://www.facebook.com/alexsander.otic?locale=pt_BR" target="_blank" rel="noopener">Facebook</a><a href="https://wa.me/5521984816082">WhatsApp</a><p style="margin-top:10px;font-size:.82rem;opacity:.75">© 2026 Alexsander Ótica</p></div>
 </footer>
 
+<div class="cart-void" id="cart-void" hidden></div>
+<aside class="drawer" id="drawer" aria-label="Sacola de compras" aria-hidden="true">
+<div class="drawer-head"><h2>Sua sacola</h2><button class="modal-x" id="cart-fechar" type="button" aria-label="Fechar sacola" style="position:static">✕</button></div>
+<div class="drawer-items" id="cart-items"></div>
+<div class="drawer-foot">
+<div class="pickup"><strong>Retirada na loja</strong><br/>Rua Poligonal, 10 · Mesquita, RJ<br/>Por enquanto sem entrega — você busca seu pedido na loja.</div>
+<div class="total-line"><span>Total</span><span id="cart-total">R$ 0</span></div>
+<label class="opt-label" for="cli-nome">Seu nome para o pedido</label>
+<input class="nome-input" id="cli-nome" type="text" name="nome" placeholder="Ex.: Maria Silva" autocomplete="name"/>
+<a class="btn magnetic checkout" id="cart-enviar" href="#">Finalizar no WhatsApp</a>
+</div>
+</aside>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
 <script>
 (function(){
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -591,6 +632,74 @@ footer a{color:var(--off);margin-right:12px;font-size:.88rem}
       window.open('https://wa.me/5521984816082?text=' + encodeURIComponent('Olá Alexsander Ótica, quero o modelo ' + m + (cor ? ' (' + cor + ')' : '') + (p ? ' — ' + p : '')), '_blank');
     });
   });
+  // Sacola (carrinho) com retirada na loja — sem entrega por enquanto
+  var LS = 'alexsander_sacola_v1', sacola = [];
+  try { sacola = JSON.parse(localStorage.getItem(LS) || '[]'); } catch(e){ sacola = []; }
+  function salvaSacola(){ try { localStorage.setItem(LS, JSON.stringify(sacola)); } catch(e){} }
+  var cartVoid = document.getElementById('cart-void'), drawer = document.getElementById('drawer'),
+      cartItems = document.getElementById('cart-items'), cartTotal = document.getElementById('cart-total'),
+      cartNum = document.getElementById('cart-num'), cliNome = document.getElementById('cli-nome'),
+      toast = document.getElementById('toast'), toastT = null;
+  try { cliNome.value = localStorage.getItem('alexsander_nome') || ''; } catch(e){}
+  function mostraToast(msg){
+    toast.textContent = msg; toast.classList.add('show');
+    clearTimeout(toastT); toastT = setTimeout(function(){ toast.classList.remove('show'); }, 2600);
+  }
+  function fotoDe(modelo){
+    var img = document.querySelector('#grade .card[data-name="' + modelo + '"] img');
+    return img ? img.src : './loja-perfil.png';
+  }
+  function totalSacola(){ return sacola.reduce(function(s, it){ return s + (PRECO[it.modelo] || 0) * it.qtd; }, 0); }
+  function renderSacola(){
+    var n = sacola.reduce(function(s, it){ return s + it.qtd; }, 0);
+    cartNum.textContent = n;
+    cartTotal.textContent = BRL(totalSacola());
+    cartItems.innerHTML = '';
+    if(!sacola.length){
+      cartItems.innerHTML = '<p class="section-note">Sua sacola está vazia. Explore a coleção e adicione seus modelos.</p>';
+    }
+    sacola.forEach(function(it, idx){
+      var div = document.createElement('div');
+      div.className = 'cart-item';
+      div.innerHTML = '<img alt=""/><div><h4></h4><small></small><div class="row"><div class="qty"><button type="button" aria-label="Diminuir">−</button><span></span><button type="button" aria-label="Aumentar">+</button></div><strong></strong></div><button type="button" class="rm">Remover</button></div>';
+      div.querySelector('img').src = fotoDe(it.modelo);
+      div.querySelector('img').alt = it.modelo;
+      div.querySelector('h4').textContent = it.modelo;
+      div.querySelector('small').textContent = it.cor + ' · lente ' + it.lente;
+      div.querySelector('.qty span').textContent = it.qtd;
+      div.querySelector('.row strong').textContent = BRL((PRECO[it.modelo] || 0) * it.qtd);
+      var btns = div.querySelectorAll('.qty button');
+      btns[0].addEventListener('click', function(){ it.qtd--; if(it.qtd < 1) sacola.splice(idx, 1); salvaSacola(); renderSacola(); });
+      btns[1].addEventListener('click', function(){ it.qtd = Math.min(10, it.qtd + 1); salvaSacola(); renderSacola(); });
+      div.querySelector('.rm').addEventListener('click', function(){ sacola.splice(idx, 1); salvaSacola(); renderSacola(); });
+      cartItems.appendChild(div);
+    });
+    var linhas = sacola.map(function(it){ return it.qtd + 'x ' + it.modelo + ' (' + it.cor + ', lente ' + it.lente + ') — ' + BRL((PRECO[it.modelo] || 0) * it.qtd); });
+    var nome = cliNome.value.trim();
+    document.getElementById('cart-enviar').href = 'https://wa.me/5521984816082?text=' + encodeURIComponent('Olá Alexsander Ótica, meu pedido (RETIRADA NA LOJA — Rua Poligonal, 10 · Mesquita):\n' + linhas.join('\n') + '\nTotal: ' + BRL(totalSacola()) + (nome ? '\nNome: ' + nome : ''));
+  }
+  function abrirSacola(){ cartVoid.hidden = false; drawer.setAttribute('aria-hidden', 'false'); renderSacola(); }
+  function fecharSacola(){ cartVoid.hidden = true; drawer.setAttribute('aria-hidden', 'true'); }
+  document.getElementById('cart-abrir').addEventListener('click', abrirSacola);
+  document.getElementById('cart-fechar').addEventListener('click', fecharSacola);
+  cartVoid.addEventListener('click', fecharSacola);
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape' && !cartVoid.hidden) fecharSacola(); });
+  cliNome.addEventListener('input', function(){ try { localStorage.setItem('alexsander_nome', cliNome.value); } catch(e){} renderSacola(); });
+  document.getElementById('cart-enviar').addEventListener('click', function(e){
+    if(!sacola.length){ e.preventDefault(); mostraToast('Sua sacola está vazia'); return; }
+    if(!cliNome.value.trim()){ e.preventDefault(); cliNome.focus(); mostraToast('Digite seu nome para o pedido'); return; }
+    sacola = []; salvaSacola(); renderSacola(); fecharSacola();
+    mostraToast('Pedido enviado! Retire na loja.');
+  });
+  document.getElementById('m-add').addEventListener('click', function(){
+    var achou = null;
+    sacola.forEach(function(it){ if(it.modelo === mModelo && it.cor === mCor && it.lente === mLente) achou = it; });
+    if(achou){ achou.qtd = Math.min(10, achou.qtd + mQtdN); }
+    else { sacola.push({modelo: mModelo, cor: mCor, lente: mLente, qtd: mQtdN}); }
+    salvaSacola(); renderSacola(); fecharModal();
+    mostraToast(mModelo + ' na sacola!');
+  });
+  renderSacola();
 })();
 </script>
 </body>
