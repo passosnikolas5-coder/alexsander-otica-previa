@@ -1,29 +1,17 @@
-MAPA DE FOTOS — Alexsander Ótica
-=====================================
-COMO USAR: salve cada foto BOA que você enviou no chat com o nome exato abaixo,
-dentro desta pasta (otica-previa-site/fotos/). Depois avise "pronto" que eu
-monto a loja com nomes + preços + selo de promoção.
+MAPA DE FOTOS FINAL — Alexsander Ótica (loja publicada)
+==========================================================
+As 8 fotos da loja (pasta fotos/), todas de fundo limpo, sem Instagram por cima:
 
-FOTOS APROVADAS (limpas, sem Instagram por cima) → nome do arquivo → modelo → preço
-------------------------------------------------------------------------------------
-1. solar-aviador-azul.jpg        → Aviador Azul (solar, metal dourado/lente azul)   → PROMOÇÃO R$ 80 (de R$ 150)
-2. optico-oval-tartaruga.jpg     → Oval Tartaruga (óptico, acetato tartaruga)       → PROMOÇÃO R$ 80 (de R$ 120)
-3. solar-redondo-transparente.jpg→ Redondo Cristal (solar, transparente/lente escura)→ PROMOÇÃO R$ 80 (de R$ 130)
-4. optico-retangular-tartaruga.jpg→ Retangular Tartaruga (óptico, acetato)          → R$ 120
-5. optico-gatinho-tartaruga.jpg  → Gatinho Tartaruga (óptico, acetato)              → R$ 130
-6. optico-trio-redondo.jpg       → Trio Redondo (óptico, 3 cores — foto com 3 peças)→ R$ 100
-7. solar-wayfarer-marrom.jpg     → Wayfarer Marrom (solar, degradê marrom)          → R$ 150
-8. solar-redondo-preto.jpg       → Redondo Preto (solar, metal preto)               → R$ 140
-9. solar-cinza-redondo.jpg       → Cinza Redondo (solar, metal grafite)             → R$ 130
-10. solar-bali-quadrado.jpg      → Bali Quadrado (solar, preto/lente escura)        → R$ 150
+1. solar-aviador-azul.jpg      → Aviador Azul (solar)           → PROMOÇÃO R$ 80 (de R$ 150)
+2. optico-oval-tartaruga.jpg   → Oval Tartaruga (óptico)        → PROMOÇÃO R$ 80 (de R$ 120)
+3. optico-retangular-tartaruga.jpg → Retangular Tartaruga (óptico) → R$ 120
+4. solar-clubmaster-marrom.jpg → Clubmaster Marrom (solar)      → R$ 150
+5. solar-redondo-preto.jpg     → Redondo Preto (solar)          → R$ 140
+6. solar-hexagonal-ambar.jpg   → Hexagonal Âmbar (solar)        → R$ 130
+7. solar-bali-quadrado.jpg     → Bali Quadrado (solar)          → R$ 150
+8. solar-redondo-grafite.jpg   → Redondo Grafite (solar)        → R$ 130
 
-FOTOS REPROVADAS (NÃO salvar — com interferência de Instagram/enquetes/texto)
-------------------------------------------------------------------------------
-- Foto com texto "Alexsander ótica" por cima da lente → texto cobre o óculos
-- Foto com "@alexsanderotic" + ícone de carrossel → moldura do Instagram
-- Enquete "QUAL VOCÊ USARIA? 1-2-3-4" → enquete cobre os óculos
-- Foto com caixa "Esse aqui traz uma elegância..." → texto cobre a foto
-- Foto "Clássico com Atitude R$50" → texto promocional antigo por cima
-- Arte "ALEX OTIC / Olhar que faz diferença" → arte gráfica, não é foto do produto
-- Fotos na bandeja com flores/folhas secas cobrindo os óculos → props atrapalham
-- Fotos duplicadas/repetidas → usar só uma de cada
+NÃO entraram na loja (com interferência de Instagram/enquetes/texto ou props):
+texto por cima da lente, @alexsanderotic + ícone de carrossel, enquete
+"QUAL VOCÊ USARIA?", caixa de texto, arte "ALEX OTIC", bandeja com flores
+cobrindo os óculos, duplicadas.
