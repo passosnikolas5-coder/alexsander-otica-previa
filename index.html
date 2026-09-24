@@ -9,6 +9,9 @@
 <link rel="icon" type="image/png" sizes="16x16" href="./loja-perfil.png"/>
 <link rel="apple-touch-icon" sizes="180x180" href="./loja-perfil.png"/>
 <link rel="canonical" href="https://passosnikolas5-coder.github.io/alexsander-otica-previa/"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,800;1,9..144,500;1,9..144,700&amp;family=Inter:wght@400;500;700;800&amp;display=swap"/>
 <meta property="og:type" content="website"/>
 <meta property="og:locale" content="pt_BR"/>
 <meta property="og:title" content="Alexsander Ótica — Seu olhar, nosso cuidado"/>
@@ -25,7 +28,7 @@
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;background:var(--off);color:var(--azul);line-height:1.6}
-h1,h2,h3{font-family:Georgia,"Times New Roman",serif;letter-spacing:-.02em}
+h1,h2,h3{font-family:Fraunces,Georgia,"Times New Roman",serif;letter-spacing:-.02em}
 h1 em,h2 em{font-style:italic;font-weight:400}
 a{color:inherit}
 .skip-link{position:absolute;left:-999px}
@@ -33,7 +36,7 @@ a{color:inherit}
 .section{padding:8px 0}
 .eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:.76rem;text-transform:uppercase;letter-spacing:.16em;font-weight:800}
 .eyebrow::before{content:"";width:34px;height:3px;background:linear-gradient(90deg,var(--dourado),var(--dourado2));display:inline-block;border-radius:2px}
-h2{font-size:clamp(1.7rem,3.6vw,2.5rem);margin:12px 0 10px;line-height:1.3}
+h2{font-size:clamp(1.8rem,3.8vw,2.7rem);margin:12px 0 10px;line-height:1.3;text-wrap:balance}
 h2 em{color:var(--dourado2)}
 .section-note{opacity:.75;max-width:62ch}
 /* barra + progresso + cursor */
@@ -57,7 +60,7 @@ nav a.cta{background:linear-gradient(135deg,var(--dourado),#b9973f);color:var(--
 .hero{background:linear-gradient(135deg,#001E42 0%,#002D62 55%,#0a2a52 100%);position:relative;overflow:hidden}
 .hero-inner{max-width:1120px;margin:0 auto;padding:56px 24px;display:grid;grid-template-columns:1.05fr .95fr;gap:32px;align-items:center;position:relative}
 .hero .eyebrow{color:var(--dourado)}
-.hero h1{font-size:clamp(2.4rem,5.2vw,3.8rem);line-height:1.28;margin:20px 0 4px;color:var(--off);text-wrap:balance}
+.hero h1{font-size:clamp(2.6rem,5.6vw,4.2rem);line-height:1.28;margin:20px 0 4px;color:var(--off);text-wrap:balance}
 .hero h1 .h1-linha{display:block}
 .hero h1 .h1-linha-1{margin-bottom:16px}
 .hero h1 em{color:var(--dourado);text-decoration:none}
@@ -106,14 +109,16 @@ nav a.cta{background:linear-gradient(135deg,var(--dourado),#b9973f);color:var(--
 .filters select{border:1px solid rgba(0,45,98,.25);border-radius:10px;padding:8px 10px;background:#fff;color:var(--azul)}
 .reset{background:none;border:none;color:var(--azul);font-weight:700;cursor:pointer;text-decoration:underline;text-underline-offset:4px}
 .reset:disabled{opacity:.4;cursor:default}
-.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:22px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:22px}
 .card{background:var(--branco);border:1px solid rgba(0,45,98,.12);border-top:4px solid var(--dourado);border-radius:16px;overflow:hidden;transform-style:preserve-3d;transition:transform .25s ease,box-shadow .25s ease;box-shadow:0 4px 16px rgba(0,45,98,.06)}
 .card:hover{transform:translateY(-3px);box-shadow:0 18px 40px rgba(0,45,98,.16)}
-.card img{width:100%;height:160px;object-fit:cover;display:block}
-.card .pad{padding:14px 15px}
+.card img{width:100%;height:250px;object-fit:cover;display:block;transition:transform .35s ease}
+.card:hover img{transform:scale(1.05)}
+.card h3{font-size:1.35rem;margin-top:8px}
+.card .pad{padding:16px 18px}
 .card small.cat{color:var(--dourado2);font-weight:800;text-transform:uppercase;letter-spacing:.08em;font-size:.7rem;display:flex;justify-content:space-between;align-items:center}
 .card small.cat button{background:none;border:none;color:var(--dourado2);font-weight:800;font-size:.72rem;cursor:pointer;text-transform:uppercase;letter-spacing:.06em}
-.card h3{font-size:1.15rem;margin-top:6px}
+.card h3{font-size:1.35rem;margin-top:8px}
 .card .meta{font-size:.88rem;opacity:.75}
 .price{font-weight:800;margin-top:8px}
 .price .old{text-decoration:line-through;opacity:.55;font-weight:400;margin-right:6px}
@@ -129,7 +134,7 @@ nav a.cta{background:linear-gradient(135deg,var(--dourado),#b9973f);color:var(--
 .modal-backdrop{position:fixed;inset:0;background:rgba(0,20,45,.65);z-index:80;display:grid;place-items:center;padding:18px}
 .modal-backdrop[hidden]{display:none}
 .modal{background:var(--off);border-radius:20px;border-top:4px solid var(--dourado);max-width:720px;width:100%;max-height:90vh;overflow:auto;display:grid;grid-template-columns:1fr 1fr;position:relative}
-.modal img{width:100%;height:100%;min-height:280px;object-fit:cover}
+.modal-media{background:#fff;border-radius:20px 0 0 20px;overflow:hidden}
 .modal-info{padding:24px}
 .modal-x{position:absolute;top:10px;right:10px;width:34px;height:34px;border-radius:50%;border:1px solid var(--dourado);background:var(--azul);color:var(--off);font-weight:800;cursor:pointer}
 .qty{display:inline-flex;align-items:center;gap:12px;margin-top:4px;background:#fff;border:1px solid rgba(0,45,98,.25);border-radius:999px;padding:4px 10px}
@@ -162,6 +167,32 @@ nav a.cta{background:linear-gradient(135deg,var(--dourado),#b9973f);color:var(--
 .toast{position:fixed;bottom:76px;left:50%;transform:translateX(-50%) translateY(20px);background:var(--azul);color:var(--off);border:1px solid var(--dourado);border-radius:999px;padding:10px 18px;font-size:.88rem;font-weight:700;z-index:120;opacity:0;pointer-events:none;transition:opacity .3s,transform .3s}
 .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
 .btn-outline{display:inline-block;margin-top:8px;color:var(--azul);font-weight:700;font-size:.88rem}
+/* faixa promocional animada */
+.marquee{background:var(--dourado);color:var(--azul2);overflow:hidden;white-space:nowrap;font-weight:800;font-size:.82rem;letter-spacing:.12em;text-transform:uppercase;padding:9px 0}
+.marquee-track{display:inline-block;animation:marquee 22s linear infinite}
+.marquee-track span{margin:0 26px}
+@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+/* galeria do modal */
+.modal-media{display:flex;flex-direction:column}
+#m-foto{width:100%;min-height:340px;max-height:420px;object-fit:cover}
+.thumbs{display:flex;gap:8px;margin-top:10px}
+.thumbs button{border:2px solid transparent;border-radius:10px;overflow:hidden;padding:0;cursor:pointer;background:#fff}
+.thumbs button[aria-pressed="true"]{border-color:var(--dourado)}
+.thumbs img{width:64px;height:64px;object-fit:cover;display:block}
+/* pagamento */
+.pay-lines{background:#fff;border:1px solid rgba(0,45,98,.15);border-radius:12px;padding:12px 14px;margin:10px 0;font-size:.9rem}
+.pay-lines div{display:flex;justify-content:space-between;gap:10px;padding:3px 0}
+.pay-methods{display:grid;gap:8px;margin:8px 0}
+.pay-methods label{display:flex;gap:10px;align-items:center;background:#fff;border:1px solid rgba(0,45,98,.25);border-radius:12px;padding:10px 12px;font-weight:700;cursor:pointer}
+.pay-methods input{accent-color:var(--azul);width:18px;height:18px}
+.pay-box{background:#fff;border:1px solid rgba(0,45,98,.15);border-radius:12px;padding:14px;margin-top:8px}
+.pay-box label{display:block;font-size:.78rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em;margin:8px 0 2px}
+.pay-box input,.pay-box select{width:100%;border:1px solid rgba(0,45,98,.3);border-radius:10px;padding:10px 12px;font-size:.95rem;color:var(--azul);background:var(--off)}
+.pay-err{color:#9b1c1c;font-size:.84rem;font-weight:700;min-height:1.2em}
+.pix-code{background:var(--azul-soft);border:1px dashed var(--dourado2);border-radius:10px;padding:12px;font-size:.86rem}
+.order-ok{text-align:center;padding:8px 0}
+.order-ok .big{font-size:2.2rem}
+.order-num{display:inline-block;background:var(--azul);color:var(--off);border-radius:999px;padding:6px 16px;font-weight:800;letter-spacing:.08em;margin:10px 0}
 .mini-btn{display:inline-block;margin-top:10px;font-size:.85rem;font-weight:700;text-decoration:underline;text-decoration-color:var(--dourado);text-decoration-thickness:2px;text-underline-offset:5px}
 /* lentes */
 .lentes{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:22px}
@@ -233,6 +264,7 @@ footer a{color:var(--off);margin-right:12px;font-size:.88rem}
 <div class="cursor-glow" aria-hidden="true"></div>
 <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
 <div class="announcement">Alexsander Ótica · Rua Poligonal, 10 · Mesquita, RJ <strong>✦ Seu olhar, nosso cuidado.</strong></div>
+<div class="marquee" aria-hidden="true"><div class="marquee-track"><span>✦ Promoção: armações por R$ 80</span><span>✦ Retirada na loja em Mesquita</span><span>✦ Pix, crédito e débito</span><span>✦ Seu olhar, nosso cuidado</span><span>✦ Promoção: armações por R$ 80</span><span>✦ Retirada na loja em Mesquita</span><span>✦ Pix, crédito e débito</span><span>✦ Seu olhar, nosso cuidado</span></div></div>
 <header>
 <a class="brand" href="#topo"><span class="brand-mark">A</span><span class="brand-name">ALEXSANDER<span class="brand-dot">.</span><span class="slogan-oficial">Seu olhar, nosso cuidado</span></span></a>
 <nav><a href="#colecao">Coleção</a><a href="#lentes">Lentes</a><a href="#materiais">Materiais</a><a href="#guia">Guia</a><a href="#entrega">Entrega</a><a href="#loja">Loja física</a><a href="#contato">Atendimento</a><a class="cta" href="https://wa.me/5521984816082?text=Ol%C3%A1%20Alexsander%20%C3%93tica">WhatsApp ↗</a></nav>
@@ -275,7 +307,7 @@ footer a{color:var(--off);margin-right:12px;font-size:.88rem}
 </div>
 <div class="toolbar">
 <label class="search"><span aria-hidden="true">⌕</span><input id="busca" type="search" placeholder="Buscar nome, formato ou cor" aria-label="Buscar na coleção"/></label>
-<p class="count" id="contagem" role="status" aria-live="polite">8 modelos na seleção</p>
+<p class="count" id="contagem" role="status" aria-live="polite">7 modelos na seleção</p>
 <label class="sort">Ordenar
 <select id="ordem"><option value="destaques" selected>Destaques da coleção</option><option value="az">Nome de A a Z</option></select>
 </label>
@@ -294,7 +326,6 @@ footer a{color:var(--off);margin-right:12px;font-size:.88rem}
 <article class="card tilt" data-cat="solar" data-name="Redondo Preto" data-format="Redondo" data-color="Preto" data-preco="R$ 140"><img src="./fotos/solar-redondo-preto.jpg" alt="Óculos de sol Redondo Preto em metal." loading="lazy"/><div class="pad"><small class="cat"><span>Solar</span><button type="button" data-orc="Redondo Preto" data-preco="R$ 140">Orçamento ↗</button></small><h3>Redondo Preto</h3><p class="meta">Redondo · Preto</p><div class="price"><strong>R$ 140</strong></div><a class="mini-btn" href="#" data-orc="Redondo Preto" data-preco="R$ 140">Escolher e pedir orçamento</a></div></article>
 <article class="card tilt" data-cat="solar" data-name="Hexagonal Âmbar" data-format="Hexagonal" data-color="Marrom âmbar" data-preco="R$ 130"><img src="./fotos/solar-hexagonal-ambar.jpg" alt="Óculos de sol Hexagonal Âmbar." loading="lazy"/><div class="pad"><small class="cat"><span>Solar</span><button type="button" data-orc="Hexagonal Âmbar" data-preco="R$ 130">Orçamento ↗</button></small><h3>Hexagonal Âmbar</h3><p class="meta">Hexagonal · Marrom âmbar</p><div class="price"><strong>R$ 130</strong></div><a class="mini-btn" href="#" data-orc="Hexagonal Âmbar" data-preco="R$ 130">Escolher e pedir orçamento</a></div></article>
 <article class="card tilt" data-cat="solar" data-name="Bali Quadrado" data-format="Quadrado" data-color="Preto" data-preco="R$ 150"><img src="./fotos/solar-bali-quadrado.jpg" alt="Óculos de sol Bali Quadrado preto." loading="lazy"/><div class="pad"><small class="cat"><span>Solar</span><button type="button" data-orc="Bali Quadrado" data-preco="R$ 150">Orçamento ↗</button></small><h3>Bali Quadrado</h3><p class="meta">Quadrado · Preto</p><div class="price"><strong>R$ 150</strong></div><a class="mini-btn" href="#" data-orc="Bali Quadrado" data-preco="R$ 150">Escolher e pedir orçamento</a></div></article>
-<article class="card tilt" data-cat="solar" data-name="Redondo Grafite" data-format="Redondo" data-color="Grafite" data-preco="R$ 130"><img src="./fotos/solar-redondo-grafite.jpg" alt="Óculos de sol Redondo Grafite." loading="lazy"/><div class="pad"><small class="cat"><span>Solar</span><button type="button" data-orc="Redondo Grafite" data-preco="R$ 130">Orçamento ↗</button></small><h3>Redondo Grafite</h3><p class="meta">Redondo · Grafite</p><div class="price"><strong>R$ 130</strong></div><a class="mini-btn" href="#" data-orc="Redondo Grafite" data-preco="R$ 130">Escolher e pedir orçamento</a></div></article>
 </div>
 <p class="empty" id="vazio">Nenhum modelo encontrado com esses filtros. <button class="reset" id="limpar2" type="button">Limpar filtros ✕</button></p>
 </section>
@@ -429,11 +460,52 @@ footer a{color:var(--off);margin-right:12px;font-size:.88rem}
 </section>
 </div>
 
+<div class="modal-backdrop" id="pay" hidden>
+<div class="modal" role="dialog" aria-modal="true" aria-labelledby="pay-titulo" style="grid-template-columns:1fr;max-width:520px">
+<button class="modal-x" id="pay-fechar" type="button" aria-label="Fechar pagamento">✕</button>
+<div class="modal-info" id="pay-corpo">
+<div class="eyebrow">Finalizar compra · Retirada na loja</div>
+<h3 id="pay-titulo">Pagamento</h3>
+<div class="pay-lines" id="pay-resumo"></div>
+<div class="pay-methods" role="radiogroup" aria-label="Forma de pagamento">
+<label><input type="radio" name="pag" value="Pix" checked/> Pix — aprovação rápida</label>
+<label><input type="radio" name="pag" value="Crédito"/> Cartão de crédito — em até 3x</label>
+<label><input type="radio" name="pag" value="Débito"/> Cartão de débito — à vista</label>
+</div>
+<div class="pay-box" id="pay-pix">
+<div class="pix-code">Total <strong id="pix-total"></strong> · Após confirmar, você recebe a <strong>chave Pix da loja no WhatsApp</strong>, paga e retira seu pedido em Mesquita.</div>
+</div>
+<div class="pay-box" id="pay-cartao" hidden>
+<label for="cc-num">Número do cartão</label>
+<input id="cc-num" inputmode="numeric" autocomplete="cc-number" placeholder="0000 0000 0000 0000"/>
+<label for="cc-nome">Nome impresso</label>
+<input id="cc-nome" autocomplete="cc-name" placeholder="Como está no cartão"/>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+<div><label for="cc-val">Validade</label><input id="cc-val" inputmode="numeric" autocomplete="cc-exp" placeholder="MM/AA"/></div>
+<div><label for="cc-cvv">CVV</label><input id="cc-cvv" inputmode="numeric" autocomplete="cc-csc" placeholder="123"/></div>
+</div>
+<label for="cc-parc">Parcelas</label>
+<select id="cc-parc"></select>
+<p class="pay-err" id="cc-erro" role="alert"></p>
+</div>
+<p style="margin-top:14px"><button class="btn magnetic" id="pay-confirmar" type="button" style="width:100%">Confirmar pedido</button></p>
+</div>
+<div class="modal-info order-ok" id="pay-ok" hidden>
+<div class="big">🎉</div>
+<h3>Pedido recebido!</h3>
+<p>Apresente este número na loja para retirar:</p>
+<p><span class="order-num" id="order-num"></span></p>
+<p class="section-note" id="order-msg"></p>
+<p style="margin-top:14px"><a class="btn magnetic" id="order-wa" href="#">Enviar pedido no WhatsApp</a></p>
+<p><button class="btn-outline" id="order-fechar" type="button">Voltar à loja</button></p>
+</div>
+</div>
+</div>
 <a class="wpp magnetic" href="https://wa.me/5521984816082">WhatsApp</a>
 <div class="modal-backdrop" id="modal" hidden>
 <div class="modal" role="dialog" aria-modal="true" aria-labelledby="m-nome">
 <button class="modal-x" id="m-fechar" aria-label="Fechar detalhes">✕</button>
-<img id="m-foto" alt=""/>
+<div class="modal-media"><img id="m-foto" alt=""/><div class="thumbs" id="m-thumbs" aria-label="Outras fotos do modelo"></div></div>
 <div class="modal-info">
 <small class="cat" id="m-cat"></small>
 <h3 id="m-nome"></h3>
@@ -464,7 +536,7 @@ footer a{color:var(--off);margin-right:12px;font-size:.88rem}
 <div class="total-line"><span>Total</span><span id="cart-total">R$ 0</span></div>
 <label class="opt-label" for="cli-nome">Seu nome para o pedido</label>
 <input class="nome-input" id="cli-nome" type="text" name="nome" maxlength="60" placeholder="Ex.: Maria Silva" autocomplete="name"/>
-<a class="btn magnetic checkout" id="cart-enviar" href="#">Finalizar no WhatsApp</a>
+<a class="btn magnetic checkout" id="cart-finalizar" href="#" role="button">Finalizar compra</a>
 </div>
 </aside>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
@@ -501,17 +573,25 @@ footer a{color:var(--off);margin-right:12px;font-size:.88rem}
   }
   // Variantes de cor por modelo + modal de detalhes
   var CORES = {
-    "Aviador Azul": ["Dourado e azul", "Preto", "Prata"],
-    "Oval Tartaruga": ["Tartaruga", "Preto", "Transparente"],
-    "Retangular Tartaruga": ["Tartaruga", "Preto", "Marrom"],
-    "Clubmaster Marrom": ["Marrom", "Preto"],
-    "Redondo Preto": ["Preto", "Grafite"],
-    "Hexagonal Âmbar": ["Âmbar", "Preto"],
-    "Bali Quadrado": ["Preto", "Tartaruga"],
-    "Redondo Grafite": ["Grafite", "Preto"]
+    "Aviador Azul": ["Dourado e azul", "Preto", "Prata", "Marrom"],
+    "Oval Tartaruga": ["Tartaruga", "Preto", "Transparente", "Vermelho"],
+    "Retangular Tartaruga": ["Tartaruga", "Preto", "Marrom", "Azul"],
+    "Clubmaster Marrom": ["Marrom", "Preto", "Tartaruga"],
+    "Redondo Preto": ["Preto", "Grafite", "Dourado"],
+    "Hexagonal Âmbar": ["Âmbar", "Preto", "Verde"],
+    "Bali Quadrado": ["Preto", "Tartaruga", "Branco"]
+  };
+  var FOTOS = {
+    "Aviador Azul": ["./fotos/solar-aviador-azul.jpg", "./fotos/solar-aviador-azul-2.jpg"],
+    "Oval Tartaruga": ["./fotos/optico-oval-tartaruga.jpg", "./fotos/optico-oval-tartaruga-2.jpg"],
+    "Retangular Tartaruga": ["./fotos/optico-retangular-tartaruga.jpg"],
+    "Clubmaster Marrom": ["./fotos/solar-clubmaster-marrom.jpg", "./fotos/solar-clubmaster-marrom-2.jpg"],
+    "Redondo Preto": ["./fotos/solar-redondo-preto.jpg", "./fotos/solar-redondo-preto-2.jpg"],
+    "Hexagonal Âmbar": ["./fotos/solar-hexagonal-ambar.jpg", "./fotos/solar-hexagonal-ambar-2.jpg", "./fotos/solar-hexagonal-ambar-3.jpg"],
+    "Bali Quadrado": ["./fotos/solar-bali-quadrado.jpg"]
   };
   var LENTES = ["Transparente", "Antirreflexo", "Fotossensível", "Polarizada"];
-  var PRECO = {"Aviador Azul": 80, "Oval Tartaruga": 80, "Retangular Tartaruga": 120, "Clubmaster Marrom": 150, "Redondo Preto": 140, "Hexagonal Âmbar": 130, "Bali Quadrado": 150, "Redondo Grafite": 130};
+  var PRECO = {"Aviador Azul": 80, "Oval Tartaruga": 80, "Retangular Tartaruga": 120, "Clubmaster Marrom": 150, "Redondo Preto": 140, "Hexagonal Âmbar": 130, "Bali Quadrado": 150};
   var PRECO_DE = {"Aviador Azul": 150, "Oval Tartaruga": 120};
   function BRL(v){ return "R$ " + v; }
   function selCor(card){ return card.dataset.selcor || card.dataset.color; }
@@ -544,6 +624,12 @@ footer a{color:var(--off);margin-right:12px;font-size:.88rem}
       foto.addEventListener('keydown', function(ev){
         if(ev.key === 'Enter' || ev.key === ' '){ ev.preventDefault(); abrirModal(card); }
       });
+      var gal = FOTOS[nome] || [];
+      if(gal.length > 1 && window.matchMedia('(hover:hover)').matches){
+        gal.slice(1).forEach(function(src){ var im = new Image(); im.src = src; });
+        card.addEventListener('mouseenter', function(){ foto.src = gal[1]; });
+        card.addEventListener('mouseleave', function(){ foto.src = gal[0]; });
+      }
     }
   });
   // Modal
@@ -552,20 +638,39 @@ footer a{color:var(--off);margin-right:12px;font-size:.88rem}
       mMeta = document.getElementById('m-meta'), mPreco = document.getElementById('m-preco'),
       mCores = document.getElementById('m-cores'), mLentes = document.getElementById('m-lentes'),
       mQtd = document.getElementById('m-qtd'), mPedir = document.getElementById('m-pedir'),
-      mCor = '', mLente = LENTES[0], mQtdN = 1, mModelo = '', mFotoSrc = '';
+      mCor = '', mLentesSel = [LENTES[0]], mQtdN = 1, mModelo = '', mFotoSrc = '';
   function precoHTML(nome){
     var p = PRECO[nome], de = PRECO_DE[nome];
     return de ? '<span class="old">' + BRL(de) + '</span><strong>' + BRL(p) + '</strong><span class="promo-tag">PROMOÇÃO</span>' : '<strong>' + BRL(p) + '</strong>';
   }
   function atualizaPedir(){
     var total = (PRECO[mModelo] || 0) * mQtdN;
-    mPedir.href = 'https://wa.me/5521984816082?text=' + encodeURIComponent('Olá Alexsander Ótica, quero ' + mQtdN + 'x ' + mModelo + ' (' + mCor + ', lente ' + mLente + ') — ' + BRL(total));
+    mPedir.href = 'https://wa.me/5521984816082?text=' + encodeURIComponent('Olá Alexsander Ótica, quero ' + mQtdN + 'x ' + mModelo + ' (' + mCor + ', ' + mLentesSel.join(' + ') + ') — ' + BRL(total));
     mPedir.textContent = 'Pedir ' + mQtdN + 'x no WhatsApp — ' + BRL(total);
   }
   function abrirModal(card){
-    mModelo = card.dataset.name; mCor = selCor(card); mLente = LENTES[0]; mQtdN = 1;
-    mFotoSrc = card.querySelector('img').src;
+    mModelo = card.dataset.name; mCor = selCor(card); mLentesSel = [LENTES[0]]; mQtdN = 1;
+    var gal = FOTOS[mModelo] || [card.querySelector('img').src];
+    mFotoSrc = gal[0];
     mFoto.src = mFotoSrc; mFoto.alt = card.querySelector('img').alt;
+    var thumbs = document.getElementById('m-thumbs');
+    thumbs.innerHTML = '';
+    if(gal.length > 1){
+      gal.forEach(function(src, i){
+        var t = document.createElement('button');
+        t.type = 'button';
+        t.setAttribute('aria-pressed', i === 0 ? 'true' : 'false');
+        t.setAttribute('aria-label', 'Ver foto ' + (i + 1) + ' de ' + mModelo);
+        var im = document.createElement('img');
+        im.src = src; im.alt = '';
+        t.appendChild(im);
+        t.addEventListener('click', function(){
+          mFoto.src = src;
+          thumbs.querySelectorAll('button').forEach(function(x){ x.setAttribute('aria-pressed', x === t ? 'true' : 'false'); });
+        });
+        thumbs.appendChild(t);
+      });
+    }
     mCat.textContent = card.querySelector('.cat span').textContent;
     mNome.textContent = mModelo;
     mMeta.textContent = card.dataset.format + ' · ' + mCor;
@@ -579,12 +684,18 @@ footer a{color:var(--off);margin-right:12px;font-size:.88rem}
         mCores.querySelectorAll('.swatch').forEach(function(x){ x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); }); atualizaPedir(); });
       mCores.appendChild(b);
     });
-    LENTES.forEach(function(l, i){
+    LENTES.forEach(function(l){
       var b = document.createElement('button');
       b.type = 'button'; b.className = 'swatch'; b.textContent = l;
-      b.setAttribute('aria-pressed', i === 0 ? 'true' : 'false');
-      b.addEventListener('click', function(){ mLente = l;
-        mLentes.querySelectorAll('.swatch').forEach(function(x){ x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); }); atualizaPedir(); });
+      b.title = 'Toque para combinar mais de uma lente';
+      b.setAttribute('aria-pressed', mLentesSel.indexOf(l) > -1 ? 'true' : 'false');
+      b.addEventListener('click', function(){
+        var i = mLentesSel.indexOf(l);
+        if(i > -1){ if(mLentesSel.length > 1) mLentesSel.splice(i, 1); }
+        else { mLentesSel.push(l); }
+        mLentes.querySelectorAll('.swatch').forEach(function(x){ x.setAttribute('aria-pressed', mLentesSel.indexOf(x.textContent) > -1 ? 'true' : 'false'); });
+        atualizaPedir();
+      });
       mLentes.appendChild(b);
     });
     atualizaPedir();
@@ -705,29 +816,129 @@ footer a{color:var(--off);margin-right:12px;font-size:.88rem}
       div.querySelector('.rm').addEventListener('click', function(){ sacola.splice(idx, 1); salvaSacola(); renderSacola(); });
       cartItems.appendChild(div);
     });
-    var linhas = sacola.map(function(it){ return it.qtd + 'x ' + it.modelo + ' (' + it.cor + ', lente ' + it.lente + ') — ' + BRL((PRECO[it.modelo] || 0) * it.qtd); });
-    var nome = cliNome.value.trim();
-    document.getElementById('cart-enviar').href = 'https://wa.me/5521984816082?text=' + encodeURIComponent('Olá Alexsander Ótica, meu pedido (RETIRADA NA LOJA — Rua Poligonal, 10 · Mesquita):\n' + linhas.join('\n') + '\nTotal: ' + BRL(totalSacola()) + (nome ? '\nNome: ' + nome : ''));
   }
   var cartOpener = null;
   function abrirSacola(){ cartOpener = document.activeElement; cartVoid.hidden = false; drawer.setAttribute('aria-hidden', 'false'); drawer.inert = false; renderSacola(); document.getElementById('cart-fechar').focus(); }
-  function fecharSacola(){ cartVoid.hidden = true; drawer.setAttribute('aria-hidden', 'true'); drawer.inert = true; if(cartOpener && cartOpener.focus) cartOpener.focus(); }
+  function fecharSacola(retorna){ cartVoid.hidden = true; drawer.setAttribute('aria-hidden', 'true'); drawer.inert = true; if(retorna !== false && cartOpener && cartOpener.focus) cartOpener.focus(); }
   document.getElementById('cart-abrir').addEventListener('click', abrirSacola);
   document.getElementById('cart-fechar').addEventListener('click', fecharSacola);
   cartVoid.addEventListener('click', fecharSacola);
   document.addEventListener('keydown', function(e){ if(e.key === 'Escape' && !cartVoid.hidden) fecharSacola(); });
   cliNome.addEventListener('input', function(){ try { localStorage.setItem('alexsander_nome', cliNome.value); } catch(e){} renderSacola(); });
-  document.getElementById('cart-enviar').addEventListener('click', function(e){
-    if(!sacola.length){ e.preventDefault(); mostraToast('Sua sacola está vazia'); return; }
-    if(!cliNome.value.trim()){ e.preventDefault(); cliNome.focus(); mostraToast('Digite seu nome para o pedido'); return; }
-    mostraToast('Abrindo o WhatsApp… retire na loja!');
+  function esc(s){ return String(s).replace(/[&<>"']/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]; }); }
+  // Pagamento: Pix, crédito, débito — retirada na loja
+  var pay = document.getElementById('pay'),
+      payResumo = document.getElementById('pay-resumo'),
+      payPix = document.getElementById('pay-pix'),
+      payCartao = document.getElementById('pay-cartao'),
+      pixTotal = document.getElementById('pix-total'),
+      ccNum = document.getElementById('cc-num'),
+      ccNome = document.getElementById('cc-nome'),
+      ccVal = document.getElementById('cc-val'),
+      ccCvv = document.getElementById('cc-cvv'),
+      ccParc = document.getElementById('cc-parc'),
+      ccErro = document.getElementById('cc-erro');
+  function metodoPag(){ var r = document.querySelector('input[name="pag"]:checked'); return r ? r.value : 'Pix'; }
+  document.querySelectorAll('input[name="pag"]').forEach(function(r){
+    r.addEventListener('change', function(){
+      var cartao = metodoPag() !== 'Pix';
+      payCartao.hidden = !cartao; payPix.hidden = cartao;
+      ccErro.textContent = '';
+      if(cartao) montaParcelas();
+    });
+  });
+  function montaParcelas(){
+    var t = totalSacola();
+    ccParc.innerHTML = '';
+    var max = metodoPag() === 'Crédito' ? 3 : 1;
+    for(var i = 1; i <= max; i++){
+      var o = document.createElement('option');
+      o.value = i;
+      o.textContent = i + 'x de ' + BRL(Math.round(t / i)) + (i === 1 ? ' à vista' : ' sem juros');
+      ccParc.appendChild(o);
+    }
+  }
+  ccNum.addEventListener('input', function(){
+    var d = ccNum.value.replace(/\D/g, '').slice(0, 19);
+    ccNum.value = d.replace(/(\d{4})(?=\d)/g, '$1 ');
+  });
+  ccVal.addEventListener('input', function(){
+    var d = ccVal.value.replace(/\D/g, '').slice(0, 4);
+    ccVal.value = d.length > 2 ? d.slice(0, 2) + '/' + d.slice(2) : d;
+  });
+  ccCvv.addEventListener('input', function(){ ccCvv.value = ccCvv.value.replace(/\D/g, '').slice(0, 4); });
+  function luhnOk(num){
+    var d = num.replace(/\D/g, '');
+    if(d.length < 13 || d.length > 19) return false;
+    var s = 0, alt = false;
+    for(var i = d.length - 1; i >= 0; i--){ var n = +d[i]; if(alt){ n *= 2; if(n > 9) n -= 9; } s += n; alt = !alt; }
+    return s % 10 === 0;
+  }
+  function validaCartao(){
+    if(!luhnOk(ccNum.value)) return {msg: 'Número do cartão inválido. Confira e tente de novo.', campo: ccNum};
+    if(ccNome.value.trim().length < 3) return {msg: 'Digite o nome impresso no cartão.', campo: ccNome};
+    var m = ccVal.value.match(/^(0[1-9]|1[0-2])\/(\d{2})$/);
+    if(!m) return {msg: 'Validade inválida. Use o formato MM/AA.', campo: ccVal};
+    if(new Date(2000 + (+m[2]), (+m[1]), 1) <= new Date()) return {msg: 'Cartão vencido. Confira a validade.', campo: ccVal};
+    if(!/^\d{3,4}$/.test(ccCvv.value)) return {msg: 'CVV inválido (3 ou 4 dígitos).', campo: ccCvv};
+    return null;
+  }
+  function abrirPay(){
+    document.getElementById('pay-corpo').hidden = false;
+    document.getElementById('pay-ok').hidden = true;
+    var linhas = sacola.map(function(it){
+      return '<div><span>' + it.qtd + 'x ' + esc(it.modelo) + ' (' + esc(it.cor) + ')</span><span>' + BRL((PRECO[it.modelo] || 0) * it.qtd) + '</span></div>';
+    }).join('');
+    payResumo.innerHTML = linhas + '<div style="font-weight:800;border-top:1px solid rgba(0,45,98,.2);margin-top:6px;padding-top:8px"><span>Total · retirada na loja</span><span>' + BRL(totalSacola()) + '</span></div>';
+    pixTotal.textContent = BRL(totalSacola());
+    var cartao = metodoPag() !== 'Pix';
+    payCartao.hidden = !cartao; payPix.hidden = cartao;
+    if(cartao) montaParcelas();
+    ccErro.textContent = '';
+    pay.hidden = false;
+    fecharSacola(false);
+    document.getElementById('pay-fechar').focus();
+  }
+  function fecharPay(){ pay.hidden = true; var b = document.getElementById('cart-abrir'); if(b) b.focus(); }
+  document.getElementById('pay-fechar').addEventListener('click', fecharPay);
+  pay.addEventListener('click', function(e){ if(e.target === pay) fecharPay(); });
+  document.getElementById('order-fechar').addEventListener('click', fecharPay);
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape' && !pay.hidden) fecharPay(); });
+  document.getElementById('cart-finalizar').addEventListener('click', function(){
+    if(!sacola.length){ mostraToast('Sua sacola está vazia'); return; }
+    if(!cliNome.value.trim()){ cliNome.focus(); mostraToast('Digite seu nome para o pedido'); return; }
+    abrirPay();
+  });
+  document.getElementById('pay-confirmar').addEventListener('click', function(){
+    var met = metodoPag(), parc = 1, ult4 = '';
+    if(met !== 'Pix'){
+      var erro = validaCartao();
+      if(erro){ ccErro.textContent = erro.msg; erro.campo.focus(); return; }
+      parc = parseInt(ccParc.value, 10) || 1;
+      ult4 = ccNum.value.replace(/\D/g, '').slice(-4);
+    }
+    var total = totalSacola();
+    var d = new Date();
+    var num = 'AO' + String(d.getFullYear()).slice(2) + ('0' + (d.getMonth() + 1)).slice(-2) + ('0' + d.getDate()).slice(-2) + '-' + Math.floor(100 + Math.random() * 900);
+    var linhas = sacola.map(function(it){ return it.qtd + 'x ' + it.modelo + ' (' + it.cor + ', ' + it.lente + ') — ' + BRL((PRECO[it.modelo] || 0) * it.qtd); });
+    var nome = cliNome.value.trim();
+    var pagTxt = met === 'Pix' ? 'Pix' : met + ' final ' + ult4 + (met === 'Crédito' ? ' em ' + parc + 'x' : '');
+    var msg = 'Olá Alexsander Ótica, meu pedido ' + num + ' (RETIRADA NA LOJA — Rua Poligonal, 10 · Mesquita):\n' + linhas.join('\n') + '\nTotal: ' + BRL(total) + '\nPagamento: ' + pagTxt + (nome ? '\nNome: ' + nome : '');
+    document.getElementById('order-num').textContent = num;
+    document.getElementById('order-msg').textContent = met === 'Pix'
+      ? 'Você escolheu Pix (' + BRL(total) + '). Toque abaixo para enviar o pedido e receber a chave Pix no WhatsApp. Pague e retire na loja com este número.'
+      : 'Você escolheu ' + met + ' (' + BRL(total) + '). Toque abaixo para enviar o pedido no WhatsApp e concluir. Retire na loja com este número.';
+    document.getElementById('order-wa').href = 'https://wa.me/5521984816082?text=' + encodeURIComponent(msg);
+    document.getElementById('pay-corpo').hidden = true;
+    document.getElementById('pay-ok').hidden = false;
+    sacola = []; salvaSacola(); renderSacola();
   });
   window.addEventListener('pagehide', function(){ if(sacola.length){ sacola = []; salvaSacola(); } });
   document.getElementById('m-add').addEventListener('click', function(){
-    var achou = null;
-    sacola.forEach(function(it){ if(it.modelo === mModelo && it.cor === mCor && it.lente === mLente) achou = it; });
+    var lenteTxt = mLentesSel.join(' + '), achou = null;
+    sacola.forEach(function(it){ if(it.modelo === mModelo && it.cor === mCor && it.lente === lenteTxt) achou = it; });
     if(achou){ achou.qtd = Math.min(10, achou.qtd + mQtdN); }
-    else { sacola.push({modelo: mModelo, cor: mCor, lente: mLente, qtd: mQtdN}); }
+    else { sacola.push({modelo: mModelo, cor: mCor, lente: lenteTxt, qtd: mQtdN}); }
     salvaSacola(); renderSacola(); fecharModal();
     mostraToast(mModelo + ' na sacola!');
   });
