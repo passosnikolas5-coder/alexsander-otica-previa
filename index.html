@@ -1,946 +1,245 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Alexsander Ótica — Seu olhar, nosso cuidado | Mesquita RJ</title>
-<meta name="description" content="Alexsander Ótica em Mesquita, RJ — armações ópticas e solares, lentes antirreflexo, polarizadas e fotossensíveis. Seu olhar, nosso cuidado."/>
-<link rel="icon" type="image/png" sizes="32x32" href="./loja-perfil.png"/>
-<link rel="icon" type="image/png" sizes="16x16" href="./loja-perfil.png"/>
-<link rel="apple-touch-icon" sizes="180x180" href="./loja-perfil.png"/>
-<link rel="canonical" href="https://passosnikolas5-coder.github.io/alexsander-otica-previa/"/>
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,800;1,9..144,500;1,9..144,700&amp;family=Inter:wght@400;500;700;800&amp;display=swap"/>
-<meta property="og:type" content="website"/>
-<meta property="og:locale" content="pt_BR"/>
-<meta property="og:title" content="Alexsander Ótica — Seu olhar, nosso cuidado"/>
-<meta property="og:description" content="Armações ópticas e solares, lentes antirreflexo, polarizadas e fotossensíveis em Mesquita, RJ."/>
-<meta property="og:image" content="https://passosnikolas5-coder.github.io/alexsander-otica-previa/loja-perfil.png"/>
-<meta property="og:image:width" content="400"/>
-<meta property="og:image:height" content="400"/>
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Alexsander Ótica — Seu olhar, nosso cuidado"/>
-<meta name="twitter:image" content="https://passosnikolas5-coder.github.io/alexsander-otica-previa/loja-perfil.png"/>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Optician","name":"Alexsander Ótica","slogan":"Seu olhar, nosso cuidado.","description":"Armações ópticas e solares, lentes antirreflexo, polarizadas e fotossensíveis em Mesquita, RJ.","url":"https://passosnikolas5-coder.github.io/alexsander-otica-previa/","logo":"https://passosnikolas5-coder.github.io/alexsander-otica-previa/loja-perfil.png","image":"https://passosnikolas5-coder.github.io/alexsander-otica-previa/loja-perfil.png","telephone":"+5521984816082","address":{"@type":"PostalAddress","streetAddress":"Av. União, 735","addressLocality":"Mesquita","addressRegion":"RJ","postalCode":"26554-000","addressCountry":"BR"}}}</script>
-<style>
-:root{--azul:#002D62;--azul2:#001E42;--azul-soft:#E8EDF3;--off:#F5F5F0;--dourado:#C9A84C;--dourado2:#A88A35;--branco:#fff;--sombra:0 10px 30px rgba(0,45,98,.12)}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;background:var(--off);color:var(--azul);line-height:1.6}
-h1,h2,h3{font-family:Fraunces,Georgia,"Times New Roman",serif;letter-spacing:-.02em}
-h1 em,h2 em{font-style:italic;font-weight:400}
-a{color:inherit}
-.skip-link{position:absolute;left:-999px}
-.container{max-width:1120px;margin:0 auto;padding:44px 24px}
-.section{padding:8px 0}
-.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:.76rem;text-transform:uppercase;letter-spacing:.16em;font-weight:800}
-.eyebrow::before{content:"";width:34px;height:3px;background:linear-gradient(90deg,var(--dourado),var(--dourado2));display:inline-block;border-radius:2px}
-h2{font-size:clamp(1.8rem,3.8vw,2.7rem);margin:12px 0 10px;line-height:1.3;text-wrap:balance}
-h2 em{color:var(--dourado2)}
-.section-note{opacity:.75;max-width:62ch}
-/* barra + progresso + cursor */
-.scroll-progress{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--dourado),var(--dourado2));z-index:60}
-.cursor-glow{position:fixed;left:-300px;top:-300px;width:220px;height:220px;border-radius:50%;pointer-events:none;z-index:1;background:radial-gradient(circle,rgba(201,168,76,.20),transparent 70%);transform:translate(-50%,-50%)}
-.announcement{background:linear-gradient(90deg,var(--azul2),var(--azul));color:var(--off);text-align:center;font-size:.84rem;padding:10px 16px;position:relative;overflow:hidden}
-.announcement strong{color:var(--dourado);font-weight:800;letter-spacing:.06em;text-transform:uppercase;font-size:.78rem;margin-left:8px}
-.announcement::after{content:"";position:absolute;top:0;left:-60%;width:50%;height:100%;background:linear-gradient(100deg,transparent,rgba(201,168,76,.35),transparent);animation:announcement-shimmer 5s ease-in-out infinite}
-@keyframes announcement-shimmer{0%,60%{left:-60%}100%{left:130%}}
-/* header */
-header{background:rgba(245,245,240,.94);backdrop-filter:blur(10px);border-bottom:2px solid var(--dourado);padding:12px 24px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:20}
-.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
-.brand-mark{width:40px;height:40px;border-radius:12px;background:var(--azul);color:var(--off);display:grid;place-items:center;font-weight:900;font-size:1.3rem;border:none}
-.brand-name{font-weight:900;letter-spacing:.08em;line-height:1}
-.brand-dot{color:var(--dourado)}
-.slogan-oficial{display:block;font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--dourado2);font-weight:800;margin-top:3px}
-nav{display:flex;gap:16px;font-size:.9rem;align-items:center;flex-wrap:wrap}
-nav a{text-decoration:none;font-weight:500}
-nav a.cta{background:linear-gradient(135deg,var(--dourado),#b9973f);color:var(--azul2);padding:9px 16px;border-radius:999px;border:1px solid var(--dourado);font-weight:800}
-/* hero */
-.hero{background:linear-gradient(135deg,#001E42 0%,#002D62 55%,#0a2a52 100%);position:relative;overflow:hidden}
-.hero-inner{max-width:1120px;margin:0 auto;padding:56px 24px;display:grid;grid-template-columns:1.05fr .95fr;gap:32px;align-items:center;position:relative}
-.hero .eyebrow{color:var(--dourado)}
-.hero h1{font-size:clamp(2.6rem,5.6vw,4.2rem);line-height:1.28;margin:20px 0 4px;color:var(--off);text-wrap:balance}
-.hero h1 .h1-linha{display:block}
-.hero h1 .h1-linha-1{margin-bottom:16px}
-.hero h1 em{color:var(--dourado);text-decoration:none}
-.hero-slogan{font-size:1.2rem;margin-top:22px;color:var(--off)}
-.hero-slogan strong{color:var(--dourado)}
-.hero-lead{opacity:.88;margin:12px 0 20px;max-width:46ch;color:var(--off)}
-.trust{display:flex;gap:12px;align-items:center;margin:16px 0;font-size:.88rem;color:var(--off)}
-.stars{color:var(--dourado);letter-spacing:.1em;font-weight:800}
-.btn{display:inline-block;background:var(--dourado);color:var(--azul2);padding:13px 22px;border-radius:12px;text-decoration:none;font-weight:800;border:2px solid var(--dourado);position:relative;overflow:hidden;transition:transform .2s ease}
-.btn:hover{transform:translateY(-1px)}
-.btn::after{content:"";position:absolute;top:0;left:-70%;width:45%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.5),transparent);transform:skewX(-20deg);animation:btn-shimmer 4.5s ease-in-out infinite}
-@keyframes btn-shimmer{0%,65%{left:-70%}100%{left:140%}}
-.btn-ghost{color:var(--off);font-weight:700;margin-left:12px}
-.badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.1);border:1px solid var(--dourado);color:var(--off);border-radius:999px;padding:7px 13px;font-size:.83rem;margin-top:16px;animation:float-badge 4s ease-in-out infinite}
-.badge i{width:8px;height:8px;border-radius:50%;background:var(--dourado);display:inline-block}
-@keyframes float-badge{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
-.ambient-glow{position:absolute;border-radius:50%;filter:blur(60px);pointer-events:none}
-.ambient-glow.gold{width:340px;height:340px;right:-60px;top:-40px;background:radial-gradient(circle,rgba(201,168,76,.35),transparent 70%);animation:glow-breathe 6s ease-in-out infinite}
-.ambient-glow.navy{width:300px;height:300px;left:-70px;bottom:-50px;background:radial-gradient(circle,rgba(0,45,98,.4),transparent 70%);animation:glow-breathe 7s ease-in-out infinite reverse}
-@keyframes glow-breathe{0%,100%{opacity:.6;transform:scale(1)}50%{opacity:1;transform:scale(1.12)}}
-.hero-particle{position:absolute;width:10px;height:10px;border-radius:50%;background:var(--dourado);opacity:.55;pointer-events:none;animation:float-particle 7s ease-in-out infinite}
-.hero-particle:nth-of-type(1){left:54%;top:12%}.hero-particle:nth-of-type(2){left:66%;top:6%;animation-delay:1.4s;width:7px;height:7px}.hero-particle:nth-of-type(3){left:93%;top:32%;animation-delay:2.6s}.hero-particle:nth-of-type(4){left:58%;bottom:8%;animation-delay:3.8s;width:8px;height:8px}.hero-particle:nth-of-type(5){left:95%;bottom:14%;animation-delay:5s;width:6px;height:6px}
-@keyframes float-particle{0%,100%{transform:translateY(0)}50%{transform:translateY(-26px)}}
-.hero-copy,.hero-media-col{position:relative;z-index:1}
-.hero-media-col{perspective:900px}
-.hero-campaign{display:block;border-radius:20px;overflow:hidden;border:1px solid rgba(201,168,76,.55);box-shadow:0 18px 50px rgba(0,0,0,.35);text-decoration:none;animation:hero-reveal 1s ease both}
-.hero-campaign img{width:100%;display:block}
-.hero-campaign span{display:flex;justify-content:space-between;align-items:center;background:var(--off);color:var(--azul);font-weight:800;padding:12px 16px;font-size:.92rem}
-@keyframes hero-reveal{from{opacity:0;transform:translateY(24px) scale(.97)}to{opacity:1;transform:none}}
-.hero-picks{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:14px}
-.hero-picks a{background:rgba(255,255,255,.08);border:1px solid rgba(201,168,76,.4);border-radius:14px;overflow:hidden;text-decoration:none;color:var(--off);font-size:.82rem;font-weight:700}
-.hero-picks img{width:100%;height:74px;object-fit:cover;display:block}
-.hero-picks span{display:block;padding:8px 10px}
-.hero-picks small{display:block;opacity:.7;font-weight:500}
-/* coleção */
-.tabs{display:flex;gap:10px;margin-top:18px;flex-wrap:wrap}
-.tabs button{border:1px solid var(--azul);background:transparent;color:var(--azul);border-radius:999px;padding:8px 18px;font-weight:700;cursor:pointer}
-.tabs button.active{background:var(--azul);color:var(--off)}
-.toolbar{display:flex;gap:14px;align-items:center;justify-content:space-between;margin-top:16px;flex-wrap:wrap}
-.search{flex:1;min-width:220px;display:flex;align-items:center;gap:8px;background:#fff;border:1px solid rgba(0,45,98,.2);border-radius:12px;padding:10px 14px}
-.search input{border:none;outline:none;flex:1;font-size:.95rem;background:transparent;color:var(--azul)}
-.count{font-size:.82rem;text-transform:uppercase;letter-spacing:.08em;font-weight:700;opacity:.8}
-.sort{display:flex;align-items:center;gap:8px;font-size:.88rem}
-.sort select{border:1px solid rgba(0,45,98,.25);border-radius:10px;padding:8px 10px;background:#fff;color:var(--azul)}
-.filters{display:flex;gap:12px;align-items:center;margin-top:12px;flex-wrap:wrap}
-.filters select{border:1px solid rgba(0,45,98,.25);border-radius:10px;padding:8px 10px;background:#fff;color:var(--azul)}
-.reset{background:none;border:none;color:var(--azul);font-weight:700;cursor:pointer;text-decoration:underline;text-underline-offset:4px}
-.reset:disabled{opacity:.4;cursor:default}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:22px}
-.card{background:var(--branco);border:1px solid rgba(0,45,98,.12);border-top:4px solid var(--dourado);border-radius:16px;overflow:hidden;transform-style:preserve-3d;transition:transform .25s ease,box-shadow .25s ease;box-shadow:0 4px 16px rgba(0,45,98,.06)}
-.card:hover{transform:translateY(-3px);box-shadow:0 18px 40px rgba(0,45,98,.16)}
-.card img{width:100%;height:250px;object-fit:cover;display:block;transition:transform .35s ease}
-.card:hover img{transform:scale(1.05)}
-.card h3{font-size:1.35rem;margin-top:8px}
-.card .pad{padding:16px 18px}
-.card small.cat{color:var(--dourado2);font-weight:800;text-transform:uppercase;letter-spacing:.08em;font-size:.7rem;display:flex;justify-content:space-between;align-items:center}
-.card small.cat button{background:none;border:none;color:var(--dourado2);font-weight:800;font-size:.72rem;cursor:pointer;text-transform:uppercase;letter-spacing:.06em}
-.card h3{font-size:1.35rem;margin-top:8px}
-.card .meta{font-size:.88rem;opacity:.75}
-.price{font-weight:800;margin-top:8px}
-.price .old{text-decoration:line-through;opacity:.55;font-weight:400;margin-right:6px}
-.promo-tag{display:inline-block;background:linear-gradient(135deg,var(--dourado),#b9973f);color:var(--azul2);font-size:.66rem;font-weight:800;letter-spacing:.1em;border-radius:999px;padding:3px 9px;margin-left:6px;vertical-align:middle}
-.empty{display:none;text-align:center;padding:26px;background:#fff;border:1px dashed var(--dourado);border-radius:14px;margin-top:18px}
-.empty.show{display:block}
-/* variantes + modal de detalhes */
-.swatches{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}
-.swatch{border:1px solid rgba(0,45,98,.3);background:#fff;color:var(--azul);border-radius:999px;padding:3px 10px;font-size:.72rem;font-weight:700;cursor:pointer}
-.swatch[aria-pressed="true"]{background:var(--azul);color:var(--off);border-color:var(--azul)}
-.card img,.card h3{cursor:pointer}
-.opt-label{font-size:.74rem;font-weight:800;text-transform:uppercase;letter-spacing:.1em;color:var(--dourado2);margin:12px 0 2px}
-.modal-backdrop{position:fixed;inset:0;background:rgba(0,20,45,.65);z-index:80;display:grid;place-items:center;padding:18px}
-.modal-backdrop[hidden]{display:none}
-.modal{background:var(--off);border-radius:20px;border-top:4px solid var(--dourado);max-width:720px;width:100%;max-height:90vh;overflow:auto;display:grid;grid-template-columns:1fr 1fr;position:relative}
-.modal-media{background:#fff;border-radius:20px 0 0 20px;overflow:hidden}
-.modal-info{padding:24px}
-.modal-x{position:absolute;top:10px;right:10px;width:34px;height:34px;border-radius:50%;border:1px solid var(--dourado);background:var(--azul);color:var(--off);font-weight:800;cursor:pointer}
-.qty{display:inline-flex;align-items:center;gap:12px;margin-top:4px;background:#fff;border:1px solid rgba(0,45,98,.25);border-radius:999px;padding:4px 10px}
-.qty button{width:28px;height:28px;border-radius:50%;border:1px solid var(--azul);background:transparent;color:var(--azul);font-weight:800;cursor:pointer}
-.qty span{font-weight:800;min-width:20px;text-align:center}
-@media(max-width:640px){.modal{grid-template-columns:1fr}.modal img{min-height:200px;max-height:260px}}
-/* carrinho */
-.cart-btn{position:relative;background:var(--azul);color:var(--off);border:1px solid var(--dourado);border-radius:999px;padding:8px 14px;font-weight:800;cursor:pointer;font-size:.88rem}
-.cart-num{position:absolute;top:-8px;right:-6px;background:var(--dourado);color:var(--azul2);font-size:.72rem;font-weight:800;border-radius:999px;min-width:20px;height:20px;display:grid;place-items:center;padding:0 5px}
-.cart-void{position:fixed;inset:0;background:rgba(0,20,45,.6);z-index:90}
-.cart-void[hidden]{display:none}
-.drawer{position:fixed;top:0;right:0;height:100dvh;width:min(400px,94vw);background:var(--off);z-index:95;display:flex;flex-direction:column;border-left:2px solid var(--dourado);transform:translateX(0);transition:transform .3s ease}
-.cart-void[hidden]+.drawer{transform:translateX(100%)}
-.drawer-head{display:flex;justify-content:space-between;align-items:center;padding:16px 18px;border-bottom:2px solid var(--dourado)}
-.drawer-head h2{font-size:1.3rem;margin:0}
-.drawer-items{flex:1;overflow:auto;padding:14px 18px;display:flex;flex-direction:column;gap:12px}
-.cart-item{display:grid;grid-template-columns:64px 1fr;gap:10px;background:#fff;border:1px solid rgba(0,45,98,.15);border-top:3px solid var(--dourado);border-radius:12px;padding:10px}
-.cart-item img{width:64px;height:64px;object-fit:cover;border-radius:8px}
-.cart-item h4{font-size:.92rem}
-.cart-item small{opacity:.75}
-.cart-item .row{display:flex;justify-content:space-between;align-items:center;margin-top:6px}
-.cart-item .qty{margin:0}
-.rm{background:none;border:none;color:var(--dourado2);font-size:.78rem;font-weight:700;cursor:pointer;text-decoration:underline;text-underline-offset:3px}
-.drawer-foot{padding:16px 18px;border-top:2px solid var(--dourado);background:#fff}
-.pickup{background:var(--azul-soft);border:1px solid var(--dourado);border-radius:10px;padding:10px 12px;font-size:.84rem;margin-bottom:10px}
-.pickup strong{color:var(--azul)}
-.total-line{display:flex;justify-content:space-between;font-weight:800;font-size:1.05rem;margin:8px 0 12px}
-.nome-input{width:100%;border:1px solid rgba(0,45,98,.3);border-radius:10px;padding:10px 12px;margin-bottom:10px;font-size:.92rem;color:var(--azul)}
-.checkout{width:100%;text-align:center}
-.toast{position:fixed;bottom:76px;left:50%;transform:translateX(-50%) translateY(20px);background:var(--azul);color:var(--off);border:1px solid var(--dourado);border-radius:999px;padding:10px 18px;font-size:.88rem;font-weight:700;z-index:120;opacity:0;pointer-events:none;transition:opacity .3s,transform .3s}
-.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
-.btn-outline{display:inline-block;margin-top:8px;color:var(--azul);font-weight:700;font-size:.88rem}
-/* faixa promocional animada */
-.marquee{background:var(--dourado);color:var(--azul2);overflow:hidden;white-space:nowrap;font-weight:800;font-size:.82rem;letter-spacing:.12em;text-transform:uppercase;padding:9px 0}
-.marquee-track{display:inline-block;animation:marquee 22s linear infinite}
-.marquee-track span{margin:0 26px}
-@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-/* galeria do modal */
-.modal-media{display:flex;flex-direction:column}
-#m-foto{width:100%;min-height:340px;max-height:420px;object-fit:cover}
-.thumbs{display:flex;gap:8px;margin-top:10px}
-.thumbs button{border:2px solid transparent;border-radius:10px;overflow:hidden;padding:0;cursor:pointer;background:#fff}
-.thumbs button[aria-pressed="true"]{border-color:var(--dourado)}
-.thumbs img{width:64px;height:64px;object-fit:cover;display:block}
-/* pagamento */
-.pay-lines{background:#fff;border:1px solid rgba(0,45,98,.15);border-radius:12px;padding:12px 14px;margin:10px 0;font-size:.9rem}
-.pay-lines div{display:flex;justify-content:space-between;gap:10px;padding:3px 0}
-.pay-methods{display:grid;gap:8px;margin:8px 0}
-.pay-methods label{display:flex;gap:10px;align-items:center;background:#fff;border:1px solid rgba(0,45,98,.25);border-radius:12px;padding:10px 12px;font-weight:700;cursor:pointer}
-.pay-methods input{accent-color:var(--azul);width:18px;height:18px}
-.pay-box{background:#fff;border:1px solid rgba(0,45,98,.15);border-radius:12px;padding:14px;margin-top:8px}
-.pay-box label{display:block;font-size:.78rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em;margin:8px 0 2px}
-.pay-box input,.pay-box select{width:100%;border:1px solid rgba(0,45,98,.3);border-radius:10px;padding:10px 12px;font-size:.95rem;color:var(--azul);background:var(--off)}
-.pay-err{color:#9b1c1c;font-size:.84rem;font-weight:700;min-height:1.2em}
-.pix-code{background:var(--azul-soft);border:1px dashed var(--dourado2);border-radius:10px;padding:12px;font-size:.86rem}
-.order-ok{text-align:center;padding:8px 0}
-.order-ok .big{font-size:2.2rem}
-.order-num{display:inline-block;background:var(--azul);color:var(--off);border-radius:999px;padding:6px 16px;font-weight:800;letter-spacing:.08em;margin:10px 0}
-.mini-btn{display:inline-block;margin-top:10px;font-size:.85rem;font-weight:700;text-decoration:underline;text-decoration-color:var(--dourado);text-decoration-thickness:2px;text-underline-offset:5px}
-/* lentes */
-.lentes{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:22px}
-.lente{background:var(--branco);border:1px solid rgba(0,45,98,.12);border-radius:16px;padding:20px;position:relative;overflow:hidden;transition:transform .25s ease,box-shadow .25s ease}
-.lente::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--azul),var(--dourado))}
-.lente:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(0,45,98,.14)}
-.lente .num{color:var(--dourado);font-weight:900;letter-spacing:.1em;animation:lens-pulse 3.5s ease-in-out infinite}
-@keyframes lens-pulse{0%,100%{opacity:1}50%{opacity:.5}}
-.lente strong{display:block;margin-top:8px}
-/* faixas e listas */
-.band{background:linear-gradient(135deg,var(--azul2),var(--azul));color:var(--off);border-radius:20px;padding:36px 30px;margin-top:28px;border:1px solid var(--dourado)}
-.band .eyebrow{color:var(--dourado)}
-.band h2{color:var(--off)}
-.band h2 em{color:var(--dourado)}
-.benefit-list{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:20px}
-.benefit-list>div{background:rgba(255,255,255,.06);border:1px solid rgba(201,168,76,.4);border-radius:14px;padding:18px}
-.benefit-list span.num{color:var(--dourado);font-weight:900}
-.materiais{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:22px}
-.mat{background:var(--branco);border-radius:16px;padding:22px;border:1px solid rgba(0,45,98,.12);border-top:4px solid var(--dourado);transition:transform .25s ease}
-.mat:hover{transform:translateY(-4px)}
-.mat i{width:36px;height:36px;border-radius:10px;background:var(--azul-soft);border:1px solid var(--dourado);display:grid;place-items:center;font-style:normal;margin-bottom:10px}
-.face-grid,.ops-grid,.pay-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:22px}
-.face-grid article,.ops-grid article,.pay-grid>div{background:#fff;border:1px solid rgba(0,45,98,.12);border-top:4px solid var(--dourado);border-radius:16px;padding:20px}
-.care-card{background:#fff;border:1px solid rgba(0,45,98,.12);border-top:4px solid var(--dourado);border-radius:20px;padding:30px;margin-top:8px}
-.care-list{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:18px}
-.quote-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:20px}
-.quote-grid blockquote{background:#fff;border-left:4px solid var(--dourado);border-radius:12px;padding:18px}
-.quote-grid cite{display:block;margin-top:8px;font-style:normal;font-weight:700;color:var(--dourado2);font-size:.85rem}
-/* avaliações */
-.score{display:inline-flex;gap:14px;align-items:center;background:#fff;border:1px solid rgba(0,45,98,.15);border-radius:14px;padding:14px 18px;text-decoration:none;margin-top:14px}
-.score strong{font-size:1.6rem}
-.reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:20px}
-.rev{background:#fff;border-radius:16px;padding:20px;border:1px solid rgba(0,45,98,.12);border-left:4px solid var(--dourado);transition:transform .25s ease}
-.rev:hover{transform:translateY(-3px)}
-.rev .who{display:flex;gap:10px;align-items:center;margin-top:12px}
-.avatar{width:36px;height:36px;border-radius:50%;background:var(--azul);color:var(--off);display:grid;place-items:center;font-weight:800;font-size:.8rem}
-.social-row{display:flex;gap:12px;align-items:center;margin-top:18px;flex-wrap:wrap}
-.social-row a{border:1px solid var(--azul);border-radius:999px;padding:8px 16px;text-decoration:none;font-weight:700;font-size:.88rem}
-/* faq loja contato */
-details{background:#fff;border:1px solid rgba(0,45,98,.15);border-radius:12px;padding:14px 16px;margin-top:10px}
-summary{font-weight:700;cursor:pointer}
-.store{display:grid;grid-template-columns:.9fr 1.1fr;gap:26px;align-items:center;margin-top:10px;background:#fff;border:1px solid rgba(0,45,98,.12);border-radius:20px;padding:22px;border-top:4px solid var(--dourado)}
-.store img{width:100%;border-radius:14px;max-width:340px}
-.store .row{margin-top:10px}
-.store .row strong{display:block;font-size:.82rem;text-transform:uppercase;letter-spacing:.08em;color:var(--dourado2)}
-.contact-card{background:linear-gradient(135deg,var(--azul2),var(--azul));color:var(--off);border-radius:20px;padding:36px 30px;margin-top:28px;border:1px solid var(--dourado);text-align:left}
-.contact-card .eyebrow{color:var(--dourado)}
-.contact-card h2{color:var(--off)}
-.contact-card h2 em{color:var(--dourado)}
-footer{background:var(--azul2);color:var(--off);border-top:3px solid var(--dourado);padding:28px 24px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
-footer .slogan-oficial{color:var(--dourado)}
-footer a{color:var(--off);margin-right:12px;font-size:.88rem}
-.wpp{position:fixed;right:18px;bottom:18px;background:var(--azul);color:#fff;text-decoration:none;padding:13px 18px;border-radius:999px;border:2px solid var(--dourado);font-weight:800;box-shadow:var(--sombra);z-index:50}
-/* reveal / stagger / magnetic / tilt */
-.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
-.reveal.visible{opacity:1;transform:none}
-.stagger>*{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}
-.stagger.visible>*{opacity:1;transform:none}
-.stagger.visible>*:nth-child(1){transition-delay:.05s}.stagger.visible>*:nth-child(2){transition-delay:.15s}.stagger.visible>*:nth-child(3){transition-delay:.25s}.stagger.visible>*:nth-child(4){transition-delay:.35s}
-.magnetic{transition:transform .2s ease;will-change:transform}
-@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none !important;transition:none !important}.reveal,.stagger>*{opacity:1;transform:none}}
-@media (hover:none){.cursor-glow{display:none}}
-@media(max-width:900px){.hero-inner{grid-template-columns:1fr}nav{display:none}.grid,.lentes,.benefit-list,.face-grid,.ops-grid,.pay-grid,.care-list{grid-template-columns:1fr 1fr}.reviews,.materiais,.quote-grid{grid-template-columns:1fr 1fr}.store{grid-template-columns:1fr}}
-@media(max-width:560px){.grid,.lentes,.reviews,.materiais,.quote-grid,.face-grid,.ops-grid,.pay-grid,.care-list,.benefit-list{grid-template-columns:1fr}}
-</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- SEO pt-BR · PARTE 1 -->
+  <title>Alexsander Ótica — Seu olhar, nosso cuidado | Mesquita RJ</title>
+  <meta name="description" content="Alexsander Ótica em Mesquita, RJ — armações ópticas e solares, lentes antirreflexo, polarizadas e fotossensíveis. Seu olhar, nosso cuidado." />
+  <link rel="canonical" href="./" />
+  <meta name="theme-color" content="#001E42" />
+
+  <!-- Favicon: logo real da loja (caminho relativo com ./) -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./loja-perfil.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="./loja-perfil.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="./loja-perfil.png" />
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:title" content="Alexsander Ótica — Seu olhar, nosso cuidado" />
+  <meta property="og:description" content="Armações ópticas e solares, lentes antirreflexo, polarizadas e fotossensíveis em Mesquita, RJ." />
+  <meta property="og:url" content="./" />
+  <meta property="og:image" content="./loja-perfil.png" />
+  <meta property="og:image:width" content="400" />
+  <meta property="og:image:height" content="400" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Alexsander Ótica — Seu olhar, nosso cuidado" />
+  <meta name="twitter:description" content="Armações ópticas e solares, lentes antirreflexo, polarizadas e fotossensíveis em Mesquita, RJ." />
+  <meta name="twitter:image" content="./loja-perfil.png" />
+
+  <!-- Preload da foto do hero (LCP) -->
+  <link rel="preload" as="image" href="./fotos/solar-aviador-azul.jpg" fetchpriority="high" />
+
+  <!-- Dados estruturados mínimos (loja física) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Optician",
+    "name": "Alexsander Ótica",
+    "slogan": "Seu olhar, nosso cuidado.",
+    "telephone": "+5521984816082",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Av. União, 735",
+      "addressLocality": "Mesquita",
+      "addressRegion": "RJ",
+      "postalCode": "26554-000",
+      "addressCountry": "BR"
+    },
+    "logo": "./loja-perfil.png"
+  }
+  </script>
+
+  <!-- Fontes: Fraunces (display) + Inter (texto) — única dependência externa -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,800;1,9..144,500;1,9..144,700&family=Inter:wght@400;500;700;800&display=swap" />
+
+  <!-- Design system da Parte 1 -->
+  <link rel="stylesheet" href="estilos.css" />
 </head>
 <body>
-<div class="scroll-progress" aria-hidden="true"></div>
-<div class="cursor-glow" aria-hidden="true"></div>
-<a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
-<div class="announcement">Alexsander Ótica · Av. União, 735 · Mesquita, RJ <strong>✦ Seu olhar, nosso cuidado.</strong></div>
-<div class="marquee" aria-hidden="true"><div class="marquee-track"><span>✦ Promoção: armações por R$ 80</span><span>✦ Retirada na loja em Mesquita</span><span>✦ Pix, crédito e débito</span><span>✦ Seu olhar, nosso cuidado</span><span>✦ Promoção: armações por R$ 80</span><span>✦ Retirada na loja em Mesquita</span><span>✦ Pix, crédito e débito</span><span>✦ Seu olhar, nosso cuidado</span></div></div>
-<header>
-<a class="brand" href="#topo"><span class="brand-mark">A</span><span class="brand-name">ALEXSANDER<span class="brand-dot">.</span><span class="slogan-oficial">Seu olhar, nosso cuidado</span></span></a>
-<nav><a href="#colecao">Coleção</a><a href="#lentes">Lentes</a><a href="#materiais">Materiais</a><a href="#guia">Guia</a><a href="#entrega">Entrega</a><a href="#loja">Loja física</a><a href="#contato">Atendimento</a><a class="cta" href="https://wa.me/5521984816082?text=Ol%C3%A1%20Alexsander%20%C3%93tica">WhatsApp ↗</a></nav>
-<button class="cart-btn magnetic" id="cart-abrir" type="button" aria-label="Abrir carrinho de compras">Sacola <span class="cart-num" id="cart-num">0</span></button>
-</header>
+  <!-- Barra fina de progresso de leitura (JS atualiza a largura) -->
+  <div class="scroll-progress" id="progresso" aria-hidden="true"></div>
 
-<section class="hero parallax" data-speed="0.05" id="topo">
-<div class="hero-inner" id="conteudo">
-<div class="ambient-glow gold" aria-hidden="true"></div>
-<div class="ambient-glow navy" aria-hidden="true"></div>
-<span class="hero-particle" aria-hidden="true"></span><span class="hero-particle" aria-hidden="true"></span><span class="hero-particle" aria-hidden="true"></span><span class="hero-particle" aria-hidden="true"></span><span class="hero-particle" aria-hidden="true"></span>
-<div class="hero-copy reveal reveal-left">
-<div class="eyebrow">Alexsander Ótica · Mesquita</div>
-<h1><span class="h1-linha h1-linha-1">Um novo olhar.</span><em class="h1-linha">Nos mínimos detalhes.</em></h1>
-<p class="hero-slogan">Seu olhar, <strong>nosso cuidado.</strong></p>
-<p class="hero-lead">Formas, cores e acabamentos que expressam seu estilo. Explore as armações e encontre sua próxima escolha com a nossa equipe.</p>
-<div><a class="btn magnetic" href="#colecao">Explorar armações</a><a class="btn-ghost" href="#lentes">Escolher minhas lentes</a></div>
-<div><span class="badge"><i></i>Orçamento personalizado pelo WhatsApp</span></div>
-</div>
-<div class="hero-media-col reveal reveal-right">
-<a class="hero-campaign tilt" href="#colecao"><img src="https://alexsander-otica.passosnikolas5.workers.dev/campaigns/eyewear-editorial.jpg" alt="Ilustração de campanha: óculos arredondados em tom champanhe e armação tartaruga sobre pedra clara, com luz de estúdio." onerror="this.onerror=null;this.src='./fotos/solar-aviador-azul.jpg'"/><span>Explore seu estilo ↗</span></a>
-<div class="hero-picks">
-<a href="#colecao"><img src="./fotos/solar-aviador-azul.jpg" alt="Óculos de sol Aviador Azul." loading="lazy"/><span>Aviador Azul<small>Solar · R$ 80</small></span></a>
-<a href="#colecao"><img src="./fotos/optico-retangular-tartaruga.jpg" alt="Óculos de grau Retangular Tartaruga." loading="lazy"/><span>Retangular Tartaruga<small>Óptico · R$ 120</small></span></a>
-<a href="#colecao"><img src="./fotos/solar-clubmaster-marrom.jpg" alt="Óculos de sol Clubmaster Marrom." loading="lazy"/><span>Clubmaster Marrom<small>Solar · R$ 150</small></span></a>
-</div>
-</div>
-</div>
-</section>
+  <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
 
-<div class="container">
-<section id="colecao" class="section reveal">
-<div class="eyebrow">Escolha seu próximo par</div>
-<h2>Seu estilo. <em>Seu próximo par.</em></h2>
-<p class="section-note">Fotografias reais para inspirar sua escolha. Envie a referência que combina com você e consulte os modelos disponíveis na Alexsander.</p>
-<div class="tabs" role="tablist" aria-label="Categorias">
-<button type="button" class="active" data-tab="todos" aria-pressed="true">Todos</button>
-<button type="button" data-tab="solar" aria-pressed="false">Solar</button>
-<button type="button" data-tab="optico" aria-pressed="false">Óptico</button>
-</div>
-<div class="toolbar">
-<label class="search"><span aria-hidden="true">⌕</span><input id="busca" type="search" placeholder="Buscar nome, formato ou cor" aria-label="Buscar na coleção"/></label>
-<p class="count" id="contagem" role="status" aria-live="polite">6 modelos na seleção</p>
-<label class="sort">Ordenar
-<select id="ordem"><option value="destaques" selected>Destaques da coleção</option><option value="az">Nome de A a Z</option></select>
-</label>
-</div>
-<div class="filters">
-<label>Formato da armação
-<select id="formato"><option value="">Todos os formatos</option><option>Retangular</option><option>Redondo</option><option>Quadrado</option><option>Aviador</option><option>Hexagonal</option><option>Clubmaster</option></select>
-</label>
-<button class="reset" id="limpar" type="button" disabled>Limpar filtros ✕</button>
-</div>
-<div class="grid stagger" id="grade">
-<article class="card tilt" data-cat="solar" data-name="Aviador Azul" data-format="Aviador" data-color="Dourado e azul" data-preco="R$ 80"><img src="./fotos/solar-aviador-azul.jpg" alt="Óculos de sol Aviador Azul com armação dourada e lente azul." loading="lazy"/><div class="pad"><small class="cat"><span>Solar · Promoção</span><button type="button" data-orc="Aviador Azul" data-preco="R$ 80">Orçamento ↗</button></small><h3>Aviador Azul</h3><p class="meta">Aviador · Dourado e azul</p><div class="price"><span class="old">R$ 150</span><strong>R$ 80</strong><span class="promo-tag">PROMOÇÃO</span></div><a class="mini-btn" href="#" data-orc="Aviador Azul" data-preco="R$ 80">Escolher e pedir orçamento</a></div></article>
-<article class="card tilt" data-cat="optico" data-name="Retangular Tartaruga" data-format="Retangular" data-color="Tartaruga" data-preco="R$ 120"><img src="./fotos/optico-retangular-tartaruga.jpg" alt="Óculos de grau Retangular Tartaruga em acetato." loading="lazy"/><div class="pad"><small class="cat"><span>Óptico</span><button type="button" data-orc="Retangular Tartaruga" data-preco="R$ 120">Orçamento ↗</button></small><h3>Retangular Tartaruga</h3><p class="meta">Retangular · Tartaruga</p><div class="price"><strong>R$ 120</strong></div><a class="mini-btn" href="#" data-orc="Retangular Tartaruga" data-preco="R$ 120">Escolher e pedir orçamento</a></div></article>
-<article class="card tilt" data-cat="solar" data-name="Clubmaster Marrom" data-format="Clubmaster" data-color="Marrom" data-preco="R$ 150"><img src="./fotos/solar-clubmaster-marrom.jpg" alt="Óculos de sol Clubmaster Marrom com lente marrom." loading="lazy"/><div class="pad"><small class="cat"><span>Solar</span><button type="button" data-orc="Clubmaster Marrom" data-preco="R$ 150">Orçamento ↗</button></small><h3>Clubmaster Marrom</h3><p class="meta">Clubmaster · Marrom</p><div class="price"><strong>R$ 150</strong></div><a class="mini-btn" href="#" data-orc="Clubmaster Marrom" data-preco="R$ 150">Escolher e pedir orçamento</a></div></article>
-<article class="card tilt" data-cat="solar" data-name="Redondo Preto" data-format="Redondo" data-color="Preto" data-preco="R$ 140"><img src="./fotos/solar-redondo-preto.jpg" alt="Óculos de sol Redondo Preto em metal." loading="lazy"/><div class="pad"><small class="cat"><span>Solar</span><button type="button" data-orc="Redondo Preto" data-preco="R$ 140">Orçamento ↗</button></small><h3>Redondo Preto</h3><p class="meta">Redondo · Preto</p><div class="price"><strong>R$ 140</strong></div><a class="mini-btn" href="#" data-orc="Redondo Preto" data-preco="R$ 140">Escolher e pedir orçamento</a></div></article>
-<article class="card tilt" data-cat="solar" data-name="Hexagonal Âmbar" data-format="Hexagonal" data-color="Marrom âmbar" data-preco="R$ 130"><img src="./fotos/solar-hexagonal-ambar.jpg" alt="Óculos de sol Hexagonal Âmbar." loading="lazy"/><div class="pad"><small class="cat"><span>Solar</span><button type="button" data-orc="Hexagonal Âmbar" data-preco="R$ 130">Orçamento ↗</button></small><h3>Hexagonal Âmbar</h3><p class="meta">Hexagonal · Marrom âmbar</p><div class="price"><strong>R$ 130</strong></div><a class="mini-btn" href="#" data-orc="Hexagonal Âmbar" data-preco="R$ 130">Escolher e pedir orçamento</a></div></article>
-<article class="card tilt" data-cat="solar" data-name="Bali Quadrado" data-format="Quadrado" data-color="Preto" data-preco="R$ 150"><img src="./fotos/solar-bali-quadrado.jpg" alt="Óculos de sol Bali Quadrado preto." loading="lazy"/><div class="pad"><small class="cat"><span>Solar</span><button type="button" data-orc="Bali Quadrado" data-preco="R$ 150">Orçamento ↗</button></small><h3>Bali Quadrado</h3><p class="meta">Quadrado · Preto</p><div class="price"><strong>R$ 150</strong></div><a class="mini-btn" href="#" data-orc="Bali Quadrado" data-preco="R$ 150">Escolher e pedir orçamento</a></div></article>
-</div>
-<p class="empty" id="vazio">Nenhum modelo encontrado com esses filtros. <button class="reset" id="limpar2" type="button">Limpar filtros ✕</button></p>
-</section>
+  <!-- ============ HEADER fixo em vidro ============ -->
+  <header class="site-header" id="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#topo" aria-label="Alexsander Ótica — voltar ao topo">
+        <img class="brand-logo" src="./loja-perfil.png" alt="Logotipo da Alexsander Ótica" width="44" height="44" fetchpriority="high" decoding="async" />
+        <span class="brand-nome">ALEXSANDER<span class="ponto">.</span>
+          <span class="brand-slogan">Seu olhar, nosso cuidado</span>
+        </span>
+      </a>
 
-<section id="lentes" class="section reveal">
-<div class="eyebrow">Escolha sua lente</div>
-<h2>Mais conforto <em>em cada olhar.</em></h2>
-<p class="section-note">Clique em uma opção para ver a tecnologia e escolher seu acabamento ideal.</p>
-<div class="lentes stagger">
-<div class="lente"><span class="num">01</span><h3>Transparente</h3><p>Leve e versátil para o dia a dia.</p><strong>Preço sob consulta</strong><br/><a class="mini-btn" href="https://wa.me/5521984816082?text=Ol%C3%A1%20Alexsander%20%C3%93tica%2C%20quero%20lente%20transparente">ver tecnologia</a></div>
-<div class="lente"><span class="num">02</span><h3>Antirreflexo</h3><p>Mais nitidez para telas e direção.</p><strong>Preço sob consulta</strong><br/><a class="mini-btn" href="https://wa.me/5521984816082?text=Ol%C3%A1%20Alexsander%20%C3%93tica%2C%20quero%20lente%20antirreflexo">ver tecnologia</a></div>
-<div class="lente"><span class="num">03</span><h3>Fotossensível</h3><p>Clara em ambientes fechados, escura no sol.</p><strong>Preço sob consulta</strong><br/><a class="mini-btn" href="https://wa.me/5521984816082?text=Ol%C3%A1%20Alexsander%20%C3%93tica%2C%20quero%20lente%20fotossens%C3%ADvel">ver tecnologia</a></div>
-<div class="lente"><span class="num">04</span><h3>Polarizada</h3><p>Reduz reflexos e realça as cores.</p><strong>Preço sob consulta</strong><br/><a class="mini-btn" href="https://wa.me/5521984816082?text=Ol%C3%A1%20Alexsander%20%C3%93tica%2C%20quero%20lente%20polarizada">ver tecnologia</a></div>
-</div>
-</section>
+      <!-- Nav por âncoras: #colecao e #lentes serão montados na Parte 2;
+           #avaliacoes, #loja e #contato na Parte 3. Links degradam com graça
+           enquanto as seções não existem (rolam até o ponto de montagem). -->
+      <nav class="site-nav" id="nav-principal" aria-label="Navegação principal">
+        <a href="#colecao">Coleção</a>
+        <a href="#lentes">Lentes</a>
+        <a href="#avaliacoes">Avaliações</a>
+        <a href="#loja">Loja física</a>
+        <a href="#contato">Atendimento</a>
+      </nav>
 
-<section class="band reveal">
-<div class="eyebrow">O detalhe faz diferença</div>
-<h2>Feito para ser <em>usado de verdade.</em></h2>
-<div class="benefit-list stagger">
-<div><span class="num">01</span><p><strong>Especificações confirmadas</strong><br/>Confirme proteção UV e tratamentos com a equipe antes da compra.</p></div>
-<div><span class="num">02</span><p><strong>Conforto para sua rotina</strong><br/>O ajuste deve ser confirmado no rosto e no uso real.</p></div>
-<div><span class="num">03</span><p><strong>Política de troca clara</strong><br/>Consulte prazos e condições diretamente com a loja.</p></div>
-</div>
-</section>
+      <div class="header-acoes">
+        <a class="btn-whatsapp" href="https://wa.me/5521984816082?text=Ol%C3%A1%20Alexsander%20%C3%93tica%2C%20quero%20conhecer%20os%20modelos" target="_blank" rel="noopener">
+          <span aria-hidden="true">◉</span> <span class="whatsapp-texto">WhatsApp ↗</span><span class="whatsapp-curto">Zap</span>
+        </a>
 
-<section id="materiais" class="section reveal">
-<div class="eyebrow">Por dentro da Alexsander</div>
-<h2>Materiais que <em>fazem diferença.</em></h2>
-<p class="section-note">Cada acabamento foi escolhido para equilibrar leveza, resistência e personalidade.</p>
-<div class="materiais stagger">
-<div class="mat"><i>◈</i><p><strong>01 · Acetato premium</strong></p><p>Toque confortável, cores profundas e brilho natural. Ideal para quem usa óculos o dia todo.</p></div>
-<div class="mat"><i>◇</i><p><strong>02 · Metal leve</strong></p><p>Linhas finas e ajuste delicado para um visual preciso, elegante e quase imperceptível.</p></div>
-<div class="mat"><i>✦</i><p><strong>03 · Bio-based</strong></p><p>Composição de base renovável para quem quer escolhas mais conscientes sem perder estilo.</p></div>
-</div>
-</section>
+        <!-- Sacola: contador visual na Parte 1; gaveta + lógica chegam na Parte 3.
+             IDs congelados para o outro especialista: #cart-abrir / #cart-num -->
+        <button class="btn-sacola" id="cart-abrir" type="button" aria-label="Abrir sacola de compras (em breve)">
+          Sacola <span class="sacola-num" id="cart-num">0</span>
+        </button>
 
-<section id="guia" class="section reveal">
-<div class="eyebrow">Guia rápido</div>
-<h2>Qual formato <em>combina com você?</em></h2>
-<p class="section-note">Use estas referências como ponto de partida. O mais importante é você se sentir bem usando.</p>
-<div class="face-grid stagger">
-<article><h3>Rosto quadrado</h3><p>Experimente armações arredondadas para suavizar os ângulos.</p></article>
-<article><h3>Rosto redondo</h3><p>Linhas retas criam contraste e alongam visualmente.</p></article>
-<article><h3>Rosto oval</h3><p>Quase todos os formatos funcionam. Brinque com proporções.</p></article>
-<article><h3>Rosto coração</h3><p>Modelos levemente maiores na parte inferior equilibram o conjunto.</p></article>
-</div>
-</section>
+        <button class="menu-btn" id="menu-btn" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-principal">
+          <span aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </header>
 
-<section class="section reveal">
-<div class="care-card">
-<div class="eyebrow">Cuide do seu par</div>
-<h2>Pequenos gestos, <em>mais tempo com você.</em></h2>
-<div class="care-list stagger">
-<div><p><strong>01 · Lave com água e sabão neutro</strong><br/>Seque com flanela de microfibra, sem papel ou camiseta.</p></div>
-<div><p><strong>02 · Guarde sempre no estojo</strong><br/>Evite deixar as lentes viradas para baixo ou dentro do carro.</p></div>
-<div><p><strong>03 · Cheque o ajuste</strong><br/>Nossa equipe pode orientar uma regulagem quando necessário.</p></div>
-</div>
-</div>
-</section>
+  <main id="conteudo">
+    <!-- ============ HERO escuro full-viewport ============ -->
+    <section class="hero" id="topo" aria-labelledby="hero-titulo">
+      <!-- Canvas aurora azul-marinho/dourado + partículas (app.js). Sem JS, o
+           gradiente + glows em CSS seguram o visual sozinhos. -->
+      <canvas class="hero-aurora" id="aurora" aria-hidden="true"></canvas>
+      <div class="hero-veu" aria-hidden="true"></div>
+      <div class="hero-glow hero-glow--ouro" aria-hidden="true"></div>
+      <div class="hero-glow hero-glow--marinho" aria-hidden="true"></div>
 
-<section id="entrega" class="section reveal">
-<div class="eyebrow">Depois da compra</div>
-<h2>Pedido sob <em>seu controle.</em></h2>
-<p class="section-note">Acompanhe cada etapa e fale com a Alexsander quando precisar.</p>
-<div class="ops-grid stagger">
-<article><h3>01 · Entrega transparente</h3><p>Prazo, entrega e valor são combinados com a equipe depois do orçamento.</p></article>
-<article><h3>02 · Troca conforme política</h3><p>A equipe orienta as opções e os prazos aplicáveis ao seu pedido.</p></article>
-<article><h3>03 · Alterar seu pedido</h3><p>Precisa ajustar ou cancelar? Fale com a equipe pelo WhatsApp para consultar o andamento e as condições do seu pedido.</p></article>
-</div>
-</section>
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow eyebrow--clara reveal">Alexsander Ótica · Mesquita</p>
 
-<section class="section reveal">
-<div class="eyebrow">Compra segura</div>
-<h2>Escolha como <em>quer pagar.</em></h2>
-<div class="pay-grid stagger">
-<div><h3>▣ Pix</h3><p>Consulte a equipe sobre condições à vista.</p></div>
-<div><h3>▤ Cartão de crédito</h3><p>Confirme as opções de parcelamento com a loja.</p></div>
-<div><h3>◫ Cartão de débito</h3><p>Disponibilidade e condições pelo atendimento.</p></div>
-<div><h3>↺ Atendimento próximo</h3><p>Combine os detalhes da compra com a equipe.</p></div>
-</div>
-</section>
+          <!-- Título em 2 linhas; JS faz split-text por palavra (data-split).
+               Sem JS, o texto continua íntegro e legível. -->
+          <h1 class="hero-titulo titulo-gigante" id="hero-titulo" data-split>
+            <span class="linha">Um novo olhar.</span>
+            <span class="linha linha--destaque">Nos mínimos detalhes.</span>
+          </h1>
 
-<section class="section reveal">
-<div class="eyebrow">Na hora de escolher</div>
-<h2>Estilo que <em>vira rotina.</em></h2>
-<div class="quote-grid stagger">
-<blockquote>Experimente a armação e observe o apoio no nariz e atrás das orelhas.<cite>Conforto no dia a dia</cite></blockquote>
-<blockquote>Converse com a equipe sobre sua rotina e os tratamentos disponíveis para suas lentes.<cite>Uma escolha acompanhada</cite></blockquote>
-</div>
-</section>
+          <p class="hero-slogan reveal" style="--d:.15s">Seu olhar, <strong>nosso cuidado.</strong></p>
+          <p class="hero-lead texto-lead reveal" style="--d:.25s">
+            Formas, cores e acabamentos que expressam seu estilo. Explore as
+            armações e encontre sua próxima escolha com a nossa equipe.
+          </p>
 
-<section id="avaliacoes" class="section reveal">
-<div class="eyebrow">Quem escolhe a Alexsander</div>
-<h2>Cuidado que vira <em>recomendação.</em></h2>
-<a class="score" href="https://www.google.com/maps?cid=16493775369192153875" target="_blank" rel="noopener"><strong>5,0 <small>/ 5</small></strong><span><span class="stars">★★★★★</span><br/>29 avaliações no Google ↗</span></a>
-<p class="section-note" style="margin-top:10px">Uma seleção de avaliações positivas de quem compartilhou sua experiência no Google.</p>
-<div class="reviews stagger">
-<figure class="rev"><span class="stars">★★★★★</span><blockquote><p>“Gostei muito do tratamento, facilita a forma de pagamento.”</p></blockquote><figcaption class="who"><span class="avatar">TL</span><span><strong>Taiane Lima</strong><br/><small>Avaliação no Google</small></span></figcaption><p><a class="mini-btn" href="https://maps.app.goo.gl/qDBtrJvw7MzpdN8i9" target="_blank" rel="noopener">Ler avaliação completa ↗</a></p></figure>
-<figure class="rev"><span class="stars">★★★★★</span><blockquote><p>“O atendimento é ótimo!”</p></blockquote><figcaption class="who"><span class="avatar">IP</span><span><strong>Isabel Peres</strong><br/><small>Avaliação no Google</small></span></figcaption><p><a class="mini-btn" href="https://maps.app.goo.gl/D5uB6egrPkgDQNt7A" target="_blank" rel="noopener">Ler avaliação completa ↗</a></p></figure>
-<figure class="rev"><span class="stars">★★★★★</span><blockquote><p>“Atendimento excelente, super recomendo, atenção total ao cliente”</p></blockquote><figcaption class="who"><span class="avatar">VL</span><span><strong>Veronica Lacerda</strong><br/><small>Avaliação no Google</small></span></figcaption><p><a class="mini-btn" href="https://maps.app.goo.gl/R7VwRW9kHe5iDicv5" target="_blank" rel="noopener">Ler avaliação completa ↗</a></p></figure>
-</div>
-<p class="section-note" style="margin-top:12px">Trechos selecionados. Nota e total consultados em 07/09/2026. <a href="https://www.google.com/maps?cid=16493775369192153875" target="_blank" rel="noopener">Ver todas as avaliações no Google ↗</a></p>
-<div class="social-row"><span>Conheça também o dia a dia da nossa loja</span><a href="https://www.instagram.com/Alexsanderotic" target="_blank" rel="noopener">Instagram</a><a href="https://www.facebook.com/alexsander.otic?locale=pt_BR" target="_blank" rel="noopener">Facebook</a></div>
-</section>
+          <div class="hero-ctas reveal" style="--d:.35s">
+            <a class="btn btn--solido btn--magnetico" href="#colecao">Explorar armações</a>
+            <a class="hero-link-fantasma" href="#lentes">Escolher minhas lentes</a>
+          </div>
 
-<section class="section reveal">
-<div class="eyebrow">Dúvidas frequentes</div>
-<h2>Antes de <em>escolher.</em></h2>
-<p class="section-note">Se ainda ficou alguma pergunta, nosso atendimento ajuda você a decidir.</p>
-<details open><summary>Como escolho o tamanho ideal?</summary><p>Compare as medidas de uma armação que você já usa ou fale com a nossa equipe. A gente orienta pelo formato e pela largura do rosto.</p></details>
-<details><summary>As lentes têm proteção UV?</summary><p>Confirme a proteção e as especificações do modelo com a equipe. A cor escura da lente, por si só, não comprova proteção UV.</p></details>
-<details><summary>Posso trocar ou cancelar meu pedido?</summary><p>Consulte as condições de troca e cancelamento com a equipe antes de finalizar uma compra real.</p></details>
-<details><summary>Como acompanho a entrega?</summary><p>Depois da confirmação, a equipe orienta a entrega e acompanha cada etapa pelo WhatsApp.</p></details>
-</section>
+          <!-- Mini-stats exigidos: 5,0★/29 avaliações · R$80 · Mesquita RJ -->
+          <ul class="hero-stats reveal" style="--d:.45s" aria-label="Destaques da loja">
+            <li><strong><span class="estrelas" aria-hidden="true">★★★★★</span> 5,0 · 29 avaliações</strong>no Google</li>
+            <li><strong>A partir de R$ 80</strong>armações em promoção</li>
+            <li><strong>Mesquita · RJ</strong>retirada na loja</li>
+          </ul>
+        </div>
 
-<section id="loja" class="store reveal">
-<div><img src="./loja-perfil.png" alt="Foto de perfil da Alexsander Ótica" width="400" height="400"/></div>
-<div><div class="eyebrow">Visite a loja</div><h2>Seu olhar, <em>bem cuidado.</em></h2><p>Óculos e oculista em Mesquita, com atendimento próximo para escolher armações, lentes e ajustes com segurança.</p>
-<div class="row"><strong>Endereço</strong><span>Av. União, 735 · Santa Terezinha, Mesquita, Rio de Janeiro</span></div>
-<div class="row"><strong>Telefone e WhatsApp</strong><span>(21) 98481-6082</span></div>
-<div class="row"><strong>Atendimento</strong><span>Aberto · confira o horário atualizado pelo WhatsApp</span></div>
-<p style="margin-top:12px"><a class="btn magnetic" href="https://wa.me/5521984816082?text=Ol%C3%A1%20Alexsander%20%C3%93tica%2C%20quero%20conhecer%20os%20modelos">Chamar no WhatsApp ↗</a> <a class="mini-btn" href="https://www.google.com/maps/search/?api=1&amp;query=Av.+Uni%C3%A3o+735+Mesquita+RJ" target="_blank" rel="noopener">Abrir rota no mapa</a></p>
-</div>
-</section>
+        <div class="hero-media reveal reveal--direita" style="--d:.3s">
+          <!-- Card flutuante da campanha Aviador Azul com tilt 3D (data-tilt).
+               Foto e preços imutáveis; fallback onerror para a pasta ./fotos. -->
+          <a class="hero-card" data-tilt href="https://wa.me/5521984816082?text=Ol%C3%A1%20Alexsander%20%C3%93tica%2C%20quero%20o%20Aviador%20Azul%20(R%24%2080)" target="_blank" rel="noopener" aria-label="Quero o Aviador Azul solar por 80 reais — chamar no WhatsApp">
+            <img src="./fotos/solar-aviador-azul.jpg" alt="Óculos de sol Aviador Azul com armação dourada e lente azul" width="880" height="660" fetchpriority="high" decoding="async" onerror="this.onerror=null;this.src='./fotos/solar-aviador-azul-2.jpg'" />
+            <span class="hero-card-info">
+              <span>Aviador Azul · Solar<br />
+                <small><span class="preco-antigo">R$ 150</span><strong>R$ 80</strong><span class="tag-promo">PROMOÇÃO</span></small>
+              </span>
+              <span class="hero-card-seta" aria-hidden="true">↗</span>
+            </span>
+          </a>
+        </div>
+      </div>
+    </section>
 
-<section id="contato" class="contact-card reveal">
-<div class="eyebrow">Atendimento Alexsander Ótica</div>
-<h2>Encontre o par <em>que encontra você.</em></h2>
-<p>Conte como é sua rotina e a gente indica armações, lentes e tamanhos que fazem sentido.</p>
-<p style="margin-top:14px"><a class="btn magnetic" href="https://api.whatsapp.com/send?phone=5521984816082&amp;text=Ol%C3%A1%20Alexsander%20%C3%93tica%2C%20quero%20ajuda%20para%20escolher%20meus%20%C3%B3culos">Falar com um especialista no WhatsApp ↗</a></p>
-</section>
-</div>
+    <!-- ============ MARQUEE dourado ============ -->
+    <div class="marquee" role="marquee" aria-label="Avisos da loja: promoção, pagamento e retirada">
+      <div class="marquee-track" aria-hidden="false">
+        <span>✦ Promoção: armações por R$ 80</span><span>✦ Pix, crédito e débito</span><span>✦ Retirada na loja em Mesquita</span><span>✦ Seu olhar, nosso cuidado</span>
+        <span aria-hidden="true">✦ Promoção: armações por R$ 80</span><span aria-hidden="true">✦ Pix, crédito e débito</span><span aria-hidden="true">✦ Retirada na loja em Mesquita</span><span aria-hidden="true">✦ Seu olhar, nosso cuidado</span>
+      </div>
+    </div>
 
-<div class="modal-backdrop" id="pay" hidden>
-<div class="modal" role="dialog" aria-modal="true" aria-labelledby="pay-titulo" style="grid-template-columns:1fr;max-width:520px">
-<button class="modal-x" id="pay-fechar" type="button" aria-label="Fechar pagamento">✕</button>
-<div class="modal-info" id="pay-corpo">
-<div class="eyebrow">Finalizar compra · Retirada na loja</div>
-<h3 id="pay-titulo">Pagamento</h3>
-<div class="pay-lines" id="pay-resumo"></div>
-<div class="pay-methods" role="radiogroup" aria-label="Forma de pagamento">
-<label><input type="radio" name="pag" value="Pix" checked/> Pix — aprovação rápida</label>
-<label><input type="radio" name="pag" value="Crédito"/> Cartão de crédito — em até 3x</label>
-<label><input type="radio" name="pag" value="Débito"/> Cartão de débito — à vista</label>
-</div>
-<div class="pay-box" id="pay-pix">
-<div class="pix-code">Total <strong id="pix-total"></strong> · Após confirmar, você recebe a <strong>chave Pix da loja no WhatsApp</strong>, paga e retira seu pedido em Mesquita.</div>
-</div>
-<div class="pay-box" id="pay-cartao" hidden>
-<label for="cc-num">Número do cartão</label>
-<input id="cc-num" inputmode="numeric" autocomplete="cc-number" placeholder="0000 0000 0000 0000"/>
-<label for="cc-nome">Nome impresso</label>
-<input id="cc-nome" autocomplete="cc-name" placeholder="Como está no cartão"/>
-<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
-<div><label for="cc-val">Validade</label><input id="cc-val" inputmode="numeric" autocomplete="cc-exp" placeholder="MM/AA"/></div>
-<div><label for="cc-cvv">CVV</label><input id="cc-cvv" inputmode="numeric" autocomplete="cc-csc" placeholder="123"/></div>
-</div>
-<label for="cc-parc">Parcelas</label>
-<select id="cc-parc"></select>
-<p class="pay-err" id="cc-erro" role="alert"></p>
-</div>
-<p style="margin-top:14px"><button class="btn magnetic" id="pay-confirmar" type="button" style="width:100%">Confirmar pedido</button></p>
-</div>
-<div class="modal-info order-ok" id="pay-ok" hidden>
-<div class="big">🎉</div>
-<h3>Pedido recebido!</h3>
-<p>Apresente este número na loja para retirar:</p>
-<p><span class="order-num" id="order-num"></span></p>
-<p class="section-note" id="order-msg"></p>
-<p style="margin-top:14px"><a class="btn magnetic" id="order-wa" href="#">Enviar pedido no WhatsApp</a></p>
-<p><button class="btn-outline" id="order-fechar" type="button">Voltar à loja</button></p>
-</div>
-</div>
-</div>
-<a class="wpp magnetic" href="https://wa.me/5521984816082">WhatsApp</a>
-<div class="modal-backdrop" id="modal" hidden>
-<div class="modal" role="dialog" aria-modal="true" aria-labelledby="m-nome">
-<button class="modal-x" id="m-fechar" aria-label="Fechar detalhes">✕</button>
-<div class="modal-media"><img id="m-foto" alt=""/><div class="thumbs" id="m-thumbs" aria-label="Outras fotos do modelo"></div></div>
-<div class="modal-info">
-<small class="cat" id="m-cat"></small>
-<h3 id="m-nome"></h3>
-<p class="meta" id="m-meta"></p>
-<div class="price" id="m-preco"></div>
-<p class="opt-label">Cor da armação</p>
-<div class="swatches" id="m-cores"></div>
-<p class="opt-label">Lente</p>
-<div class="swatches" id="m-lentes"></div>
-<p class="opt-label">Quantidade</p>
-<div class="qty"><button id="m-menos" type="button" aria-label="Diminuir quantidade">−</button><span id="m-qtd">1</span><button id="m-mais" type="button" aria-label="Aumentar quantidade">+</button></div>
-<p style="margin-top:16px"><button class="btn magnetic" id="m-add" type="button" style="width:100%">Adicionar à sacola</button></p>
-<p><a class="btn-outline" id="m-pedir" href="#">ou pedir direto no WhatsApp</a></p>
-</div>
-</div>
-</div>
-<footer>
-<div><a class="brand" href="#topo" style="color:var(--off)"><span class="brand-mark" style="background:var(--dourado);color:var(--azul2)">A</span><span class="brand-name">ALEXSANDER<span class="brand-dot">.</span><span class="slogan-oficial">Seu olhar, nosso cuidado</span></span></a><p style="margin-top:10px;font-size:.88rem;opacity:.85">Elegância, conforto e cuidado com a sua visão.</p></div>
-<div><a href="#avaliacoes">Avaliações</a><a href="https://www.instagram.com/Alexsanderotic" target="_blank" rel="noopener">Instagram</a><a href="https://www.facebook.com/alexsander.otic?locale=pt_BR" target="_blank" rel="noopener">Facebook</a><a href="https://wa.me/5521984816082">WhatsApp</a><p style="margin-top:10px;font-size:.82rem;opacity:.75">© 2026 Alexsander Ótica</p></div>
-</footer>
+    <!-- TRUST-BAR sob o hero (evolução visual): faixa clara com 4 selos em
+         CSS puro. Rótulos curtos vindos do FAQ/original (garantia, troca,
+         pagamento, retirada) — nada inventado. -->
+    <div class="trustbar" aria-label="Diferenciais da loja">
+      <ul class="trustbar-lista container">
+        <li class="reveal" style="--d:0s"><span class="trust-ico" aria-hidden="true">✓</span><span>Garantia da loja</span></li>
+        <li class="reveal" style="--d:.08s"><span class="trust-ico" aria-hidden="true">⇄</span><span>Troca facilitada</span></li>
+        <li class="reveal" style="--d:.16s"><span class="trust-ico" aria-hidden="true">◈</span><span>Pix e cartão</span></li>
+        <li class="reveal" style="--d:.24s"><span class="trust-ico" aria-hidden="true">◎</span><span>Retirada em Mesquita</span></li>
+      </ul>
+    </div>
 
-<div class="cart-void" id="cart-void" hidden></div>
-<aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Sacola de compras" aria-hidden="true" inert>
-<div class="drawer-head"><h2>Sua sacola</h2><button class="modal-x" id="cart-fechar" type="button" aria-label="Fechar sacola" style="position:static">✕</button></div>
-<div class="drawer-items" id="cart-items"></div>
-<div class="drawer-foot">
-<div class="pickup"><strong>Retirada na loja</strong><br/>Av. União, 735 · Mesquita, RJ<br/>Por enquanto sem entrega — você busca seu pedido na loja.</div>
-<div class="total-line"><span>Total</span><span id="cart-total">R$ 0</span></div>
-<label class="opt-label" for="cli-nome">Seu nome para o pedido</label>
-<input class="nome-input" id="cli-nome" type="text" name="nome" maxlength="60" placeholder="Ex.: Maria Silva" autocomplete="name"/>
-<a class="btn magnetic checkout" id="cart-finalizar" href="#" role="button">Finalizar compra</a>
-</div>
-</aside>
-<div class="toast" id="toast" role="status" aria-live="polite"></div>
-<script>
-(function(){
-  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var bar = document.querySelector('.scroll-progress');
-  function onScroll(){
-    var h = document.documentElement;
-    var max = h.scrollHeight - h.clientHeight;
-    bar.style.width = (max > 0 ? (h.scrollTop / max) * 100 : 0) + '%';
-    if(!reduce){
-      var p = document.querySelector('.parallax');
-      if(p){ p.style.transform = 'translateY(' + (h.scrollTop * parseFloat(p.dataset.speed || '0.05')) + 'px)'; }
-    }
-  }
-  document.addEventListener('scroll', onScroll, {passive:true});
-  onScroll();
-  var glow = document.querySelector('.cursor-glow');
-  if(glow && window.matchMedia('(hover:hover)').matches){
-    document.addEventListener('mousemove', function(e){ glow.style.left = e.clientX + 'px'; glow.style.top = e.clientY + 'px'; }, {passive:true});
-  } else if(glow){ glow.style.display = 'none'; }
-  var io = new IntersectionObserver(function(es){ es.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('visible'); io.unobserve(en.target); } }); }, {threshold: 0.1});
-  document.querySelectorAll('.reveal, .stagger').forEach(function(el){ io.observe(el); });
-  if(!reduce && window.matchMedia('(hover:hover)').matches){
-    document.querySelectorAll('.magnetic').forEach(function(b){
-      b.addEventListener('mousemove', function(e){ var r = b.getBoundingClientRect(); b.style.transform = 'translate(' + ((e.clientX - r.left - r.width/2)*0.15) + 'px,' + ((e.clientY - r.top - r.height/2)*0.2) + 'px)'; });
-      b.addEventListener('mouseleave', function(){ b.style.transform = ''; });
-    });
-    document.querySelectorAll('.tilt').forEach(function(c){
-      c.addEventListener('mousemove', function(e){ var r = c.getBoundingClientRect(); var px = (e.clientX - r.left)/r.width - .5, py = (e.clientY - r.top)/r.height - .5; c.style.transform = 'perspective(900px) rotateX(' + (-py*8) + 'deg) rotateY(' + (px*10) + 'deg) translateY(-3px)'; });
-      c.addEventListener('mouseleave', function(){ c.style.transform = ''; });
-    });
-  }
-  // Variantes de cor por modelo + modal de detalhes
-  var CORES = {
-    "Aviador Azul": ["Dourado e azul", "Preto", "Prata", "Marrom"],
-    "Retangular Tartaruga": ["Tartaruga", "Preto", "Marrom", "Azul"],
-    "Clubmaster Marrom": ["Marrom", "Preto", "Tartaruga"],
-    "Redondo Preto": ["Preto", "Grafite", "Dourado"],
-    "Hexagonal Âmbar": ["Âmbar", "Preto", "Verde"],
-    "Bali Quadrado": ["Preto", "Tartaruga", "Branco"]
-  };
-  var FOTOS = {
-    "Aviador Azul": ["./fotos/solar-aviador-azul.jpg", "./fotos/solar-aviador-azul-2.jpg"],
-    "Retangular Tartaruga": ["./fotos/optico-retangular-tartaruga.jpg"],
-    "Clubmaster Marrom": ["./fotos/solar-clubmaster-marrom.jpg", "./fotos/solar-clubmaster-marrom-2.jpg"],
-    "Redondo Preto": ["./fotos/solar-redondo-preto.jpg", "./fotos/solar-redondo-preto-2.jpg"],
-    "Hexagonal Âmbar": ["./fotos/solar-hexagonal-ambar.jpg", "./fotos/solar-hexagonal-ambar-2.jpg", "./fotos/solar-hexagonal-ambar-3.jpg"],
-    "Bali Quadrado": ["./fotos/solar-bali-quadrado.jpg"]
-  };
-  var LENTES = ["Transparente", "Antirreflexo", "Fotossensível", "Polarizada"];
-  var PRECO = {"Aviador Azul": 80, "Retangular Tartaruga": 120, "Clubmaster Marrom": 150, "Redondo Preto": 140, "Hexagonal Âmbar": 130, "Bali Quadrado": 150};
-  var PRECO_DE = {"Aviador Azul": 150};
-  function BRL(v){ return "R$ " + v; }
-  function selCor(card){ return card.dataset.selcor || card.dataset.color; }
-  // Linha de cores em cada card
-  document.querySelectorAll('#grade .card').forEach(function(card){
-    var nome = card.dataset.name, cores = CORES[nome] || [card.dataset.color];
-    card.dataset.selcor = cores[0];
-    var box = document.createElement('div');
-    box.className = 'swatches';
-    box.setAttribute('aria-label', 'Cores de ' + nome);
-    cores.forEach(function(cor, i){
-      var b = document.createElement('button');
-      b.type = 'button'; b.className = 'swatch'; b.textContent = cor;
-      b.setAttribute('aria-pressed', i === 0 ? 'true' : 'false');
-      b.addEventListener('click', function(){
-        card.dataset.selcor = cor;
-        box.querySelectorAll('.swatch').forEach(function(x){ x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
-        var meta = card.querySelector('.meta');
-        if(meta) meta.textContent = card.dataset.format + ' · ' + cor;
-      });
-      box.appendChild(b);
-    });
-    var meta = card.querySelector('.meta');
-    if(meta) meta.after(box);
-    var foto = card.querySelector('img');
-    if(foto){
-      foto.tabIndex = 0;
-      foto.setAttribute('role', 'button');
-      foto.setAttribute('aria-label', 'Ver detalhes de ' + nome);
-      foto.addEventListener('keydown', function(ev){
-        if(ev.key === 'Enter' || ev.key === ' '){ ev.preventDefault(); abrirModal(card); }
-      });
-      var gal = FOTOS[nome] || [];
-      if(gal.length > 1 && window.matchMedia('(hover:hover)').matches){
-        gal.slice(1).forEach(function(src){ var im = new Image(); im.src = src; });
-        card.addEventListener('mouseenter', function(){ foto.src = gal[1]; });
-        card.addEventListener('mouseleave', function(){ foto.src = gal[0]; });
-      }
-    }
-  });
-  // Modal
-  var modal = document.getElementById('modal'), mNome = document.getElementById('m-nome'),
-      mFoto = document.getElementById('m-foto'), mCat = document.getElementById('m-cat'),
-      mMeta = document.getElementById('m-meta'), mPreco = document.getElementById('m-preco'),
-      mCores = document.getElementById('m-cores'), mLentes = document.getElementById('m-lentes'),
-      mQtd = document.getElementById('m-qtd'), mPedir = document.getElementById('m-pedir'),
-      mCor = '', mLentesSel = [LENTES[0]], mQtdN = 1, mModelo = '', mFotoSrc = '';
-  function precoHTML(nome){
-    var p = PRECO[nome], de = PRECO_DE[nome];
-    return de ? '<span class="old">' + BRL(de) + '</span><strong>' + BRL(p) + '</strong><span class="promo-tag">PROMOÇÃO</span>' : '<strong>' + BRL(p) + '</strong>';
-  }
-  function atualizaPedir(){
-    var total = (PRECO[mModelo] || 0) * mQtdN;
-    mPedir.href = 'https://wa.me/5521984816082?text=' + encodeURIComponent('Olá Alexsander Ótica, quero ' + mQtdN + 'x ' + mModelo + ' (' + mCor + ', ' + mLentesSel.join(' + ') + ') — ' + BRL(total));
-    mPedir.textContent = 'Pedir ' + mQtdN + 'x no WhatsApp — ' + BRL(total);
-  }
-  function abrirModal(card){
-    mModelo = card.dataset.name; mCor = selCor(card); mLentesSel = [LENTES[0]]; mQtdN = 1;
-    var gal = FOTOS[mModelo] || [card.querySelector('img').src];
-    mFotoSrc = gal[0];
-    mFoto.src = mFotoSrc; mFoto.alt = card.querySelector('img').alt;
-    var thumbs = document.getElementById('m-thumbs');
-    thumbs.innerHTML = '';
-    if(gal.length > 1){
-      gal.forEach(function(src, i){
-        var t = document.createElement('button');
-        t.type = 'button';
-        t.setAttribute('aria-pressed', i === 0 ? 'true' : 'false');
-        t.setAttribute('aria-label', 'Ver foto ' + (i + 1) + ' de ' + mModelo);
-        var im = document.createElement('img');
-        im.src = src; im.alt = '';
-        t.appendChild(im);
-        t.addEventListener('click', function(){
-          mFoto.src = src;
-          thumbs.querySelectorAll('button').forEach(function(x){ x.setAttribute('aria-pressed', x === t ? 'true' : 'false'); });
-        });
-        thumbs.appendChild(t);
-      });
-    }
-    mCat.textContent = card.querySelector('.cat span').textContent;
-    mNome.textContent = mModelo;
-    mMeta.textContent = card.dataset.format + ' · ' + mCor;
-    mPreco.innerHTML = precoHTML(mModelo);
-    mCores.innerHTML = ''; mLentes.innerHTML = ''; mQtd.textContent = '1';
-    (CORES[mModelo] || [mCor]).forEach(function(cor){
-      var b = document.createElement('button');
-      b.type = 'button'; b.className = 'swatch'; b.textContent = cor;
-      b.setAttribute('aria-pressed', cor === mCor ? 'true' : 'false');
-      b.addEventListener('click', function(){ mCor = cor; mMeta.textContent = card.dataset.format + ' · ' + cor;
-        mCores.querySelectorAll('.swatch').forEach(function(x){ x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); }); atualizaPedir(); });
-      mCores.appendChild(b);
-    });
-    LENTES.forEach(function(l){
-      var b = document.createElement('button');
-      b.type = 'button'; b.className = 'swatch'; b.textContent = l;
-      b.title = 'Toque para combinar mais de uma lente';
-      b.setAttribute('aria-pressed', mLentesSel.indexOf(l) > -1 ? 'true' : 'false');
-      b.addEventListener('click', function(){
-        var i = mLentesSel.indexOf(l);
-        if(i > -1){ if(mLentesSel.length > 1) mLentesSel.splice(i, 1); }
-        else { mLentesSel.push(l); }
-        mLentes.querySelectorAll('.swatch').forEach(function(x){ x.setAttribute('aria-pressed', mLentesSel.indexOf(x.textContent) > -1 ? 'true' : 'false'); });
-        atualizaPedir();
-      });
-      mLentes.appendChild(b);
-    });
-    atualizaPedir();
-    modalOpener = card.querySelector('img');
-    modal.hidden = false;
-    document.getElementById('m-fechar').focus();
-  }
-  var modalOpener = null;
-  function fecharModal(retorna){
-    modal.hidden = true;
-    if(retorna !== false && modalOpener && modalOpener.focus) modalOpener.focus();
-  }
-  document.addEventListener('keydown', function(e){
-    if(e.key !== 'Tab' || modal.hidden) return;
-    var f = Array.prototype.slice.call(modal.querySelectorAll('button, [href], input, select, [tabindex]:not([tabindex="-1"])')).filter(function(el){ return !el.disabled && el.offsetParent !== null; });
-    if(!f.length) return;
-    var primeiro = f[0], ultimo = f[f.length - 1];
-    if(e.shiftKey && document.activeElement === primeiro){ e.preventDefault(); ultimo.focus(); }
-    else if(!e.shiftKey && document.activeElement === ultimo){ e.preventDefault(); primeiro.focus(); }
-  });
-  document.getElementById('grade').addEventListener('click', function(e){
-    if(e.target.closest('button, a')) return;
-    var card = e.target.closest('.card');
-    if(card) abrirModal(card);
-  });
-  document.getElementById('m-fechar').addEventListener('click', fecharModal);
-  modal.addEventListener('click', function(e){ if(e.target === modal) fecharModal(); });
-  document.addEventListener('keydown', function(e){ if(e.key === 'Escape' && !modal.hidden) fecharModal(); });
-  document.getElementById('m-mais').addEventListener('click', function(){ mQtdN = Math.min(10, mQtdN + 1); mQtd.textContent = mQtdN; atualizaPedir(); });
-  document.getElementById('m-menos').addEventListener('click', function(){ mQtdN = Math.max(1, mQtdN - 1); mQtd.textContent = mQtdN; atualizaPedir(); });
-  // Filtros da coleção
-  var tab = 'todos', grade = document.getElementById('grade'), cards = Array.prototype.slice.call(grade.children),
-      busca = document.getElementById('busca'), ordem = document.getElementById('ordem'), formato = document.getElementById('formato'),
-      limpar = document.getElementById('limpar'), contagem = document.getElementById('contagem');
-  document.querySelectorAll('.tabs button').forEach(function(b){
-    b.addEventListener('click', function(){
-      document.querySelectorAll('.tabs button').forEach(function(x){ x.classList.remove('active'); x.setAttribute('aria-pressed','false'); });
-      b.classList.add('active'); b.setAttribute('aria-pressed','true'); tab = b.dataset.tab; aplicar();
-    });
-  });
-  [busca, ordem, formato].forEach(function(el){ el.addEventListener('input', aplicar); el.addEventListener('change', aplicar); });
-  limpar.addEventListener('click', function(){ busca.value=''; formato.value=''; ordem.value='destaques'; tab='todos';
-    document.querySelectorAll('.tabs button').forEach(function(x){ var on = x.dataset.tab==='todos'; x.classList.toggle('active', on); x.setAttribute('aria-pressed', on); });
-    aplicar(); });
-  function aplicar(){
-    var q = busca.value.trim().toLowerCase(), f = formato.value;
-    var vis = cards.filter(function(c){
-      var txt = (c.dataset.name + ' ' + c.dataset.format + ' ' + c.dataset.color + ' ' + (CORES[c.dataset.name] || []).join(' ') + ' ' + c.dataset.cat).toLowerCase();
-      return (tab==='todos' || c.dataset.cat===tab) && (!f || c.dataset.format===f) && (!q || txt.indexOf(q) > -1);
-    });
-    if(ordem.value==='az') vis.sort(function(a,b){ return a.dataset.name.localeCompare(b.dataset.name, 'pt-BR'); });
-    vis.forEach(function(c){ grade.appendChild(c); c.style.display=''; });
-    cards.forEach(function(c){ if(vis.indexOf(c) < 0) c.style.display='none'; });
-    contagem.textContent = vis.length + (vis.length === 1 ? ' modelo na seleção' : ' modelos na seleção');
-    document.getElementById('vazio').classList.toggle('show', vis.length === 0);
-    limpar.disabled = !(q || f || tab!=='todos' || ordem.value!=='destaques');
-  }
-  document.getElementById('limpar2').addEventListener('click', function(){ limpar.click(); });
-  // Orçamento pelo WhatsApp com o nome do modelo, cor e preço
-  document.querySelectorAll('[data-orc]').forEach(function(el){
-    el.addEventListener('click', function(ev){
-      ev.preventDefault();
-      var m = el.getAttribute('data-orc');
-      var card = el.closest('.card');
-      var cor = card ? selCor(card) : '';
-      var p = el.getAttribute('data-preco') || '';
-      window.open('https://wa.me/5521984816082?text=' + encodeURIComponent('Olá Alexsander Ótica, quero o modelo ' + m + (cor ? ' (' + cor + ')' : '') + (p ? ' — ' + p : '')), '_blank', 'noopener');
-    });
-  });
-  // Sacola (carrinho) com retirada na loja — sem entrega por enquanto
-  var LS = 'alexsander_sacola_v1', sacola = [];
-  try {
-    var bruto = JSON.parse(localStorage.getItem(LS) || '[]');
-    if(Array.isArray(bruto)){
-      sacola = bruto.filter(function(it){ return it && typeof it.modelo === 'string' && typeof it.cor === 'string' && typeof it.lente === 'string'; })
-        .map(function(it){ return {modelo: it.modelo.slice(0, 60), cor: it.cor.slice(0, 40), lente: it.lente.slice(0, 30), qtd: Math.min(10, Math.max(1, parseInt(it.qtd, 10) || 1))}; });
-    }
-  } catch(e){ sacola = []; }
-  function salvaSacola(){ try { localStorage.setItem(LS, JSON.stringify(sacola)); } catch(e){} }
-  var cartVoid = document.getElementById('cart-void'), drawer = document.getElementById('drawer'),
-      cartItems = document.getElementById('cart-items'), cartTotal = document.getElementById('cart-total'),
-      cartNum = document.getElementById('cart-num'), cliNome = document.getElementById('cli-nome'),
-      toast = document.getElementById('toast'), toastT = null;
-  try { cliNome.value = localStorage.getItem('alexsander_nome') || ''; } catch(e){}
-  function mostraToast(msg){
-    toast.textContent = msg; toast.classList.add('show');
-    clearTimeout(toastT); toastT = setTimeout(function(){ toast.classList.remove('show'); }, 2600);
-  }
-  function fotoDe(modelo){
-    try {
-      var nome = (typeof CSS !== 'undefined' && CSS.escape) ? CSS.escape(modelo) : String(modelo).replace(/["\\\[\]]/g, '');
-      var img = document.querySelector('#grade .card[data-name="' + nome + '"] img');
-      return img ? img.src : './loja-perfil.png';
-    } catch(e){ return './loja-perfil.png'; }
-  }
-  function totalSacola(){ return sacola.reduce(function(s, it){ return s + (PRECO[it.modelo] || 0) * it.qtd; }, 0); }
-  function renderSacola(){
-    var n = sacola.reduce(function(s, it){ return s + it.qtd; }, 0);
-    cartNum.textContent = n;
-    cartTotal.textContent = BRL(totalSacola());
-    cartItems.innerHTML = '';
-    if(!sacola.length){
-      cartItems.innerHTML = '<p class="section-note">Sua sacola está vazia. Explore a coleção e adicione seus modelos.</p>';
-    }
-    sacola.forEach(function(it, idx){
-      var div = document.createElement('div');
-      div.className = 'cart-item';
-      div.innerHTML = '<img alt=""/><div><h4></h4><small></small><div class="row"><div class="qty"><button type="button" aria-label="Diminuir">−</button><span></span><button type="button" aria-label="Aumentar">+</button></div><strong></strong></div><button type="button" class="rm">Remover</button></div>';
-      div.querySelector('img').src = fotoDe(it.modelo);
-      div.querySelector('img').alt = it.modelo;
-      div.querySelector('h4').textContent = it.modelo;
-      div.querySelector('small').textContent = it.cor + ' · lente ' + it.lente;
-      div.querySelector('.qty span').textContent = it.qtd;
-      div.querySelector('.row strong').textContent = BRL((PRECO[it.modelo] || 0) * it.qtd);
-      var btns = div.querySelectorAll('.qty button');
-      btns[0].addEventListener('click', function(){ it.qtd--; if(it.qtd < 1) sacola.splice(idx, 1); salvaSacola(); renderSacola(); });
-      btns[1].addEventListener('click', function(){ it.qtd = Math.min(10, it.qtd + 1); salvaSacola(); renderSacola(); });
-      div.querySelector('.rm').addEventListener('click', function(){ sacola.splice(idx, 1); salvaSacola(); renderSacola(); });
-      cartItems.appendChild(div);
-    });
-  }
-  var cartOpener = null;
-  function abrirSacola(){ cartOpener = document.activeElement; cartVoid.hidden = false; drawer.setAttribute('aria-hidden', 'false'); drawer.inert = false; renderSacola(); document.getElementById('cart-fechar').focus(); }
-  function fecharSacola(retorna){ cartVoid.hidden = true; drawer.setAttribute('aria-hidden', 'true'); drawer.inert = true; if(retorna !== false && cartOpener && cartOpener.focus) cartOpener.focus(); }
-  document.getElementById('cart-abrir').addEventListener('click', abrirSacola);
-  document.getElementById('cart-fechar').addEventListener('click', fecharSacola);
-  cartVoid.addEventListener('click', fecharSacola);
-  document.addEventListener('keydown', function(e){ if(e.key === 'Escape' && !cartVoid.hidden) fecharSacola(); });
-  cliNome.addEventListener('input', function(){ try { localStorage.setItem('alexsander_nome', cliNome.value); } catch(e){} renderSacola(); });
-  function esc(s){ return String(s).replace(/[&<>"']/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]; }); }
-  // Pagamento: Pix, crédito, débito — retirada na loja
-  var pay = document.getElementById('pay'),
-      payResumo = document.getElementById('pay-resumo'),
-      payPix = document.getElementById('pay-pix'),
-      payCartao = document.getElementById('pay-cartao'),
-      pixTotal = document.getElementById('pix-total'),
-      ccNum = document.getElementById('cc-num'),
-      ccNome = document.getElementById('cc-nome'),
-      ccVal = document.getElementById('cc-val'),
-      ccCvv = document.getElementById('cc-cvv'),
-      ccParc = document.getElementById('cc-parc'),
-      ccErro = document.getElementById('cc-erro');
-  function metodoPag(){ var r = document.querySelector('input[name="pag"]:checked'); return r ? r.value : 'Pix'; }
-  document.querySelectorAll('input[name="pag"]').forEach(function(r){
-    r.addEventListener('change', function(){
-      var cartao = metodoPag() !== 'Pix';
-      payCartao.hidden = !cartao; payPix.hidden = cartao;
-      ccErro.textContent = '';
-      if(cartao) montaParcelas();
-    });
-  });
-  function montaParcelas(){
-    var t = totalSacola();
-    ccParc.innerHTML = '';
-    var max = metodoPag() === 'Crédito' ? 3 : 1;
-    for(var i = 1; i <= max; i++){
-      var o = document.createElement('option');
-      o.value = i;
-      o.textContent = i + 'x de ' + BRL(Math.round(t / i)) + (i === 1 ? ' à vista' : ' sem juros');
-      ccParc.appendChild(o);
-    }
-  }
-  ccNum.addEventListener('input', function(){
-    var d = ccNum.value.replace(/\D/g, '').slice(0, 19);
-    ccNum.value = d.replace(/(\d{4})(?=\d)/g, '$1 ');
-  });
-  ccVal.addEventListener('input', function(){
-    var d = ccVal.value.replace(/\D/g, '').slice(0, 4);
-    ccVal.value = d.length > 2 ? d.slice(0, 2) + '/' + d.slice(2) : d;
-  });
-  ccCvv.addEventListener('input', function(){ ccCvv.value = ccCvv.value.replace(/\D/g, '').slice(0, 4); });
-  function luhnOk(num){
-    var d = num.replace(/\D/g, '');
-    if(d.length < 13 || d.length > 19) return false;
-    var s = 0, alt = false;
-    for(var i = d.length - 1; i >= 0; i--){ var n = +d[i]; if(alt){ n *= 2; if(n > 9) n -= 9; } s += n; alt = !alt; }
-    return s % 10 === 0;
-  }
-  function validaCartao(){
-    if(!luhnOk(ccNum.value)) return {msg: 'Número do cartão inválido. Confira e tente de novo.', campo: ccNum};
-    if(ccNome.value.trim().length < 3) return {msg: 'Digite o nome impresso no cartão.', campo: ccNome};
-    var m = ccVal.value.match(/^(0[1-9]|1[0-2])\/(\d{2})$/);
-    if(!m) return {msg: 'Validade inválida. Use o formato MM/AA.', campo: ccVal};
-    if(new Date(2000 + (+m[2]), (+m[1]), 1) <= new Date()) return {msg: 'Cartão vencido. Confira a validade.', campo: ccVal};
-    if(!/^\d{3,4}$/.test(ccCvv.value)) return {msg: 'CVV inválido (3 ou 4 dígitos).', campo: ccCvv};
-    return null;
-  }
-  function abrirPay(){
-    document.getElementById('pay-corpo').hidden = false;
-    document.getElementById('pay-ok').hidden = true;
-    var linhas = sacola.map(function(it){
-      return '<div><span>' + it.qtd + 'x ' + esc(it.modelo) + ' (' + esc(it.cor) + ')</span><span>' + BRL((PRECO[it.modelo] || 0) * it.qtd) + '</span></div>';
-    }).join('');
-    payResumo.innerHTML = linhas + '<div style="font-weight:800;border-top:1px solid rgba(0,45,98,.2);margin-top:6px;padding-top:8px"><span>Total · retirada na loja</span><span>' + BRL(totalSacola()) + '</span></div>';
-    pixTotal.textContent = BRL(totalSacola());
-    var cartao = metodoPag() !== 'Pix';
-    payCartao.hidden = !cartao; payPix.hidden = cartao;
-    if(cartao) montaParcelas();
-    ccErro.textContent = '';
-    pay.hidden = false;
-    fecharSacola(false);
-    document.getElementById('pay-fechar').focus();
-  }
-  function fecharPay(){ pay.hidden = true; var b = document.getElementById('cart-abrir'); if(b) b.focus(); }
-  document.getElementById('pay-fechar').addEventListener('click', fecharPay);
-  pay.addEventListener('click', function(e){ if(e.target === pay) fecharPay(); });
-  document.getElementById('order-fechar').addEventListener('click', fecharPay);
-  document.addEventListener('keydown', function(e){ if(e.key === 'Escape' && !pay.hidden) fecharPay(); });
-  document.getElementById('cart-finalizar').addEventListener('click', function(){
-    if(!sacola.length){ mostraToast('Sua sacola está vazia'); return; }
-    if(!cliNome.value.trim()){ cliNome.focus(); mostraToast('Digite seu nome para o pedido'); return; }
-    abrirPay();
-  });
-  document.getElementById('pay-confirmar').addEventListener('click', function(){
-    var met = metodoPag(), parc = 1, ult4 = '';
-    if(met !== 'Pix'){
-      var erro = validaCartao();
-      if(erro){ ccErro.textContent = erro.msg; erro.campo.focus(); return; }
-      parc = parseInt(ccParc.value, 10) || 1;
-      ult4 = ccNum.value.replace(/\D/g, '').slice(-4);
-    }
-    var total = totalSacola();
-    var d = new Date();
-    var num = 'AO' + String(d.getFullYear()).slice(2) + ('0' + (d.getMonth() + 1)).slice(-2) + ('0' + d.getDate()).slice(-2) + '-' + Math.floor(100 + Math.random() * 900);
-    var linhas = sacola.map(function(it){ return it.qtd + 'x ' + it.modelo + ' (' + it.cor + ', ' + it.lente + ') — ' + BRL((PRECO[it.modelo] || 0) * it.qtd); });
-    var nome = cliNome.value.trim();
-    var pagTxt = met === 'Pix' ? 'Pix' : met + ' final ' + ult4 + (met === 'Crédito' ? ' em ' + parc + 'x' : '');
-    var msg = 'Olá Alexsander Ótica, meu pedido ' + num + ' (RETIRADA NA LOJA — Av. União, 735 · Mesquita):\n' + linhas.join('\n') + '\nTotal: ' + BRL(total) + '\nPagamento: ' + pagTxt + (nome ? '\nNome: ' + nome : '');
-    document.getElementById('order-num').textContent = num;
-    document.getElementById('order-msg').textContent = met === 'Pix'
-      ? 'Você escolheu Pix (' + BRL(total) + '). Toque abaixo para enviar o pedido e receber a chave Pix no WhatsApp. Pague e retire na loja com este número.'
-      : 'Você escolheu ' + met + ' (' + BRL(total) + '). Toque abaixo para enviar o pedido no WhatsApp e concluir. Retire na loja com este número.';
-    document.getElementById('order-wa').href = 'https://wa.me/5521984816082?text=' + encodeURIComponent(msg);
-    document.getElementById('pay-corpo').hidden = true;
-    document.getElementById('pay-ok').hidden = false;
-    sacola = []; salvaSacola(); renderSacola();
-  });
-  window.addEventListener('pagehide', function(){ if(sacola.length){ sacola = []; salvaSacola(); } });
-  document.getElementById('m-add').addEventListener('click', function(){
-    var lenteTxt = mLentesSel.join(' + '), achou = null;
-    sacola.forEach(function(it){ if(it.modelo === mModelo && it.cor === mCor && it.lente === lenteTxt) achou = it; });
-    if(achou){ achou.qtd = Math.min(10, achou.qtd + mQtdN); }
-    else { sacola.push({modelo: mModelo, cor: mCor, lente: lenteTxt, qtd: mQtdN}); }
-    salvaSacola(); renderSacola(); fecharModal();
-    mostraToast(mModelo + ' na sacola!');
-  });
-  renderSacola();
-})();
-</script>
+    <!-- =====================================================
+         PONTO DE MONTAGEM · PARTE 2 (outro especialista)
+         A coleção será renderizada aqui: tabs, busca, ordenação,
+         grade de 6 produtos, modal de detalhes.
+         Contrato: <section id="colecao">…</section> dentro deste div.
+         Não remover este id — âncoras do header e CTAs apontam p/ #colecao.
+         ===================================================== -->
+    <div id="app-colecao">
+      <!-- PARTE 2 monta aqui. -->
+    </div>
+
+    <!-- FAIXA "COMO FUNCIONA" (R4): jornada em 3 passos entre #colecao e #lentes.
+         Seção clara estática (sem JS): eyebrow exigida + 3 passos derivados só do
+         que o site já oferece (sacola, WhatsApp, retirada, lentes). -->
+    <section id="como-funciona" class="secao secao--branca" aria-labelledby="como-funciona-titulo">
+      <div class="container">
+        <p class="eyebrow reveal">Do clique à retirada</p>
+        <h2 class="como-titulo reveal" id="como-funciona-titulo" style="--d:.08s" tabindex="-1">Do clique <em>à retirada.</em></h2>
+        <ol class="como-passos">
+          <li class="reveal" style="--d:.16s">
+            <span class="como-num" aria-hidden="true">01</span>
+            <h3>Escolha o modelo e a cor</h3>
+            <p>Navegue pela coleção e selecione a cor — monte sua sacola.</p>
+          </li>
+          <li class="reveal" style="--d:.24s">
+            <span class="como-num" aria-hidden="true">02</span>
+            <h3>Defina a lente e chame no WhatsApp</h3>
+            <p>Escolha a lente no modal e peça o orçamento no WhatsApp.</p>
+          </li>
+          <li class="reveal" style="--d:.32s">
+            <span class="como-num" aria-hidden="true">03</span>
+            <h3>Retire na loja em Mesquita ou receba o pedido</h3>
+            <p>Retirada na loja — prazo e entrega combinados no WhatsApp.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         PONTO DE MONTAGEM · PARTE 3 (outro especialista)
+         Demais seções + carrinho: lentes, materiais, guia,
+         avaliações, loja, contato, gaveta da sacola, checkout,
+         toast e rodapé (com <span id="ano"> para o ano dinâmico).
+         Contrato: seções com ids #lentes #avaliacoes #loja #contato.
+         ===================================================== -->
+    <div id="app-resto">
+      <!-- PARTE 3 monta aqui. -->
+    </div>
+  </main>
+
+  <!-- Rodapé-base mínimo da Parte 1 (a Parte 3 expande para o rodapé completo).
+       Mantido propositalmente simples para não invadir o escopo alheio. -->
+  <footer class="secao--escura" aria-label="Rodapé base">
+    <div class="container" style="padding-block:22px;display:flex;gap:12px;flex-wrap:wrap;align-items:center;justify-content:space-between;font-size:.88rem">
+      <p><strong>Alexsander Ótica</strong> · Seu olhar, nosso cuidado. · Mesquita, RJ</p>
+      <p>© <span id="ano">2026</span> Alexsander Ótica · <a href="https://wa.me/5521984816082" target="_blank" rel="noopener">WhatsApp (21) 98481-6082</a></p>
+    </div>
+  </footer>
+
+  <script src="app.js" defer></script>
 </body>
 </html>
