@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- SEO pt-BR · PARTE 1 -->
+  <title>Alexsander Ótica — Seu olhar, nosso cuidado | Mesquita RJ</title>
+  <meta name="description" content="Alexsander Ótica em Mesquita, RJ — armações ópticas e solares, lentes antirreflexo, polarizadas e fotossensíveis. Seu olhar, nosso cuidado." />
+  <link rel="canonical" href="./" />
+  <meta name="theme-color" content="#001E42" />
+
+  <!-- Favicon: logo real da loja (caminho relativo com ../) -->
+  <link rel="icon" type="image/png" sizes="32x32" href="../loja-perfil.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="../loja-perfil.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../loja-perfil.png" />
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:title" content="Alexsander Ótica — Seu olhar, nosso cuidado" />
+  <meta property="og:description" content="Armações ópticas e solares, lentes antirreflexo, polarizadas e fotossensíveis em Mesquita, RJ." />
+  <meta property="og:url" content="./" />
+  <meta property="og:image" content="../loja-perfil.png" />
+  <meta property="og:image:width" content="400" />
+  <meta property="og:image:height" content="400" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Alexsander Ótica — Seu olhar, nosso cuidado" />
+  <meta name="twitter:description" content="Armações ópticas e solares, lentes antirreflexo, polarizadas e fotossensíveis em Mesquita, RJ." />
+  <meta name="twitter:image" content="../loja-perfil.png" />
+
+  <!-- Preload da foto do hero (LCP) -->
+  <link rel="preload" as="image" href="../fotos/solar-aviador-azul.jpg" fetchpriority="high" />
+
+  <!-- Dados estruturados mínimos (loja física) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Optician",
+    "name": "Alexsander Ótica",
+    "slogan": "Seu olhar, nosso cuidado.",
+    "telephone": "+5521984816082",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Av. União, 735",
+      "addressLocality": "Mesquita",
+      "addressRegion": "RJ",
+      "postalCode": "26554-000",
+      "addressCountry": "BR"
+    },
+    "logo": "../loja-perfil.png"
+  }
+  </script>
+
+  <!-- Fontes: Fraunces (display) + Inter (texto) — única dependência externa -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,800;1,9..144,500;1,9..144,700&family=Inter:wght@400;500;700;800&display=swap" />
+
+  <!-- Design system da Parte 1 -->
+  <link rel="stylesheet" href="estilos.css" />
+</head>
+<body>
+  <!-- Barra fina de progresso de leitura (JS atualiza a largura) -->
+  <div class="scroll-progress" id="progresso" aria-hidden="true"></div>
+
+  <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+
+  <!-- ============ HEADER fixo em vidro ============ -->
+  <header class="site-header" id="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#topo" aria-label="Alexsander Ótica — voltar ao topo">
+        <img class="brand-logo" src="../loja-perfil.png" alt="Logotipo da Alexsander Ótica" width="44" height="44" fetchpriority="high" decoding="async" />
+        <span class="brand-nome">ALEXSANDER<span class="ponto">.</span>
+          <span class="brand-slogan">Seu olhar, nosso cuidado</span>
+        </span>
+      </a>
+
+      <!-- Nav por âncoras: #colecao e #lentes serão montados na Parte 2;
+           #avaliacoes, #loja e #contato na Parte 3. Links degradam com graça
+           enquanto as seções não existem (rolam até o ponto de montagem). -->
+      <nav class="site-nav" id="nav-principal" aria-label="Navegação principal">
+        <a href="#colecao">Coleção</a>
+        <a href="#lentes">Lentes</a>
+        <a href="#avaliacoes">Avaliações</a>
+        <a href="#loja">Loja física</a>
+        <a href="#contato">Atendimento</a>
+      </nav>
+
+      <div class="header-acoes">
+        <a class="btn-whatsapp" href="https://wa.me/5521984816082?text=Ol%C3%A1%20Alexsander%20%C3%93tica%2C%20quero%20conhecer%20os%20modelos" target="_blank" rel="noopener">
+          <span aria-hidden="true">◉</span> <span class="whatsapp-texto">WhatsApp ↗</span><span class="whatsapp-curto">Zap</span>
+        </a>
+
+        <!-- Sacola: contador visual na Parte 1; gaveta + lógica chegam na Parte 3.
+             IDs congelados para o outro especialista: #cart-abrir / #cart-num -->
+        <button class="btn-sacola" id="cart-abrir" type="button" aria-label="Abrir sacola de compras (em breve)">
+          Sacola <span class="sacola-num" id="cart-num">0</span>
+        </button>
+
+        <button class="menu-btn" id="menu-btn" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-principal">
+          <span aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <!-- ============ HERO escuro full-viewport ============ -->
+    <section class="hero" id="topo" aria-labelledby="hero-titulo">
+      <!-- Canvas aurora azul-marinho/dourado + partículas (app.js). Sem JS, o
+           gradiente + glows em CSS seguram o visual sozinhos. -->
+      <canvas class="hero-aurora" id="aurora" aria-hidden="true"></canvas>
+      <div class="hero-veu" aria-hidden="true"></div>
+      <div class="hero-glow hero-glow--ouro" aria-hidden="true"></div>
+      <div class="hero-glow hero-glow--marinho" aria-hidden="true"></div>
+
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow eyebrow--clara reveal">Alexsander Ótica · Mesquita</p>
+
+          <!-- Título em 2 linhas; JS faz split-text por palavra (data-split).
+               Sem JS, o texto continua íntegro e legível. -->
+          <h1 class="hero-titulo titulo-gigante" id="hero-titulo" data-split>
+            <span class="linha">Um novo olhar.</span>
+            <span class="linha linha--destaque">Nos mínimos detalhes.</span>
+          </h1>
+
+          <p class="hero-slogan reveal" style="--d:.15s">Seu olhar, <strong>nosso cuidado.</strong></p>
+          <p class="hero-lead texto-lead reveal" style="--d:.25s">
+            Formas, cores e acabamentos que expressam seu estilo. Explore as
+            armações e encontre sua próxima escolha com a nossa equipe.
+          </p>
+
+          <div class="hero-ctas reveal" style="--d:.35s">
+            <a class="btn btn--solido btn--magnetico" href="#colecao">Explorar armações</a>
+            <a class="hero-link-fantasma" href="#lentes">Escolher minhas lentes</a>
+          </div>
+
+          <!-- Mini-stats exigidos: 5,0★/29 avaliações · R$80 · Mesquita RJ -->
+          <ul class="hero-stats reveal" style="--d:.45s" aria-label="Destaques da loja">
+            <li><strong><span class="estrelas" aria-hidden="true">★★★★★</span> 5,0 · 29 avaliações</strong>no Google</li>
+            <li><strong>A partir de R$ 80</strong>armações em promoção</li>
+            <li><strong>Mesquita · RJ</strong>retirada na loja</li>
+          </ul>
+        </div>
+
+        <div class="hero-media reveal reveal--direita" style="--d:.3s">
+          <!-- Card flutuante da campanha Aviador Azul com tilt 3D (data-tilt).
+               Foto e preços imutáveis; fallback onerror para a pasta ../fotos. -->
+          <a class="hero-card" data-tilt href="https://wa.me/5521984816082?text=Ol%C3%A1%20Alexsander%20%C3%93tica%2C%20quero%20o%20Aviador%20Azul%20(R%24%2080)" target="_blank" rel="noopener" aria-label="Quero o Aviador Azul solar por 80 reais — chamar no WhatsApp">
+            <img src="../fotos/solar-aviador-azul.jpg" alt="Óculos de sol Aviador Azul com armação dourada e lente azul" width="880" height="660" fetchpriority="high" decoding="async" onerror="this.onerror=null;this.src='../fotos/solar-aviador-azul-2.jpg'" />
+            <span class="hero-card-info">
+              <span>Aviador Azul · Solar<br />
+                <small><span class="preco-antigo">R$ 150</span><strong>R$ 80</strong><span class="tag-promo">PROMOÇÃO</span></small>
+              </span>
+              <span class="hero-card-seta" aria-hidden="true">↗</span>
+            </span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ MARQUEE dourado ============ -->
+    <div class="marquee" role="marquee" aria-label="Avisos da loja: promoção, pagamento e retirada">
+      <div class="marquee-track" aria-hidden="false">
+        <span>✦ Promoção: armações por R$ 80</span><span>✦ Pix, crédito e débito</span><span>✦ Retirada na loja em Mesquita</span><span>✦ Seu olhar, nosso cuidado</span>
+        <span aria-hidden="true">✦ Promoção: armações por R$ 80</span><span aria-hidden="true">✦ Pix, crédito e débito</span><span aria-hidden="true">✦ Retirada na loja em Mesquita</span><span aria-hidden="true">✦ Seu olhar, nosso cuidado</span>
+      </div>
+    </div>
+
+    <!-- TRUST-BAR sob o hero (evolução visual): faixa clara com 4 selos em
+         CSS puro. Rótulos curtos vindos do FAQ/original (garantia, troca,
+         pagamento, retirada) — nada inventado. -->
+    <div class="trustbar" aria-label="Diferenciais da loja">
+      <ul class="trustbar-lista container">
+        <li class="reveal" style="--d:0s"><span class="trust-ico" aria-hidden="true">✓</span><span>Garantia da loja</span></li>
+        <li class="reveal" style="--d:.08s"><span class="trust-ico" aria-hidden="true">⇄</span><span>Troca facilitada</span></li>
+        <li class="reveal" style="--d:.16s"><span class="trust-ico" aria-hidden="true">◈</span><span>Pix e cartão</span></li>
+        <li class="reveal" style="--d:.24s"><span class="trust-ico" aria-hidden="true">◎</span><span>Retirada em Mesquita</span></li>
+      </ul>
+    </div>
+
+    <!-- =====================================================
+         PONTO DE MONTAGEM · PARTE 2 (outro especialista)
+         A coleção será renderizada aqui: tabs, busca, ordenação,
+         grade de 6 produtos, modal de detalhes.
+         Contrato: <section id="colecao">…</section> dentro deste div.
+         Não remover este id — âncoras do header e CTAs apontam p/ #colecao.
+         ===================================================== -->
+    <div id="app-colecao">
+      <!-- PARTE 2 monta aqui. -->
+    </div>
+
+    <!-- FAIXA "COMO FUNCIONA" (R4): jornada em 3 passos entre #colecao e #lentes.
+         Seção clara estática (sem JS): eyebrow exigida + 3 passos derivados só do
+         que o site já oferece (sacola, WhatsApp, retirada, lentes). -->
+    <section id="como-funciona" class="secao secao--branca" aria-labelledby="como-funciona-titulo">
+      <div class="container">
+        <p class="eyebrow reveal">Do clique à retirada</p>
+        <h2 class="como-titulo reveal" id="como-funciona-titulo" style="--d:.08s" tabindex="-1">Do clique <em>à retirada.</em></h2>
+        <ol class="como-passos">
+          <li class="reveal" style="--d:.16s">
+            <span class="como-num" aria-hidden="true">01</span>
+            <h3>Escolha o modelo e a cor</h3>
+            <p>Navegue pela coleção e selecione a cor — monte sua sacola.</p>
+          </li>
+          <li class="reveal" style="--d:.24s">
+            <span class="como-num" aria-hidden="true">02</span>
+            <h3>Defina a lente e chame no WhatsApp</h3>
+            <p>Escolha a lente no modal e peça o orçamento no WhatsApp.</p>
+          </li>
+          <li class="reveal" style="--d:.32s">
+            <span class="como-num" aria-hidden="true">03</span>
+            <h3>Retire na loja em Mesquita ou receba o pedido</h3>
+            <p>Retirada na loja — prazo e entrega combinados no WhatsApp.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         PONTO DE MONTAGEM · PARTE 3 (outro especialista)
+         Demais seções + carrinho: lentes, materiais, guia,
+         avaliações, loja, contato, gaveta da sacola, checkout,
+         toast e rodapé (com <span id="ano"> para o ano dinâmico).
+         Contrato: seções com ids #lentes #avaliacoes #loja #contato.
+         ===================================================== -->
+    <div id="app-resto">
+      <!-- PARTE 3 monta aqui. -->
+    </div>
+  </main>
+
+  <!-- Rodapé-base mínimo da Parte 1 (a Parte 3 expande para o rodapé completo).
+       Mantido propositalmente simples para não invadir o escopo alheio. -->
+  <footer class="secao--escura" aria-label="Rodapé base">
+    <div class="container" style="padding-block:22px;display:flex;gap:12px;flex-wrap:wrap;align-items:center;justify-content:space-between;font-size:.88rem">
+      <p><strong>Alexsander Ótica</strong> · Seu olhar, nosso cuidado. · Mesquita, RJ</p>
+      <p>© <span id="ano">2026</span> Alexsander Ótica · <a href="https://wa.me/5521984816082" target="_blank" rel="noopener">WhatsApp (21) 98481-6082</a></p>
+    </div>
+  </footer>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
