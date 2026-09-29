@@ -1,0 +1,12 @@
+/fotos/*
+  Cache-Control: public, max-age=86400, stale-while-revalidate=86400
+/site-novo/*
+  Cache-Control: public, max-age=86400, stale-while-revalidate=86400
+/loja-perfil.png
+  Cache-Control: public, max-age=86400, stale-while-revalidate=86400
+/estilos.css
+  Cache-Control: public, max-age=86400, stale-while-revalidate=86400
+/app.js
+  Cache-Control: public, max-age=86400, stale-while-revalidate=86400
+/
+  Cache-Control: public, max-age=3600, must-revalidate
